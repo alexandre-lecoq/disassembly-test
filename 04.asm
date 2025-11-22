@@ -442,8 +442,9 @@
        1000:ca0b e8 f3 03        CALL       FUN_1000_ce01                                    undefined FUN_1000_ce01()
        1000:ca0e 3b 1e ba db     CMP        BX,word ptr [0xdbba]
        1000:ca12 74 04           JZ         LAB_1000_ca18
-       1000:ca14 b4 3e           MOV        AH,0x3e
-       1000:ca16 cd 21           INT        0x21
+       1000:ca14 b4 3e           MOV        AH,0x3e                      ; AH=3Eh: Close file handle
+                                                                        ; BX = file handle to close
+       1000:ca16 cd 21           INT        0x21                         ; INT 21h, AH=3Eh: Close file handle in BX
                              LAB_1000_ca18                                   XREF[2]:     1000:ca09(j), 1000:ca12(j)  
        1000:ca18 33 c9           XOR        CX,CX
        1000:ca1a c3              RET
@@ -1026,15 +1027,21 @@
        1000:cdc6 72 38           JC         LAB_1000_ce00
                              LAB_1000_cdc8                                   XREF[1]:     1000:cde3(j)  
        1000:cdc8 51              PUSH       CX
-       1000:cdc9 8b 0e 06 dc     MOV        CX,word ptr [0xdc06]
-       1000:cdcd 8b 16 04 dc     MOV        DX,word ptr [0xdc04]
-       1000:cdd1 b8 00 42        MOV        AX,0x4200
-       1000:cdd4 cd 21           INT        0x21
+       1000:cdc9 8b 0e 06 dc     MOV        CX,word ptr [0xdc06]         ; CX = high word of file offset
+       1000:cdcd 8b 16 04 dc     MOV        DX,word ptr [0xdc04]         ; DX = low word of file offset
+       1000:cdd1 b8 00 42        MOV        AX,0x4200                    ; AH=42h: LSEEK - Set file position
+                                                                        ; AL=00h: Seek from beginning of file
+                                                                        ; CX:DX = 32-bit file offset
+                                                                        ; BX = file handle (set earlier)
+       1000:cdd4 cd 21           INT        0x21                         ; INT 21h, AH=42h: Seek to position CX:DX from start
        1000:cdd6 59              POP        CX
        1000:cdd7 1e              PUSH       DS
-       1000:cdd8 c5 16 0c dc     LDS        DX,[0xdc0c]
-       1000:cddc b4 3f           MOV        AH,0x3f
-       1000:cdde cd 21           INT        0x21
+       1000:cdd8 c5 16 0c dc     LDS        DX,[0xdc0c]                  ; DS:DX = buffer address for read
+       1000:cddc b4 3f           MOV        AH,0x3f                      ; AH=3Fh: Read from file or device
+                                                                        ; BX = file handle
+                                                                        ; CX = number of bytes to read
+                                                                        ; DS:DX = buffer address
+       1000:cdde cd 21           INT        0x21                         ; INT 21h, AH=3Fh: Read CX bytes from file into DS:DX
        1000:cde0 1f              POP        DS
        1000:cde1 3b c1           CMP        AX,CX
        1000:cde3 72 e3           JC         LAB_1000_cdc8
@@ -2960,9 +2967,11 @@
        1000:daf5 d3 e0           SHL        AX,CL
        1000:daf7 8a cd           MOV        CL,CH
        1000:daf9 d3 e2           SHL        DX,CL
-       1000:dafb 8b c8           MOV        CX,AX
-       1000:dafd b8 04 00        MOV        AX,0x4
-       1000:db00 cd 33           INT        0x33
+       1000:dafb 8b c8           MOV        CX,AX                        ; CX = horizontal position
+       1000:dafd b8 04 00        MOV        AX,0x4                       ; AX=04h: Set mouse cursor position
+                                                                        ; CX = horizontal position
+                                                                        ; DX = vertical position
+       1000:db00 cd 33           INT        0x33                         ; INT 33h, AX=04h: Set mouse cursor position to (CX, DX)
                              LAB_1000_db02                                   XREF[1]:     1000:dae8(j)  
        1000:db02 c3              RET
                              **************************************************************
@@ -2997,14 +3006,18 @@
        1000:db2a 53              PUSH       BX
        1000:db2b a0 80 25        MOV        AL,[0x2580]
        1000:db2e e8 13 00        CALL       FUN_1000_db44                                    undefined FUN_1000_db44()
-       1000:db31 b8 07 00        MOV        AX,0x7
-       1000:db34 cd 33           INT        0x33
+       1000:db31 b8 07 00        MOV        AX,0x7                       ; AX=07h: Set horizontal mouse cursor range
+                                                                        ; CX = minimum horizontal position
+                                                                        ; DX = maximum horizontal position
+       1000:db34 cd 33           INT        0x33                         ; INT 33h, AX=07h: Set horizontal range CX to DX
        1000:db36 5a              POP        DX
        1000:db37 59              POP        CX
        1000:db38 a0 81 25        MOV        AL,[0x2581]
        1000:db3b e8 06 00        CALL       FUN_1000_db44                                    undefined FUN_1000_db44()
-       1000:db3e b8 08 00        MOV        AX,0x8
-       1000:db41 cd 33           INT        0x33
+       1000:db3e b8 08 00        MOV        AX,0x8                       ; AX=08h: Set vertical mouse cursor range
+                                                                        ; CX = minimum vertical position
+                                                                        ; DX = maximum vertical position
+       1000:db41 cd 33           INT        0x33                         ; INT 33h, AX=08h: Set vertical range CX to DX
                              LAB_1000_db43                                   XREF[1]:     1000:db27(j)  
        1000:db43 c3              RET
                              **************************************************************
@@ -3428,8 +3441,11 @@
        1000:dd72 f6 06 42        TEST       byte ptr [0x2942],0x40
                  29 40
        1000:dd77 75 10           JNZ        LAB_1000_dd89
-       1000:dd79 b8 03 00        MOV        AX,0x3
-       1000:dd7c cd 33           INT        0x33
+       1000:dd79 b8 03 00        MOV        AX,0x3                       ; AX=03h: Get mouse position and button status
+                                                                        ; Returns: BX = button status (bit 0=left, bit 1=right, bit 2=middle)
+                                                                        ;          CX = horizontal position
+                                                                        ;          DX = vertical position
+       1000:dd7c cd 33           INT        0x33                         ; INT 33h, AX=03h: Get mouse position and button status
        1000:dd7e 87 de           XCHG       SI,BX
        1000:dd80 33 de           XOR        BX,SI
        1000:dd82 23 de           AND        BX,SI
@@ -3712,8 +3728,11 @@
        1000:df23 f6 06 42        TEST       byte ptr [0x2942],0x40
                  29 40
        1000:df28 75 1f           JNZ        LAB_1000_df49
-       1000:df2a b8 03 00        MOV        AX,0x3
-       1000:df2d cd 33           INT        0x33
+       1000:df2a b8 03 00        MOV        AX,0x3                       ; AX=03h: Get mouse position and button status
+                                                                        ; Returns: BX = button status (bit 0=left, bit 1=right, bit 2=middle)
+                                                                        ;          CX = horizontal position
+                                                                        ;          DX = vertical position
+       1000:df2d cd 33           INT        0x33                         ; INT 33h, AX=03h: Get mouse position and button status
        1000:df2f 8b c1           MOV        AX,CX
        1000:df31 8b 0e 80 25     MOV        CX,word ptr [0x2580]
        1000:df35 d3 e8           SHR        AX,CL
@@ -4697,16 +4716,20 @@
        1000:e5bb 8c d9           MOV        CX,DS
        1000:e5bd 03 c1           ADD        AX,CX
        1000:e5bf a3 32 dc        MOV        [0xdc32],AX
-       1000:e5c2 b4 19           MOV        AH,0x19
-       1000:e5c4 cd 21           INT        0x21
+       1000:e5c2 b4 19           MOV        AH,0x19                      ; AH=19h: Get current default drive
+                                                                        ; Returns: AL = drive number (0=A, 1=B, 2=C, etc.)
+       1000:e5c4 cd 21           INT        0x21                         ; INT 21h, AH=19h: Get current drive
        1000:e5c6 a2 76 ce        MOV        [0xce76],AL
        1000:e5c9 a2 77 ce        MOV        [0xce77],AL
-       1000:e5cc b8 01 33        MOV        AX,0x3301
-       1000:e5cf cd 21           INT        0x21
+       1000:e5cc b8 01 33        MOV        AX,0x3301                    ; AH=33h: Get/Set Ctrl-Break check flag
+                                                                        ; AL=01h: Get current state
+                                                                        ; Returns: DL = current state (0=off, 1=on)
+       1000:e5cf cd 21           INT        0x21                         ; INT 21h, AH=33h, AL=01h: Get Ctrl-Break flag
        1000:e5d1 88 16 41 29     MOV        byte ptr [0x2941],DL
-       1000:e5d5 b8 01 33        MOV        AX,0x3301
-       1000:e5d8 33 d2           XOR        DX,DX
-       1000:e5da cd 21           INT        0x21
+       1000:e5d5 b8 01 33        MOV        AX,0x3301                    ; AH=33h: Get/Set Ctrl-Break check flag
+                                                                        ; AL=01h: Get current state (or set with DL)
+       1000:e5d8 33 d2           XOR        DX,DX                        ; DL=0: Disable Ctrl-Break checking
+       1000:e5da cd 21           INT        0x21                         ; INT 21h, AH=33h, AL=01h, DL=0: Disable Ctrl-Break
        1000:e5dc e8 96 00        CALL       FUN_1000_e675                                    undefined FUN_1000_e675()
        1000:e5df a0 42 29        MOV        AL,[0x2942]
        1000:e5e2 25 01 00        AND        AX,0x1
@@ -4794,9 +4817,12 @@
        1000:e695 fe 04           INC        byte ptr [SI]
        1000:e697 80 3c 39        CMP        byte ptr [SI],0x39
        1000:e69a 76 d9           JBE        FUN_1000_e675
-       1000:e69c ba e9 37        MOV        DX,0x37e9                    ; Load address of "dune.dat" string
-       1000:e69f b8 00 3d        MOV        AX,0x3d00                    ; DOS function 3Dh: Open file (AL=00h: read-only mode)
-       1000:e6a2 cd 21           INT        0x21                         ; Open dune.dat archive file
+       1000:e69c ba e9 37        MOV        DX,0x37e9                    ; DS:DX = pointer to "dune.dat" string
+       1000:e69f b8 00 3d        MOV        AX,0x3d00                    ; AH=3Dh: Open existing file
+                                                                        ; AL=00h: Read-only access mode
+                                                                        ; DS:DX = pointer to ASCIIZ filename
+                                                                        ; Returns: AX = file handle (if successful), or error code (if CF set)
+       1000:e6a2 cd 21           INT        0x21                         ; INT 21h, AH=3Dh: Open file "dune.dat" in read-only mode
        1000:e6a4 72 ce           JC         LAB_1000_e674                ; Jump if open failed (carry flag set)
        1000:e6a6 a3 ba db        MOV        [0xdbba],AX                  ; Store file handle for archive
        1000:e6a9 e8 95 00        CALL       FUN_1000_e741                ; Read archive directory/header from start of file
@@ -5153,9 +5179,11 @@
                              LAB_1000_e8fd                                   XREF[1]:     1000:e8f6(j)  
        1000:e8fd 33 c0           XOR        AX,AX
        1000:e8ff e8 a6 ff        CALL       FUN_1000_e8a8                                    undefined FUN_1000_e8a8()
-       1000:e902 8a 16 41 29     MOV        DL,byte ptr [0x2941]
-       1000:e906 b8 01 33        MOV        AX,0x3301
-       1000:e909 cd 21           INT        0x21
+       1000:e902 8a 16 41 29     MOV        DL,byte ptr [0x2941]         ; DL = saved Ctrl-Break flag state
+       1000:e906 b8 01 33        MOV        AX,0x3301                    ; AH=33h: Get/Set Ctrl-Break check flag
+                                                                        ; AL=01h: Set state
+                                                                        ; DL = new state (0=off, 1=on)
+       1000:e909 cd 21           INT        0x21                         ; INT 21h, AH=33h, AL=01h: Restore Ctrl-Break flag
        1000:e90b 80 3e 73        CMP        byte ptr [0xce73],0x0
                  ce 00
        1000:e910 75 01           JNZ        FUN_1000_e913
@@ -5215,41 +5243,57 @@
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_e97a                                   XREF[1]:     FUN_1000_e594:1000:e62f(c)  
-       1000:e97a b8 33 35        MOV        AX,0x3533
-       1000:e97d cd 21           INT        0x21
+       1000:e97a b8 33 35        MOV        AX,0x3533                    ; AH=35h: Get interrupt vector
+                                                                        ; AL=33h: Interrupt number (mouse driver)
+                                                                        ; Returns: ES:BX = address of interrupt handler
+       1000:e97d cd 21           INT        0x21                         ; INT 21h, AH=35h: Get INT 33h (mouse) vector
        1000:e97f 8c c0           MOV        AX,ES
        1000:e981 0b c3           OR         AX,BX
        1000:e983 74 6e           JZ         LAB_1000_e9f3
-       1000:e985 b8 00 00        MOV        AX,0x0
-       1000:e988 cd 33           INT        0x33
+       1000:e985 b8 00 00        MOV        AX,0x0                       ; AX=00h: Reset mouse driver and get status
+                                                                        ; Returns: AX=FFFFh if mouse installed, 0000h if not
+                                                                        ;          BX = number of buttons
+       1000:e988 cd 33           INT        0x33                         ; INT 33h, AX=00h: Reset mouse driver
        1000:e98a 40              INC        AX
        1000:e98b 75 66           JNZ        LAB_1000_e9f3
-       1000:e98d 33 c9           XOR        CX,CX
-       1000:e98f 33 d2           XOR        DX,DX
-       1000:e991 b8 04 00        MOV        AX,0x4
-       1000:e994 cd 33           INT        0x33
+       1000:e98d 33 c9           XOR        CX,CX                        ; CX = 0 (horizontal position)
+       1000:e98f 33 d2           XOR        DX,DX                        ; DX = 0 (vertical position)
+       1000:e991 b8 04 00        MOV        AX,0x4                       ; AX=04h: Set mouse cursor position
+                                                                        ; CX = horizontal position
+                                                                        ; DX = vertical position
+       1000:e994 cd 33           INT        0x33                         ; INT 33h, AX=04h: Set mouse cursor position to (0, 0)
                              LAB_1000_e996                                   XREF[1]:     1000:e9b1(j)  
        1000:e996 fe 06 80 25     INC        byte ptr [0x2580]
        1000:e99a 78 17           JS         LAB_1000_e9b3
        1000:e99c 8a 0e 80 25     MOV        CL,byte ptr [0x2580]
        1000:e9a0 b8 01 00        MOV        AX,0x1
        1000:e9a3 d3 e0           SHL        AX,CL
-       1000:e9a5 8b c8           MOV        CX,AX
-       1000:e9a7 b8 04 00        MOV        AX,0x4
-       1000:e9aa cd 33           INT        0x33
-       1000:e9ac b8 03 00        MOV        AX,0x3
-       1000:e9af cd 33           INT        0x33
+       1000:e9a5 8b c8           MOV        CX,AX                        ; CX = scaled position value
+       1000:e9a7 b8 04 00        MOV        AX,0x4                       ; AX=04h: Set mouse cursor position
+                                                                        ; CX = horizontal position
+                                                                        ; DX = vertical position (0)
+       1000:e9aa cd 33           INT        0x33                         ; INT 33h, AX=04h: Set mouse cursor horizontal position
+       1000:e9ac b8 03 00        MOV        AX,0x3                       ; AX=03h: Get mouse position and button status
+                                                                        ; Returns: BX = button status
+                                                                        ;          CX = horizontal position
+                                                                        ;          DX = vertical position
+       1000:e9af cd 33           INT        0x33                         ; INT 33h, AX=03h: Get mouse position
        1000:e9b1 e3 e3           JCXZ       LAB_1000_e996
                              LAB_1000_e9b3                                   XREF[2]:     1000:e99a(j), 1000:e9ce(j)  
        1000:e9b3 fe 06 81 25     INC        byte ptr [0x2581]
        1000:e9b7 78 17           JS         LAB_1000_e9d0
        1000:e9b9 8a 0e 81 25     MOV        CL,byte ptr [0x2581]
        1000:e9bd ba 01 00        MOV        DX,0x1
-       1000:e9c0 d3 e2           SHL        DX,CL
-       1000:e9c2 b8 04 00        MOV        AX,0x4
-       1000:e9c5 cd 33           INT        0x33
-       1000:e9c7 b8 03 00        MOV        AX,0x3
-       1000:e9ca cd 33           INT        0x33
+       1000:e9c0 d3 e2           SHL        DX,CL                        ; Scale vertical position
+       1000:e9c2 b8 04 00        MOV        AX,0x4                       ; AX=04h: Set mouse cursor position
+                                                                        ; CX = horizontal position (0)
+                                                                        ; DX = vertical position
+       1000:e9c5 cd 33           INT        0x33                         ; INT 33h, AX=04h: Set mouse cursor vertical position
+       1000:e9c7 b8 03 00        MOV        AX,0x3                       ; AX=03h: Get mouse position and button status
+                                                                        ; Returns: BX = button status
+                                                                        ;          CX = horizontal position
+                                                                        ;          DX = vertical position
+       1000:e9ca cd 33           INT        0x33                         ; INT 33h, AX=03h: Get mouse position
        1000:e9cc 0b d2           OR         DX,DX
        1000:e9ce 74 e3           JZ         LAB_1000_e9b3
                              LAB_1000_e9d0                                   XREF[1]:     1000:e9b7(j)  
@@ -5262,12 +5306,15 @@
        1000:e9e1 8a cd           MOV        CL,CH
        1000:e9e3 d3 ea           SHR        DX,CL
        1000:e9e5 8b c8           MOV        CX,AX
-       1000:e9e7 b8 0f 00        MOV        AX,0xf
+       1000:e9e7 b8 0f 00        MOV        AX,0xf                       ; AX=0Fh: Set mouse sensitivity (Mickey to pixel ratio)
+                                                                        ; CX = horizontal sensitivity
+                                                                        ; DX = vertical sensitivity (saved on stack)
        1000:e9ea 52              PUSH       DX
-       1000:e9eb cd 33           INT        0x33
+       1000:e9eb cd 33           INT        0x33                         ; INT 33h, AX=0Fh: Set mouse sensitivity
        1000:e9ed 5a              POP        DX
-       1000:e9ee b8 13 00        MOV        AX,0x13
-       1000:e9f1 cd 33           INT        0x33
+       1000:e9ee b8 13 00        MOV        AX,0x13                      ; AX=13h: Set double-speed threshold
+                                                                        ; DX = threshold value in mickeys/second
+       1000:e9f1 cd 33           INT        0x33                         ; INT 33h, AX=13h: Set double-speed threshold
                              LAB_1000_e9f3                                   XREF[4]:     1000:e983(j), 1000:e98b(j), 
                                                                                           FUN_1000_ea32:1000:ea4e(j), 
                                                                                           FUN_1000_ea32:1000:ea58(j)  
@@ -5675,10 +5722,13 @@
        1000:ecde 2e 89 55 1c     MOV        word ptr CS:[DI + 0x1c]=>DAT_1000_ec88,DX        = 9200h
        1000:ece2 8b f7           MOV        SI,DI
        1000:ece4 0e              PUSH       CS
-       1000:ece5 07              POP        ES
+       1000:ece5 07              POP        ES                           ; ES = CS (set ES to code segment)
        1000:ece6 59              POP        CX
-       1000:ece7 b4 87           MOV        AH,0x87
-       1000:ece9 cd 15           INT        0x15
+       1000:ece7 b4 87           MOV        AH,0x87                      ; AH=87h: Move block (copy extended memory)
+                                                                        ; CX = number of words to move
+                                                                        ; ES:SI = pointer to Global Descriptor Table (GDT)
+                                                                        ; GDT contains source and destination addresses
+       1000:ece9 cd 15           INT        0x15                         ; INT 15h, AH=87h: Copy CX words using GDT at ES:SI
        1000:eceb c3              RET
                              **************************************************************
                              *                          FUNCTION                          *
@@ -5717,10 +5767,13 @@
        1000:ed2a 2e 89 5c 12     MOV        word ptr CS:[SI + 0x12]=>DAT_1000_ec7e,BX
        1000:ed2e 2e 89 54 14     MOV        word ptr CS:[SI + 0x14]=>DAT_1000_ec80,DX        = 9200h
        1000:ed32 0e              PUSH       CS
-       1000:ed33 07              POP        ES
+       1000:ed33 07              POP        ES                           ; ES = CS (set ES to code segment)
        1000:ed34 59              POP        CX
-       1000:ed35 b4 87           MOV        AH,0x87
-       1000:ed37 cd 15           INT        0x15
+       1000:ed35 b4 87           MOV        AH,0x87                      ; AH=87h: Move block (copy extended memory)
+                                                                        ; CX = number of words to move
+                                                                        ; ES:SI = pointer to Global Descriptor Table (GDT)
+                                                                        ; GDT contains source and destination addresses
+       1000:ed37 cd 15           INT        0x15                         ; INT 15h, AH=87h: Copy CX words using GDT at ES:SI
        1000:ed39 c3              RET
                              DAT_1000_ed3a                                   XREF[3]:     FUN_1000_e8d5:1000:e8e2(R), 
                                                                                           FUN_1000_ed40:1000:ed40(R), 
@@ -5757,7 +5810,10 @@
                                                                                           FUN_1000_edb9:1000:eddf(c), 
                                                                                           FUN_1000_edb9:1000:edea(c), 
                                                                                           FUN_1000_edb9:1000:edff(c)  
-       1000:ed45 cd 67           INT        0x67
+       1000:ed45 cd 67           INT        0x67                         ; INT 67h: Expanded Memory Manager (EMM) services
+                                                                        ; AH = function number
+                                                                        ; Various functions for managing expanded memory
+                                                                        ; Returns: AH = status (00h = success, 80h+ = error)
        1000:ed47 80 fc 80        CMP        AH,0x80
        1000:ed4a f5              CMC
        1000:ed4b c3              RET
@@ -5873,8 +5929,10 @@
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_eea0                                   XREF[1]:     FUN_1000_ea7b:1000:ea82(c)  
-       1000:eea0 b8 10 43        MOV        AX,0x4310
-       1000:eea3 cd 2f           INT        0x2f
+       1000:eea0 b8 10 43        MOV        AX,0x4310                    ; AH=43h: Get XMS driver address
+                                                                        ; AL=10h: Subfunction
+                                                                        ; Returns: ES:BX = address of XMS driver entry point
+       1000:eea3 cd 2f           INT        0x2f                         ; INT 2Fh, AX=4310h: Get XMS driver entry point address
        1000:eea5 2e 89 1e        MOV        word ptr CS:[DAT_1000_ee8c],BX
                  8c ee
        1000:eeaa 2e 8c 06        MOV        word ptr CS:[DAT_1000_ee8e],ES
@@ -6204,21 +6262,31 @@
        1000:f202 8b d6           MOV        DX,SI
        1000:f204 52              PUSH       DX
        1000:f205 e8 f4 00        CALL       FUN_1000_f2fc                                    undefined FUN_1000_f2fc()
-       1000:f208 b8 00 3d        MOV        AX,0x3d00
-       1000:f20b cd 21           INT        0x21
+       1000:f208 b8 00 3d        MOV        AX,0x3d00                    ; AH=3Dh: Open existing file
+                                                                        ; AL=00h: Read-only access mode
+                                                                        ; DS:DX = pointer to ASCIIZ filename
+                                                                        ; Returns: AX = file handle (if successful)
+       1000:f20b cd 21           INT        0x21                         ; INT 21h, AH=3Dh: Open file in read-only mode
        1000:f20d 5a              POP        DX
        1000:f20e 72 18           JC         LAB_1000_f228
-       1000:f210 8b d8           MOV        BX,AX
-       1000:f212 33 c9           XOR        CX,CX
-       1000:f214 8b d1           MOV        DX,CX
-       1000:f216 b8 02 42        MOV        AX,0x4202
-       1000:f219 cd 21           INT        0x21
+       1000:f210 8b d8           MOV        BX,AX                        ; BX = file handle
+       1000:f212 33 c9           XOR        CX,CX                        ; CX = 0 (high word of offset)
+       1000:f214 8b d1           MOV        DX,CX                        ; DX = 0 (low word of offset)
+       1000:f216 b8 02 42        MOV        AX,0x4202                    ; AH=42h: LSEEK - Set file position
+                                                                        ; AL=02h: Seek from end of file
+                                                                        ; CX:DX = offset (0 = end of file)
+                                                                        ; BX = file handle
+                                                                        ; Returns: DX:AX = new file position (file size)
+       1000:f219 cd 21           INT        0x21                         ; INT 21h, AH=42h: Seek to end to get file size
        1000:f21b 50              PUSH       AX
        1000:f21c 52              PUSH       DX
-       1000:f21d 33 c9           XOR        CX,CX
-       1000:f21f 8b d1           MOV        DX,CX
-       1000:f221 b8 00 42        MOV        AX,0x4200
-       1000:f224 cd 21           INT        0x21
+       1000:f21d 33 c9           XOR        CX,CX                        ; CX = 0 (high word of offset)
+       1000:f21f 8b d1           MOV        DX,CX                        ; DX = 0 (low word of offset)
+       1000:f221 b8 00 42        MOV        AX,0x4200                    ; AH=42h: LSEEK - Set file position
+                                                                        ; AL=00h: Seek from beginning of file
+                                                                        ; CX:DX = offset (0 = start of file)
+                                                                        ; BX = file handle
+       1000:f224 cd 21           INT        0x21                         ; INT 21h, AH=42h: Seek to start of file
        1000:f226 5d              POP        BP
        1000:f227 59              POP        CX
                              LAB_1000_f228                                   XREF[2]:     1000:f200(j), 1000:f20e(j)  
@@ -6296,23 +6364,29 @@
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_f27c                                   XREF[1]:     FUN_1000_b389:1000:b3ad(c)  
        1000:f27c 51              PUSH       CX
-       1000:f27d b4 3c           MOV        AH,0x3c
-       1000:f27f 33 c9           XOR        CX,CX
-       1000:f281 cd 21           INT        0x21
+       1000:f27d b4 3c           MOV        AH,0x3c                      ; AH=3Ch: Create or truncate file
+                                                                        ; CX = file attributes
+                                                                        ; DS:DX = pointer to ASCIIZ filename
+                                                                        ; Returns: AX = file handle (if successful)
+       1000:f27f 33 c9           XOR        CX,CX                        ; CX = 0 (normal file attributes)
+       1000:f281 cd 21           INT        0x21                         ; INT 21h, AH=3Ch: Create file
        1000:f283 59              POP        CX
        1000:f284 72 14           JC         LAB_1000_f29a
-       1000:f286 8b d8           MOV        BX,AX
+       1000:f286 8b d8           MOV        BX,AX                        ; BX = file handle
        1000:f288 1e              PUSH       DS
        1000:f289 06              PUSH       ES
-       1000:f28a 1f              POP        DS
-       1000:f28b 8b d7           MOV        DX,DI
-       1000:f28d b4 40           MOV        AH,0x40
-       1000:f28f cd 21           INT        0x21
+       1000:f28a 1f              POP        DS                           ; DS = ES (set DS to buffer segment)
+       1000:f28b 8b d7           MOV        DX,DI                        ; DS:DX = buffer address
+       1000:f28d b4 40           MOV        AH,0x40                      ; AH=40h: Write to file or device
+                                                                        ; BX = file handle
+                                                                        ; CX = number of bytes to write
+                                                                        ; DS:DX = buffer address
+       1000:f28f cd 21           INT        0x21                         ; INT 21h, AH=40h: Write CX bytes from DS:DX to file
        1000:f291 1f              POP        DS
        1000:f292 2b c1           SUB        AX,CX
        1000:f294 9c              PUSHF
-       1000:f295 b4 3e           MOV        AH,0x3e
-       1000:f297 cd 21           INT        0x21
+       1000:f295 b4 3e           MOV        AH,0x3e                      ; AH=3Eh: Close file handle
+       1000:f297 cd 21           INT        0x21                         ; INT 21h, AH=3Eh: Close file handle in BX
        1000:f299 9d              POPF
                              LAB_1000_f29a                                   XREF[1]:     1000:f284(j)  
        1000:f29a c3              RET
@@ -6377,12 +6451,16 @@
                                                                                           FUN_1000_f244:1000:f24f(c)  
        1000:f2ea 1e              PUSH       DS
        1000:f2eb 06              PUSH       ES
-       1000:f2ec 1f              POP        DS
-       1000:f2ed 36 8b 1e        MOV        BX,word ptr SS:[0xdbba]
+       1000:f2ec 1f              POP        DS                           ; DS = ES (set DS to buffer segment)
+       1000:f2ed 36 8b 1e        MOV        BX,word ptr SS:[0xdbba]      ; BX = file handle from SS:[0xdbba]
                  ba db
-       1000:f2f2 8b d7           MOV        DX,DI
-       1000:f2f4 b4 3f           MOV        AH,0x3f
-       1000:f2f6 cd 21           INT        0x21
+       1000:f2f2 8b d7           MOV        DX,DI                        ; DS:DX = buffer address (DI offset)
+       1000:f2f4 b4 3f           MOV        AH,0x3f                      ; AH=3Fh: Read from file or device
+                                                                        ; BX = file handle
+                                                                        ; CX = number of bytes to read
+                                                                        ; DS:DX = buffer address
+                                                                        ; Returns: AX = bytes actually read
+       1000:f2f6 cd 21           INT        0x21                         ; INT 21h, AH=3Fh: Read CX bytes from file into DS:DX
        1000:f2f8 3b c1           CMP        AX,CX
        1000:f2fa 1f              POP        DS
        1000:f2fb c3              RET

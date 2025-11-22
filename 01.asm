@@ -37,8 +37,8 @@
                              LAB_1000_003a                                   XREF[2]:     FUN_1000_f0ff:1000:f13c(j), 
                                                                                           FUN_1000_f229:1000:f241(j)  
        1000:003a fc              CLD
-       1000:003b 33 c0           XOR        AX,AX
-       1000:003d cd 33           INT        0x33
+       1000:003b 33 c0           XOR        AX,AX                        ; AX = 0 (function 0: Reset mouse driver)
+       1000:003d cd 33           INT        0x33                         ; INT 33h, AX=00h: Reset mouse driver and get status
        1000:003f b8 4b 1f        MOV        AX,0x1f4b
        1000:0042 8e d8           MOV        DS,AX
        1000:0044 e8 8e e8        CALL       FUN_1000_e8d5                                    undefined FUN_1000_e8d5()
@@ -48,8 +48,8 @@
        1000:004e ff 1e 75 39     CALLF      [0x3975]=>DAT_1f4b_3977                          = 0106h
        1000:0052 ff 1e 8d 39     CALLF      [0x398d]=>DAT_1f4b_398f                          = 0103h
                              LAB_1000_0056                                   XREF[1]:     1000:004c(j)  
-       1000:0056 b8 03 00        MOV        AX,0x3
-       1000:0059 cd 10           INT        0x10
+       1000:0056 b8 03 00        MOV        AX,0x3                       ; AH=0, AL=3: Set video mode to 80x25 text mode
+       1000:0059 cd 10           INT        0x10                         ; INT 10h, AH=00h: Set video mode
        1000:005b 8b 36 bc 3c     MOV        SI,word ptr [DAT_1f4b_3cbc]                      = ??
        1000:005f 0b f6           OR         SI,SI
        1000:0061 74 0b           JZ         LAB_1000_006e
@@ -57,19 +57,22 @@
        1000:0063 ac              LODSB      SI
        1000:0064 0a c0           OR         AL,AL
        1000:0066 74 06           JZ         LAB_1000_006e
-       1000:0068 b4 0e           MOV        AH,0xe
-       1000:006a cd 10           INT        0x10
+       1000:0068 b4 0e           MOV        AH,0xe                       ; AH=0Eh: Teletype output
+                                                                        ; AL=character to output, BH=page number, BL=foreground color
+       1000:006a cd 10           INT        0x10                         ; INT 10h, AH=0Eh: Write character in teletype mode
        1000:006c eb f5           JMP        LAB_1000_0063
                              LAB_1000_006e                                   XREF[2]:     1000:0061(j), 1000:0066(j)  
-       1000:006e b8 0d 0e        MOV        AX,0xe0d
-       1000:0071 cd 10           INT        0x10
-       1000:0073 b8 0a 0e        MOV        AX,0xe0a
-       1000:0076 cd 10           INT        0x10
-       1000:0078 b2 ff           MOV        DL,0xff
-       1000:007a b8 06 0c        MOV        AX,0xc06
-       1000:007d cd 21           INT        0x21
-       1000:007f b4 4c           MOV        AH,0x4c
-       1000:0081 cd 21           INT        0x21
+       1000:006e b8 0d 0e        MOV        AX,0xe0d                     ; AH=0Eh (teletype output), AL=0Dh (carriage return)
+       1000:0071 cd 10           INT        0x10                         ; INT 10h, AH=0Eh: Write CR character
+       1000:0073 b8 0a 0e        MOV        AX,0xe0a                     ; AH=0Eh (teletype output), AL=0Ah (line feed)
+       1000:0076 cd 10           INT        0x10                         ; INT 10h, AH=0Eh: Write LF character
+       1000:0078 b2 ff           MOV        DL,0xff                      ; DL=0FFh: Check console input status without waiting
+       1000:007a b8 06 0c        MOV        AX,0xc06                     ; AH=0Ch: Flush input buffer and read stdin
+                                                                        ; AL=06h: Direct console I/O function
+       1000:007d cd 21           INT        0x21                         ; INT 21h, AH=0Ch: Flush buffer and invoke DOS function AL
+       1000:007f b4 4c           MOV        AH,0x4c                      ; AH=4Ch: Terminate program with return code
+                                                                        ; AL=return code (0 = success)
+       1000:0081 cd 21           INT        0x21                         ; INT 21h, AH=4Ch: Exit to DOS
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
