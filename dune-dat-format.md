@@ -32,7 +32,13 @@ The archive consists of two main sections:
 
 ### Directory Header
 
-The directory begins with a 2-byte word (little-endian) at offset 0x0000. The exact meaning is not fully determined but appears to be related to the directory structure (possibly an entry count or initial offset).
+The directory begins with a 2-byte word (little-endian) at offset 0x0000. Based on the assembly code analysis, this word is read but not actively used in the entry processing loop - the code immediately begins processing entries after reading it. Its purpose may be:
+- A format version identifier
+- A magic number for file type validation  
+- Reserved for future use
+- Simply skipped padding
+
+The entries are processed sequentially until a 0x00 terminator byte is found, so the header word is not used as an entry count.
 
 ### Directory Entry Format
 
@@ -69,7 +75,9 @@ Filenames starting with `\P` (0x5C50) use a special compressed encoding to save 
 
 Where:
 - `\P` (2 bytes): Magic prefix identifying encoded filename
-- `XX` (2 bytes): Two unknown/reserved bytes
+- `XX` (2 bytes): Two bytes skipped by the decoder (at offset +2 and +3 of filename field)
+  - Purpose undetermined from assembly analysis - may be file attributes, extended flags, or reserved space
+  - The decoder simply skips them with `ADD SI,0x4` (skipping `\P` + these 2 bytes)
 - `T` (1 byte): Type identifier (subtract 0x40 to get actual type)
 - `HHH` (3 bytes): Three hexadecimal digits (0-9, A-F) forming a 12-bit file ID
   - Each character is converted: '0'-'9' → 0-9, 'A'-'F' → 10-15
@@ -80,7 +88,7 @@ Where:
 
 **Example Decoding:**
 
-Input: `\P??A123O ` (where ?? are two unknown bytes)
+Input: `\P??A123O ` (where ?? are two bytes that are skipped)
 - Skip `\P` and 2 bytes
 - Read 'A' (0x41), subtract 0x40 = 0x01 → Type = 1
 - Read '1' → 1, '2' → 2, '3' → 3
