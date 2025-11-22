@@ -137,6 +137,14 @@ This repository contains disassembled code for educational and preservation purp
 
 **No game assets or executable files are included in this repository.**
 
+## Documentation Files
+
+The repository includes several documentation files that provide additional information about the disassembled code:
+
+- **[functions.md](functions.md)** - Complete list of all 718 functions with addresses and auto-generated descriptions
+- **[globalvars.md](globalvars.md)** - Documentation of global variables and their likely purposes
+- **[strings.md](strings.md)** - Collection of all strings found in the code, including file names and resources
+
 ## File Format
 
 All assembly files use:
