@@ -6251,26 +6251,26 @@
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_f260                                   XREF[2]:     FUN_1000_e675:1000:e681(c), 
                                                                                           FUN_1000_f244:1000:f24d(j)  
-       1000:f260 52              PUSH       DX
-       1000:f261 57              PUSH       DI
-       1000:f262 06              PUSH       ES
-       1000:f263 1e              PUSH       DS
-       1000:f264 06              PUSH       ES
-       1000:f265 1f              POP        DS
-       1000:f266 b9 ff ff        MOV        CX,0xffff
-       1000:f269 8b d7           MOV        DX,DI
-       1000:f26b b4 3f           MOV        AH,0x3f
-       1000:f26d cd 21           INT        0x21
-       1000:f26f 1f              POP        DS
-       1000:f270 8b c8           MOV        CX,AX
-       1000:f272 9c              PUSHF
-       1000:f273 b4 3e           MOV        AH,0x3e
-       1000:f275 cd 21           INT        0x21
-       1000:f277 9d              POPF
-       1000:f278 07              POP        ES
-       1000:f279 5f              POP        DI
-       1000:f27a 5a              POP        DX
-       1000:f27b c3              RET
+       1000:f260 52              PUSH       DX                           ; Save DX register (file handle)
+       1000:f261 57              PUSH       DI                           ; Save DI register (buffer offset)
+       1000:f262 06              PUSH       ES                           ; Save ES register (buffer segment)
+       1000:f263 1e              PUSH       DS                           ; Save DS register
+       1000:f264 06              PUSH       ES                           ; Push ES to prepare for DS update
+       1000:f265 1f              POP        DS                           ; Set DS = ES (point DS to buffer segment)
+       1000:f266 b9 ff ff        MOV        CX,0xffff                    ; Set CX = 65535 (maximum bytes to read)
+       1000:f269 8b d7           MOV        DX,DI                        ; Set DX = DI (buffer offset for read operation)
+       1000:f26b b4 3f           MOV        AH,0x3f                      ; DOS function 3Fh: Read from file or device
+       1000:f26d cd 21           INT        0x21                         ; Call DOS interrupt (read from file handle in BX into DS:DX buffer, CX bytes max)
+       1000:f26f 1f              POP        DS                           ; Restore original DS register
+       1000:f270 8b c8           MOV        CX,AX                        ; Save number of bytes read (from AX) to CX
+       1000:f272 9c              PUSHF                                   ; Save flags (preserve carry flag and read status)
+       1000:f273 b4 3e           MOV        AH,0x3e                      ; DOS function 3Eh: Close file handle
+       1000:f275 cd 21           INT        0x21                         ; Call DOS interrupt (close file handle in BX)
+       1000:f277 9d              POPF                                    ; Restore flags from read operation
+       1000:f278 07              POP        ES                           ; Restore ES register
+       1000:f279 5f              POP        DI                           ; Restore DI register
+       1000:f27a 5a              POP        DX                           ; Restore DX register
+       1000:f27b c3              RET                                     ; Return to caller (AX contains bytes read, flags indicate success/error)
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
