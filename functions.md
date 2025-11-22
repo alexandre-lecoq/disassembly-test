@@ -57,7 +57,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_1a0f` | `1000:1a0f` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1a34` | `1000:1a34` | calls other functions, conditional logic, stack operations, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_1a9b` | `1000:1a9b` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
-| `FUN_1000_1ac5` | `1000:1ac5` | arithmetic operations, referenced 5 time(s) | 01.asm |
+| `divide_by_16` | `1000:1ac5` | arithmetic operations, referenced 5 time(s) | 01.asm |
 | `FUN_1000_1ad1` | `1000:1ad1` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1ae0` | `1000:1ae0` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_1b0d` | `1000:1b0d` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
@@ -574,7 +574,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_cfa0` | `1000:cfa0` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_cfb9` | `1000:cfb9` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d00f` | `1000:d00f` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 04.asm |
-| `FUN_1000_d03c` | `1000:d03c` | string/memory operations, comparison, referenced 6 time(s) | 04.asm |
+| `skip_to_digit_then_past_digits` | `1000:d03c` | string/memory operations, comparison, referenced 6 time(s) | 04.asm |
 | `FUN_1000_d04e` | `1000:d04e` | referenced 9 time(s); uses: 0xd82c=Display coordinate or position | 04.asm |
 | `FUN_1000_d05f` | `1000:d05f` | referenced 1 time(s); uses: 0xd82c=Display coordinate or position | 04.asm |
 | `FUN_1000_d068` | `1000:d068` | referenced 8 time(s) | 04.asm |
@@ -716,11 +716,11 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_f1fb` | `1000:f1fb` | DOS interrupt call, calls other functions, string/memory operations, memory write operations, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f229` | `1000:f229` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f244` | `1000:f244` | calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
-| `FUN_1000_f260` | `1000:f260` | Reads entire file content from file handle in BX into buffer at ES:DI (max 65535 bytes), then closes the file handle. Returns number of bytes read in AX with carry flag indicating success/error status. DOS file I/O wrapper function. Referenced 2 time(s) | 04.asm |
+| `dos_read_file_and_close` | `1000:f260` | Reads entire file content from file handle in BX into buffer at ES:DI (max 65535 bytes), then closes the file handle. Returns number of bytes read in AX with carry flag indicating success/error status. DOS file I/O wrapper function. Referenced 2 time(s) | 04.asm |
 | `FUN_1000_f27c` | `1000:f27c` | DOS interrupt call, segment manipulation, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f2a7` | `1000:f2a7` | DOS interrupt call, calls other functions, stack operations, referenced 2 time(s) | 04.asm |
-| `FUN_1000_f2d6` | `1000:f2d6` | Seeks to specified position in file from beginning. Takes 32-bit offset in AX:DX (low:high word), retrieves file handle from SS:[0xdbba], and calls DOS function 42h (LSEEK) with AL=00h to set file pointer from start. Returns new file position in DX:AX. DOS file positioning wrapper function. Referenced 2 time(s) | 04.asm |
-| `FUN_1000_f2ea` | `1000:f2ea` | memory write operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s) | 04.asm |
+| `dos_seek_from_start` | `1000:f2d6` | Seeks to specified position in file from beginning. Takes 32-bit offset in AX:DX (low:high word), retrieves file handle from SS:[0xdbba], and calls DOS function 42h (LSEEK) with AL=00h to set file pointer from start. Returns new file position in DX:AX. DOS file positioning wrapper function. Referenced 2 time(s) | 04.asm |
+| `dos_read_from_file` | `1000:f2ea` | memory write operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f2fc` | `1000:f2fc` | DOS interrupt call, calls other functions, stack operations, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f314` | `1000:f314` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f3a7` | `1000:f3a7` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |

@@ -965,7 +965,7 @@
        1000:5bbd e8 a8 74        CALL       FUN_1000_d068                                    undefined FUN_1000_d068()
        1000:5bc0 be e2 00        MOV        SI,0xe2
        1000:5bc3 e8 aa 73        CALL       FUN_1000_cf70                                    undefined FUN_1000_cf70()
-       1000:5bc6 e8 73 74        CALL       FUN_1000_d03c                                    undefined FUN_1000_d03c()
+       1000:5bc6 e8 73 74        CALL       skip_to_digit_then_past_digits                                    undefined skip_to_digit_then_past_digits()
        1000:5bc9 a0 28 00        MOV        AL,[0x28]
        1000:5bcc 32 e4           XOR        AH,AH
        1000:5bce e8 12 87        CALL       FUN_1000_e2e3                                    undefined FUN_1000_e2e3()
@@ -3200,7 +3200,7 @@
        1000:7449 e8 02 f0        CALL       FUN_1000_644e                                    undefined FUN_1000_644e()
        1000:744c 5f              POP        DI
        1000:744d 5e              POP        SI
-       1000:744e e8 74 a6        CALL       FUN_1000_1ac5                                    undefined FUN_1000_1ac5()
+       1000:744e e8 74 a6        CALL       divide_by_16                                    undefined divide_by_16()
        1000:7451 04 02           ADD        AL,0x2
        1000:7453 88 45 0b        MOV        byte ptr [DI + 0xb],AL
        1000:7456 b0 04           MOV        AL,0x4
