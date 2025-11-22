@@ -2546,10 +2546,13 @@
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_a93f                                   XREF[1]:     FUN_1000_a9b9:1000:a9dc(c)  
        1000:a93f 52              PUSH       DX
-       1000:a940 8b 16 c0 db     MOV        DX,word ptr [0xdbc0]
-       1000:a944 8b 0e c2 db     MOV        CX,word ptr [0xdbc2]
-       1000:a948 b8 00 42        MOV        AX,0x4200
-       1000:a94b cd 21           INT        0x21
+       1000:a940 8b 16 c0 db     MOV        DX,word ptr [0xdbc0]         ; DX = low word of file offset
+       1000:a944 8b 0e c2 db     MOV        CX,word ptr [0xdbc2]         ; CX = high word of file offset
+       1000:a948 b8 00 42        MOV        AX,0x4200                    ; AH=42h: LSEEK - Set file position
+                                                                        ; AL=00h: Seek from beginning of file
+                                                                        ; CX:DX = 32-bit offset
+                                                                        ; BX = file handle (set earlier)
+       1000:a94b cd 21           INT        0x21                         ; INT 21h, AH=42h: Seek to position CX:DX from start
        1000:a94d 5a              POP        DX
        1000:a94e 56              PUSH       SI
        1000:a94f 1e              PUSH       DS
@@ -2563,9 +2566,12 @@
        1000:a963 41              INC        CX
                              LAB_1000_a964                                   XREF[1]:     1000:a95f(j)  
        1000:a964 06              PUSH       ES
-       1000:a965 1f              POP        DS
-       1000:a966 b4 3f           MOV        AH,0x3f
-       1000:a968 cd 21           INT        0x21
+       1000:a965 1f              POP        DS                           ; DS = ES (set DS to buffer segment)
+       1000:a966 b4 3f           MOV        AH,0x3f                      ; AH=3Fh: Read from file or device
+                                                                        ; BX = file handle
+                                                                        ; CX = number of bytes to read
+                                                                        ; DS:DX = buffer address
+       1000:a968 cd 21           INT        0x21                         ; INT 21h, AH=3Fh: Read CX bytes from file into DS:DX
        1000:a96a 1f              POP        DS
        1000:a96b 5e              POP        SI
        1000:a96c 89 44 04        MOV        word ptr [SI + 0x4],AX
@@ -2603,8 +2609,9 @@
        1000:a9ab 3b 1e ba db     CMP        BX,word ptr [0xdbba]
        1000:a9af 74 06           JZ         LAB_1000_a9b7
        1000:a9b1 50              PUSH       AX
-       1000:a9b2 b4 3e           MOV        AH,0x3e
-       1000:a9b4 cd 21           INT        0x21
+       1000:a9b2 b4 3e           MOV        AH,0x3e                      ; AH=3Eh: Close file handle
+                                                                        ; BX = file handle to close
+       1000:a9b4 cd 21           INT        0x21                         ; INT 21h, AH=3Eh: Close file handle in BX
        1000:a9b6 58              POP        AX
                              LAB_1000_a9b7                                   XREF[2]:     1000:a9a9(j), 1000:a9af(j)  
        1000:a9b7 f8              CLC
