@@ -965,7 +965,7 @@
        1000:5bbd e8 a8 74        CALL       FUN_1000_d068                                    undefined FUN_1000_d068()
        1000:5bc0 be e2 00        MOV        SI,0xe2
        1000:5bc3 e8 aa 73        CALL       FUN_1000_cf70                                    undefined FUN_1000_cf70()
-       1000:5bc6 e8 73 74        CALL       FUN_1000_d03c                                    undefined FUN_1000_d03c()
+       1000:5bc6 e8 73 74        CALL       skip_to_digit_then_past_digits                                    undefined skip_to_digit_then_past_digits()
        1000:5bc9 a0 28 00        MOV        AL,[0x28]
        1000:5bcc 32 e4           XOR        AH,AH
        1000:5bce e8 12 87        CALL       FUN_1000_e2e3                                    undefined FUN_1000_e2e3()

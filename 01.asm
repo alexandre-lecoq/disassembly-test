@@ -3367,7 +3367,7 @@
        1000:32f8 56              PUSH       SI
        1000:32f9 8b f0           MOV        SI,AX
        1000:32fb e8 72 9c        CALL       FUN_1000_cf70                                    undefined FUN_1000_cf70()
-       1000:32fe e8 3b 9d        CALL       FUN_1000_d03c                                    undefined FUN_1000_d03c()
+       1000:32fe e8 3b 9d        CALL       skip_to_digit_then_past_digits                                    undefined skip_to_digit_then_past_digits()
        1000:3301 8b c2           MOV        AX,DX
        1000:3303 b1 04           MOV        CL,0x4
        1000:3305 d3 e8           SHR        AX,CL

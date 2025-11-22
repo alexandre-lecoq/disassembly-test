@@ -4262,7 +4262,7 @@
                                                                                           FUN_1000_bf26:1000:bf53(c)  
        1000:bf61 57              PUSH       DI
        1000:bf62 50              PUSH       AX
-       1000:bf63 e8 d6 10        CALL       FUN_1000_d03c                                    undefined FUN_1000_d03c()
+       1000:bf63 e8 d6 10        CALL       skip_to_digit_then_past_digits                                    undefined skip_to_digit_then_past_digits()
        1000:bf66 4e              DEC        SI
        1000:bf67 26 c6 04 30     MOV        byte ptr ES:[SI],0x30
        1000:bf6b 58              POP        AX
@@ -4280,7 +4280,7 @@
                                                                                           FUN_1000_bf26:1000:bf3b(c)  
        1000:bf73 57              PUSH       DI
        1000:bf74 50              PUSH       AX
-       1000:bf75 e8 c4 10        CALL       FUN_1000_d03c                                    undefined FUN_1000_d03c()
+       1000:bf75 e8 c4 10        CALL       skip_to_digit_then_past_digits                                    undefined skip_to_digit_then_past_digits()
        1000:bf78 58              POP        AX
        1000:bf79 50              PUSH       AX
        1000:bf7a e8 66 23        CALL       FUN_1000_e2e3                                    undefined FUN_1000_e2e3()

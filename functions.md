@@ -57,7 +57,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_1a0f` | `1000:1a0f` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1a34` | `1000:1a34` | calls other functions, conditional logic, stack operations, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_1a9b` | `1000:1a9b` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
-| `FUN_1000_1ac5` | `1000:1ac5` | arithmetic operations, referenced 5 time(s) | 01.asm |
+| `divide_by_16` | `1000:1ac5` | arithmetic operations, referenced 5 time(s) | 01.asm |
 | `FUN_1000_1ad1` | `1000:1ad1` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1ae0` | `1000:1ae0` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_1b0d` | `1000:1b0d` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
@@ -720,7 +720,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_f27c` | `1000:f27c` | DOS interrupt call, segment manipulation, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f2a7` | `1000:f2a7` | DOS interrupt call, calls other functions, stack operations, referenced 2 time(s) | 04.asm |
 | `dos_seek_from_start` | `1000:f2d6` | Seeks to specified position in file from beginning. Takes 32-bit offset in AX:DX (low:high word), retrieves file handle from SS:[0xdbba], and calls DOS function 42h (LSEEK) with AL=00h to set file pointer from start. Returns new file position in DX:AX. DOS file positioning wrapper function. Referenced 2 time(s) | 04.asm |
-| `FUN_1000_f2ea` | `1000:f2ea` | memory write operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s) | 04.asm |
+| `dos_read_from_file` | `1000:f2ea` | memory write operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f2fc` | `1000:f2fc` | DOS interrupt call, calls other functions, stack operations, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f314` | `1000:f314` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f3a7` | `1000:f3a7` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
