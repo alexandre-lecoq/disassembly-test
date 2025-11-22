@@ -1321,10 +1321,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
-                             undefined __cdecl16near FUN_1000_d03c()
+                             undefined __cdecl16near skip_to_digit_then_past_digits()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
-                             FUN_1000_d03c                                   XREF[6]:     FUN_1000_32c7:1000:32fe(c), 
+                             skip_to_digit_then_past_digits                                   XREF[6]:     FUN_1000_32c7:1000:32fe(c), 
                                                                                           FUN_1000_5bb0:1000:5bc6(c), 
                                                                                           FUN_1000_bf61:1000:bf63(c), 
                                                                                           FUN_1000_bf73:1000:bf75(c), 
@@ -1333,7 +1333,7 @@
        1000:d03c 26 ac           LODSB      ES:SI
        1000:d03e 2c 30           SUB        AL,0x30
        1000:d040 3c 09           CMP        AL,0x9
-       1000:d042 77 f8           JA         FUN_1000_d03c
+       1000:d042 77 f8           JA         skip_to_digit_then_past_digits
                              LAB_1000_d044                                   XREF[1]:     1000:d04a(j)  
        1000:d044 26 ac           LODSB      ES:SI
        1000:d046 2c 30           SUB        AL,0x30
@@ -4247,7 +4247,7 @@
                                                                                           FUN_1000_bdfa:1000:be11(c)  
        1000:e2db 50              PUSH       AX
        1000:e2dc e8 91 ec        CALL       FUN_1000_cf70                                    undefined FUN_1000_cf70()
-       1000:e2df e8 5a ed        CALL       FUN_1000_d03c                                    undefined FUN_1000_d03c()
+       1000:e2df e8 5a ed        CALL       skip_to_digit_then_past_digits                                    undefined skip_to_digit_then_past_digits()
        1000:e2e2 58              POP        AX
                              **************************************************************
                              *                          FUNCTION                          *
