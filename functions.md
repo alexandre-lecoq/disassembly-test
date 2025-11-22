@@ -7,7 +7,7 @@ This document lists all functions found in the disassembled Dune game executable
 ## Function Table
 
 | Function Name | Address | Description | Source File |
-|---------------|---------|-------------|-------------|
+| --------------- | --------- | ------------- | ------------- |
 | `caseD_0` | `N/A` | segment manipulation, conditional logic, comparison, referenced 1 time(s) | 02.asm |
 | `entry` | `1000:0000` | calls other functions, referenced 1 time(s) | 01.asm |
 | `FUN_1000_0083` | `1000:0083` | BIOS video interrupt, Mouse interrupt, calls other functions, conditional logic, comparison, initialization, referenced 2 time(s) | 01.asm |
@@ -25,13 +25,13 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_093f` | `1000:093f` | calls other functions, conditional logic, referenced 1 time(s) | 01.asm |
 | `FUN_1000_0945` | `1000:0945` | calls other functions, conditional logic, referenced 2 time(s) | 01.asm |
 | `FUN_1000_0a16` | `1000:0a16` | calls other functions, conditional logic, stack operations, initialization, referenced 2 time(s) | 01.asm |
-|`FUN_1000_0a23`|`1000:0a23`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0xdbda=Primary video segment address |01.asm|
+| `FUN_1000_0a23` | `1000:0a23` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0xdbda=Primary video segment address | 01.asm |
 | `FUN_1000_0a3e` | `1000:0a3e` | calls other functions, string/memory operations, conditional logic, referenced 6 time(s) | 01.asm |
 | `FUN_1000_0acd` | `1000:0acd` | calls other functions, memory write operations, segment manipulation, stack operations, initialization, referenced 1 time(s) | 01.asm |
 | `FUN_1000_0b21` | `1000:0b21` | calls other functions, conditional logic, referenced 6 time(s) | 01.asm |
 | `FUN_1000_0d45` | `1000:0d45` | calls other functions, stack operations, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_0d8e`|`1000:0d8e`| calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x46d9=Graphics mode indicator |01.asm|
-|`FUN_1000_0e66`|`1000:0e66`| calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations; uses: 0x11ca=Related control flag |01.asm|
+| `FUN_1000_0d8e` | `1000:0d8e` | calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x46d9=Graphics mode indicator | 01.asm |
+| `FUN_1000_0e66` | `1000:0e66` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations; uses: 0x11ca=Related control flag | 01.asm |
 | `FUN_1000_0e77` | `1000:0e77` | calls other functions, conditional logic, stack operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_0fa7` | `1000:0fa7` | calls other functions, conditional logic, referenced 2 time(s) | 01.asm |
 | `FUN_1000_0fd9` | `1000:0fd9` | calls other functions, conditional logic, stack operations, comparison, referenced 3 time(s) | 01.asm |
@@ -46,14 +46,14 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_1771` | `1000:1771` | calls other functions, string/memory operations, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1797` | `1000:1797` | calls other functions, memory write operations, segment manipulation, arithmetic operations, referenced 5 time(s) | 01.asm |
 | `FUN_1000_17be` | `1000:17be` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 4 time(s) | 01.asm |
-|`FUN_1000_17e6`|`1000:17e6`| calls other functions, conditional logic, comparison, referenced 5 time(s); uses: 0x11c9=Input/control state flag |01.asm|
-|`FUN_1000_1803`|`1000:1803`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x28e7=Graphics mode or video mode flag |01.asm|
+| `FUN_1000_17e6` | `1000:17e6` | calls other functions, conditional logic, comparison, referenced 5 time(s); uses: 0x11c9=Input/control state flag | 01.asm |
+| `FUN_1000_1803` | `1000:1803` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x28e7=Graphics mode or video mode flag | 01.asm |
 | `FUN_1000_181e` | `1000:181e` | calls other functions, conditional logic, referenced 1 time(s) | 01.asm |
-|`FUN_1000_1834`|`1000:1834`| calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s); uses: 0xdbd6=Video segment address |01.asm|
+| `FUN_1000_1834` | `1000:1834` | calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s); uses: 0xdbd6=Video segment address | 01.asm |
 | `FUN_1000_1843` | `1000:1843` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_1860`|`1000:1860`| BIOS video interrupt, Mouse interrupt, calls other functions, string/memory operations, conditional logic, comparison, initialization, referenced 2 time(s); uses: 0xce80=High memory initialization flag |01.asm|
+| `FUN_1000_1860` | `1000:1860` | BIOS video interrupt, Mouse interrupt, calls other functions, string/memory operations, conditional logic, comparison, initialization, referenced 2 time(s); uses: 0xce80=High memory initialization flag | 01.asm |
 | `FUN_1000_189a` | `1000:189a` | calls other functions, conditional logic, comparison, referenced 3 time(s) | 01.asm |
-|`FUN_1000_18ba`|`1000:18ba`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x1c06=Display or rendering parameter |01.asm|
+| `FUN_1000_18ba` | `1000:18ba` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x1c06=Display or rendering parameter | 01.asm |
 | `FUN_1000_1a0f` | `1000:1a0f` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1a34` | `1000:1a34` | calls other functions, conditional logic, stack operations, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_1a9b` | `1000:1a9b` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
@@ -63,7 +63,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_1b0d` | `1000:1b0d` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1b23` | `1000:1b23` | calls other functions, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1bb2` | `1000:1bb2` | calls other functions, conditional logic, comparison, referenced 8 time(s) | 01.asm |
-|`FUN_1000_1bec`|`1000:1bec`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x46d9=Graphics mode indicator |01.asm|
+| `FUN_1000_1bec` | `1000:1bec` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x46d9=Graphics mode indicator | 01.asm |
 | `FUN_1000_1c18` | `1000:1c18` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1c46` | `1000:1c46` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_1cda` | `1000:1cda` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
@@ -93,17 +93,17 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_29ee` | `1000:29ee` | calls other functions, referenced 1 time(s) | 01.asm |
 | `FUN_1000_29f0` | `1000:29f0` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_2a34` | `1000:2a34` | conditional logic, arithmetic operations, referenced 1 time(s) | 01.asm |
-|`FUN_1000_2a51`|`1000:2a51`| string/memory operations, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); refs: PHRASE32.HSQ |01.asm|
-|`FUN_1000_2ad8`|`1000:2ad8`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure; refs: COMMAND6.HSQ |01.asm|
+| `FUN_1000_2a51` | `1000:2a51` | string/memory operations, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); refs: PHRASE32.HSQ | 01.asm |
+| `FUN_1000_2ad8` | `1000:2ad8` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure; refs: COMMAND6.HSQ | 01.asm |
 | `FUN_1000_2b2a` | `1000:2b2a` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_2c92` | `1000:2c92` | calls other functions, conditional logic, initialization | 01.asm |
 | `FUN_1000_2d74` | `1000:2d74` | calls other functions, referenced 4 time(s) | 01.asm |
 | `FUN_1000_2db1` | `1000:2db1` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_2e52` | `1000:2e52` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_2e98`|`1000:2e98`| calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x47c4=Current graphics context ID |01.asm|
+| `FUN_1000_2e98` | `1000:2e98` | calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x47c4=Current graphics context ID | 01.asm |
 | `FUN_1000_2ebf` | `1000:2ebf` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_2efb`|`1000:2efb`| string/memory operations, memory write operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure |01.asm|
-|`FUN_1000_2ffb`|`1000:2ffb`| calls other functions, segment manipulation, conditional logic, comparison, referenced 3 time(s); uses: 0x11c9=Input/control state flag, 0x11ca=Related control flag, 0x11cb=Tertiary control flag |01.asm|
+| `FUN_1000_2efb` | `1000:2efb` | string/memory operations, memory write operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure | 01.asm |
+| `FUN_1000_2ffb` | `1000:2ffb` | calls other functions, segment manipulation, conditional logic, comparison, referenced 3 time(s); uses: 0x11c9=Input/control state flag, 0x11ca=Related control flag, 0x11cb=Tertiary control flag | 01.asm |
 | `FUN_1000_31f6` | `1000:31f6` | calls other functions, arithmetic operations, referenced 2 time(s) | 01.asm |
 | `FUN_1000_329d` | `1000:329d` | calls other functions, arithmetic operations | 01.asm |
 | `FUN_1000_32c7` | `1000:32c7` | calls other functions, arithmetic operations | 01.asm |
@@ -114,72 +114,72 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_33be` | `1000:33be` | calls other functions, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_33d9` | `1000:33d9` | stack operations, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_34a5` | `1000:34a5` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_3542`|`1000:3542`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); refs: CONDIT.HSQ |01.asm|
+| `FUN_1000_3542` | `1000:3542` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); refs: CONDIT.HSQ | 01.asm |
 | `FUN_1000_3551` | `1000:3551` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_35ad`|`1000:35ad`| calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0xce7a=Data table or array pointer |01.asm|
+| `FUN_1000_35ad` | `1000:35ad` | calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0xce7a=Data table or array pointer | 01.asm |
 | `FUN_1000_366f` | `1000:366f` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 4 time(s) | 01.asm |
 | `FUN_1000_368b` | `1000:368b` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 4 time(s) | 01.asm |
-|`FUN_1000_36d3`|`1000:36d3`| calls other functions, conditional logic, comparison, referenced 1 time(s); refs: SEKENCE.HSQ, WORMSUIT.HSQ |01.asm|
-|`FUN_1000_36ee`|`1000:36ee`| calls other functions, conditional logic, stack operations, comparison, initialization, referenced 1 time(s); uses: 0x1152=Entity slot or ID |01.asm|
-|`FUN_1000_3723`|`1000:3723`| calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x4774=Data structure pointer |01.asm|
-|`FUN_1000_37b2`|`1000:37b2`| calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0x11c9=Input/control state flag |01.asm|
+| `FUN_1000_36d3` | `1000:36d3` | calls other functions, conditional logic, comparison, referenced 1 time(s); refs: SEKENCE.HSQ, WORMSUIT.HSQ | 01.asm |
+| `FUN_1000_36ee` | `1000:36ee` | calls other functions, conditional logic, stack operations, comparison, initialization, referenced 1 time(s); uses: 0x1152=Entity slot or ID | 01.asm |
+| `FUN_1000_3723` | `1000:3723` | calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x4774=Data structure pointer | 01.asm |
+| `FUN_1000_37b2` | `1000:37b2` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0x11c9=Input/control state flag | 01.asm |
 | `FUN_1000_37b5` | `1000:37b5` | calls other functions, string/memory operations, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_37eb` | `1000:37eb` | calls other functions, conditional logic, referenced 1 time(s) | 01.asm |
 | `FUN_1000_380c` | `1000:380c` | calls other functions, conditional logic, referenced 1 time(s) | 01.asm |
 | `FUN_1000_388d` | `1000:388d` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_38b4` | `1000:38b4` | calls other functions, stack operations, arithmetic operations, comparison, initialization, referenced 2 time(s) | 01.asm |
 | `FUN_1000_38e1` | `1000:38e1` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_38f1`|`1000:38f1`| calls other functions, segment manipulation, conditional logic, referenced 3 time(s); uses: 0x46df=Screen update flag |01.asm|
-|`FUN_1000_3950`|`1000:3950`| calls other functions, segment manipulation, conditional logic, referenced 3 time(s); uses: 0x46df=Screen update flag |01.asm|
+| `FUN_1000_38f1` | `1000:38f1` | calls other functions, segment manipulation, conditional logic, referenced 3 time(s); uses: 0x46df=Screen update flag | 01.asm |
+| `FUN_1000_3950` | `1000:3950` | calls other functions, segment manipulation, conditional logic, referenced 3 time(s); uses: 0x46df=Screen update flag | 01.asm |
 | `FUN_1000_395c` | `1000:395c` | calls other functions, stack operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_3971` | `1000:3971` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_398c` | `1000:398c` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_39b9`|`1000:39b9`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x227d=Game mode or special state flag |01.asm|
+| `FUN_1000_39b9` | `1000:39b9` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x227d=Game mode or special state flag | 01.asm |
 | `FUN_1000_39e6` | `1000:39e6` | calls other functions, conditional logic, referenced 1 time(s) | 01.asm |
 | `FUN_1000_39ec` | `1000:39ec` | calls other functions, segment manipulation, conditional logic, referenced 1 time(s) | 01.asm |
 | `FUN_1000_3a7c` | `1000:3a7c` | calls other functions, segment manipulation, conditional logic, stack operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_3a95` | `1000:3a95` | calls other functions, stack operations, arithmetic operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_3aa9` | `1000:3aa9` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 3 time(s) | 01.asm |
-|`FUN_1000_3ae9`|`1000:3ae9`| calls other functions, segment manipulation, conditional logic, referenced 1 time(s); uses: 0x47a4=Graphics state flag, 0x11c9=Input/control state flag; refs: dune.dat |01.asm|
+| `FUN_1000_3ae9` | `1000:3ae9` | calls other functions, segment manipulation, conditional logic, referenced 1 time(s); uses: 0x47a4=Graphics state flag, 0x11c9=Input/control state flag; refs: dune.dat | 01.asm |
 | `FUN_1000_3af9` | `1000:3af9` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s) | 01.asm |
-|`FUN_1000_3b59`|`1000:3b59`| calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x46df=Screen update flag, 0x4731=Display coordinate or offset, 0x47a4=Graphics state flag |01.asm|
-|`FUN_1000_3be9`|`1000:3be9`| calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0xdbda=Primary video segment address |01.asm|
+| `FUN_1000_3b59` | `1000:3b59` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x46df=Screen update flag, 0x4731=Display coordinate or offset, 0x47a4=Graphics state flag | 01.asm |
+| `FUN_1000_3be9` | `1000:3be9` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0xdbda=Primary video segment address | 01.asm |
 | `FUN_1000_3d12` | `1000:3d12` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_3d2f` | `1000:3d2f` | calls other functions, conditional logic, stack operations, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_3d83` | `1000:3d83` | calls other functions, string/memory operations, conditional logic, stack operations, comparison, referenced 4 time(s) | 01.asm |
 | `FUN_1000_3df4` | `1000:3df4` | calls other functions, string/memory operations, conditional logic, arithmetic operations, referenced 1 time(s) | 01.asm |
-|`FUN_1000_3e13`|`1000:3e13`| calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0x22d9=Status or configuration byte, 0xdbda=Primary video segment address, 0x4c60=Large graphics/screen buffer area |01.asm|
-|`FUN_1000_3e80`|`1000:3e80`| memory write operations, segment manipulation, conditional logic, arithmetic operations, referenced 1 time(s); uses: 0x22d9=Status or configuration byte |01.asm|
-|`FUN_1000_3efe`|`1000:3efe`| string/memory operations, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure |01.asm|
+| `FUN_1000_3e13` | `1000:3e13` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0x22d9=Status or configuration byte, 0xdbda=Primary video segment address, 0x4c60=Large graphics/screen buffer area | 01.asm |
+| `FUN_1000_3e80` | `1000:3e80` | memory write operations, segment manipulation, conditional logic, arithmetic operations, referenced 1 time(s); uses: 0x22d9=Status or configuration byte | 01.asm |
+| `FUN_1000_3efe` | `1000:3efe` | string/memory operations, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure | 01.asm |
 | `FUN_1000_3f15` | `1000:3f15` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_407e` | `1000:407e` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_409a`|`1000:409a`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure, 0x1150=Secondary pointer or index |01.asm|
+| `FUN_1000_409a` | `1000:409a` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure, 0x1150=Secondary pointer or index | 01.asm |
 | `FUN_1000_40ae` | `1000:40ae` | calls other functions, comparison, referenced 3 time(s) | 01.asm |
-|`FUN_1000_40c3`|`1000:40c3`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag |01.asm|
+| `FUN_1000_40c3` | `1000:40c3` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag | 01.asm |
 | `FUN_1000_40e6` | `1000:40e6` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_40f9` | `1000:40f9` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 4 time(s) | 01.asm |
 | `FUN_1000_4182` | `1000:4182` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 4 time(s) | 01.asm |
-|`FUN_1000_41cc`|`1000:41cc`| conditional logic, comparison, referenced 2 time(s); uses: 0x46d9=Graphics mode indicator |01.asm|
-|`FUN_1000_41e1`|`1000:41e1`| calls other functions, string/memory operations, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x11c7=State or flag byte |01.asm|
+| `FUN_1000_41cc` | `1000:41cc` | conditional logic, comparison, referenced 2 time(s); uses: 0x46d9=Graphics mode indicator | 01.asm |
+| `FUN_1000_41e1` | `1000:41e1` | calls other functions, string/memory operations, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x11c7=State or flag byte | 01.asm |
 | `FUN_1000_425b` | `1000:425b` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_42e9` | `1000:42e9` | calls other functions, referenced 1 time(s) | 01.asm |
 | `FUN_1000_439f` | `1000:439f` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_445d` | `1000:445d` | calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_4658` | `1000:4658` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_47fb` | `1000:47fb` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 2 time(s) | 01.asm |
-|`FUN_1000_488a`|`1000:488a`| calls other functions, segment manipulation, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x46df=Screen update flag |01.asm|
+| `FUN_1000_488a` | `1000:488a` | calls other functions, segment manipulation, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x46df=Screen update flag | 01.asm |
 | `FUN_1000_4944` | `1000:4944` | calls other functions, arithmetic operations, referenced 5 time(s) | 01.asm |
 | `FUN_1000_4988` | `1000:4988` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_49a0` | `1000:49a0` | calls other functions, conditional logic, referenced 1 time(s) | 01.asm |
-|`FUN_1000_49d9`|`1000:49d9`| calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag |01.asm|
+| `FUN_1000_49d9` | `1000:49d9` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag | 01.asm |
 | `FUN_1000_49ea` | `1000:49ea` | calls other functions | 01.asm |
 | `FUN_1000_4a00` | `1000:4a00` | calls other functions, memory write operations, segment manipulation, stack operations, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_4a1a`|`1000:4a1a`| calls other functions, string/memory operations, conditional logic, comparison, referenced 1 time(s); uses: 0x4728=Graphics buffer or data pointer |01.asm|
+| `FUN_1000_4a1a` | `1000:4a1a` | calls other functions, string/memory operations, conditional logic, comparison, referenced 1 time(s); uses: 0x4728=Graphics buffer or data pointer | 01.asm |
 | `FUN_1000_4a5a` | `1000:4a5a` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_4ac4`|`1000:4ac4`| referenced 1 time(s); uses: 0x11ca=Related control flag |01.asm|
+| `FUN_1000_4ac4` | `1000:4ac4` | referenced 1 time(s); uses: 0x11ca=Related control flag | 01.asm |
 | `FUN_1000_4aca` | `1000:4aca` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4aeb` | `1000:4aeb` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_4afd`|`1000:4afd`| calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x227d=Game mode or special state flag |01.asm|
+| `FUN_1000_4afd` | `1000:4afd` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x227d=Game mode or special state flag | 01.asm |
 | `FUN_1000_4b2b` | `1000:4b2b` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4b3b` | `1000:4b3b` | calls other functions, segment manipulation, conditional logic, arithmetic operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4b5f` | `1000:4b5f` | arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
@@ -187,42 +187,42 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_4c45` | `1000:4c45` | string/memory operations, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4c92` | `1000:4c92` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4d00` | `1000:4d00` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_4d06`|`1000:4d06`| calls other functions, conditional logic, referenced 1 time(s); uses: 0x4728=Graphics buffer or data pointer; refs: dune.dat |01.asm|
+| `FUN_1000_4d06` | `1000:4d06` | calls other functions, conditional logic, referenced 1 time(s); uses: 0x4728=Graphics buffer or data pointer; refs: dune.dat | 01.asm |
 | `FUN_1000_4d57` | `1000:4d57` | calls other functions, comparison, referenced 5 time(s) | 01.asm |
 | `FUN_1000_4d6c` | `1000:4d6c` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4da0` | `1000:4da0` | string/memory operations, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4ded` | `1000:4ded` | calls other functions, segment manipulation, stack operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4e12` | `1000:4e12` | calls other functions, conditional logic, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4ec6` | `1000:4ec6` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_4f0c`|`1000:4f0c`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x11ca=Related control flag, 0x1c06=Display or rendering parameter |01.asm|
-|`FUN_1000_503c`|`1000:503c`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x46d9=Graphics mode indicator |01.asm|
+| `FUN_1000_4f0c` | `1000:4f0c` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x11ca=Related control flag, 0x1c06=Display or rendering parameter | 01.asm |
+| `FUN_1000_503c` | `1000:503c` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x46d9=Graphics mode indicator | 01.asm |
 | `FUN_1000_5098` | `1000:5098` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_50be`|`1000:50be`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x11cb=Tertiary control flag |01.asm|
+| `FUN_1000_50be` | `1000:50be` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x11cb=Tertiary control flag | 01.asm |
 | `FUN_1000_5119` | `1000:5119` | calls other functions, referenced 1 time(s) | 01.asm |
-|`FUN_1000_5124`|`1000:5124`| calls other functions, arithmetic operations, comparison, referenced 1 time(s); uses: 0x11c7=State or flag byte |01.asm|
-|`FUN_1000_5133`|`1000:5133`| calls other functions, conditional logic, referenced 1 time(s); uses: 0x1150=Secondary pointer or index |01.asm|
+| `FUN_1000_5124` | `1000:5124` | calls other functions, arithmetic operations, comparison, referenced 1 time(s); uses: 0x11c7=State or flag byte | 01.asm |
+| `FUN_1000_5133` | `1000:5133` | calls other functions, conditional logic, referenced 1 time(s); uses: 0x1150=Secondary pointer or index | 01.asm |
 | `FUN_1000_5198` | `1000:5198` | arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_51cb`|`1000:51cb`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x11cb=Tertiary control flag, 0x11c8=Secondary state byte, 0x11c7=State or flag byte |02.asm|
+| `FUN_1000_51cb` | `1000:51cb` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x11cb=Tertiary control flag, 0x11c8=Secondary state byte, 0x11c7=State or flag byte | 02.asm |
 | `FUN_1000_5206` | `1000:5206` | calls other functions, arithmetic operations, referenced 8 time(s) | 02.asm |
 | `FUN_1000_5274` | `1000:5274` | conditional logic, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_5323`|`1000:5323`| calls other functions, arithmetic operations, referenced 5 time(s); uses: 0x11fd=Calculated or derived value |02.asm|
+| `FUN_1000_5323` | `1000:5323` | calls other functions, arithmetic operations, referenced 5 time(s); uses: 0x11fd=Calculated or derived value | 02.asm |
 | `FUN_1000_5344` | `1000:5344` | segment manipulation, conditional logic, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_541f`|`1000:541f`| calls other functions, stack operations, arithmetic operations, referenced 1 time(s); uses: 0x197c=Save/restore position X coordinate, 0x197e=Save/restore position Y coordinate, 0x1982=Backup coordinate Y |02.asm|
-|`FUN_1000_542f`|`1000:542f`| calls other functions, arithmetic operations, referenced 1 time(s); uses: 0x479e=Graphics context or mode identifier |02.asm|
+| `FUN_1000_541f` | `1000:541f` | calls other functions, stack operations, arithmetic operations, referenced 1 time(s); uses: 0x197c=Save/restore position X coordinate, 0x197e=Save/restore position Y coordinate, 0x1982=Backup coordinate Y | 02.asm |
+| `FUN_1000_542f` | `1000:542f` | calls other functions, arithmetic operations, referenced 1 time(s); uses: 0x479e=Graphics context or mode identifier | 02.asm |
 | `FUN_1000_557b` | `1000:557b` | calls other functions, stack operations, arithmetic operations | 02.asm |
-|`FUN_1000_5584`|`1000:5584`| calls other functions, stack operations, arithmetic operations, comparison; uses: 0xdbb2=Segment address for data, 0xdd00=Segment address for extended data, 0x46eb=Major graphics/display mode flag |02.asm|
+| `FUN_1000_5584` | `1000:5584` | calls other functions, stack operations, arithmetic operations, comparison; uses: 0xdbb2=Segment address for data, 0xdd00=Segment address for extended data, 0x46eb=Major graphics/display mode flag | 02.asm |
 | `FUN_1000_55c0` | `1000:55c0` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_55dd` | `1000:55dd` | segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_5605` | `1000:5605` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_563e`|`1000:563e`| calls other functions, arithmetic operations, comparison, referenced 1 time(s); uses: 0x2772=Timer or sequence counter, 0x1980=Backup coordinate X, 0x1982=Backup coordinate Y |02.asm|
+| `FUN_1000_563e` | `1000:563e` | calls other functions, arithmetic operations, comparison, referenced 1 time(s); uses: 0x2772=Timer or sequence counter, 0x1980=Backup coordinate X, 0x1982=Backup coordinate Y | 02.asm |
 | `FUN_1000_57e5` | `1000:57e5` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_586e` | `1000:586e` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, initialization, referenced 1 time(s) | 02.asm |
 | `FUN_1000_58e4` | `1000:58e4` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_5a1a`|`1000:5a1a`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x28e7=Graphics mode or video mode flag |02.asm|
+| `FUN_1000_5a1a` | `1000:5a1a` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x28e7=Graphics mode or video mode flag | 02.asm |
 | `FUN_1000_5adf` | `1000:5adf` | calls other functions, conditional logic, initialization, referenced 1 time(s) | 02.asm |
 | `FUN_1000_5b5d` | `1000:5b5d` | calls other functions, conditional logic, comparison, initialization, referenced 1 time(s) | 02.asm |
 | `FUN_1000_5b69` | `1000:5b69` | calls other functions, conditional logic, stack operations, referenced 2 time(s) | 02.asm |
-|`FUN_1000_5b8d`|`1000:5b8d`| calls other functions, stack operations, arithmetic operations; uses: 0xdd00=Segment address for extended data |02.asm|
+| `FUN_1000_5b8d` | `1000:5b8d` | calls other functions, stack operations, arithmetic operations; uses: 0xdd00=Segment address for extended data | 02.asm |
 | `FUN_1000_5b93` | `1000:5b93` | referenced 3 time(s) | 02.asm |
 | `FUN_1000_5b96` | `1000:5b96` | referenced 3 time(s) | 02.asm |
 | `FUN_1000_5b99` | `1000:5b99` | calls other functions, conditional logic, referenced 4 time(s) | 02.asm |
@@ -230,8 +230,8 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_5ba8` | `1000:5ba8` | calls other functions, conditional logic, referenced 1 time(s) | 02.asm |
 | `FUN_1000_5bb0` | `1000:5bb0` | calls other functions, conditional logic, initialization, referenced 1 time(s) | 02.asm |
 | `FUN_1000_5d36` | `1000:5d36` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_5d44`|`1000:5d44`| calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x11c9=Input/control state flag, 0x4728=Graphics buffer or data pointer, 0x46eb=Major graphics/display mode flag |02.asm|
-|`FUN_1000_5d6d`|`1000:5d6d`| calls other functions, conditional logic, comparison, referenced 2 time(s); uses: 0x46eb=Major graphics/display mode flag |02.asm|
+| `FUN_1000_5d44` | `1000:5d44` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x11c9=Input/control state flag, 0x4728=Graphics buffer or data pointer, 0x46eb=Major graphics/display mode flag | 02.asm |
+| `FUN_1000_5d6d` | `1000:5d6d` | calls other functions, conditional logic, comparison, referenced 2 time(s); uses: 0x46eb=Major graphics/display mode flag | 02.asm |
 | `FUN_1000_5dce` | `1000:5dce` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_5e42` | `1000:5e42` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s) | 02.asm |
 | `FUN_1000_5e4f` | `1000:5e4f` | comparison, referenced 6 time(s) | 02.asm |
@@ -260,7 +260,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_636a` | `1000:636a` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_639a` | `1000:639a` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_63c7` | `1000:63c7` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_63f0`|`1000:63f0`| calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0xdd00=Segment address for extended data |02.asm|
+| `FUN_1000_63f0` | `1000:63f0` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0xdd00=Segment address for extended data | 02.asm |
 | `FUN_1000_642e` | `1000:642e` | calls other functions, string/memory operations, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_644e` | `1000:644e` | calls other functions, conditional logic, referenced 1 time(s) | 02.asm |
 | `FUN_1000_64ef` | `1000:64ef` | calls other functions, conditional logic, arithmetic operations, referenced 1 time(s) | 02.asm |
@@ -287,12 +287,12 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_6c6f` | `1000:6c6f` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_6d19` | `1000:6d19` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_6d7b` | `1000:6d7b` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 6 time(s) | 02.asm |
-|`FUN_1000_6efd`|`1000:6efd`| conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s); uses: 0x114e=Pointer or index to data structure |02.asm|
+| `FUN_1000_6efd` | `1000:6efd` | conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s); uses: 0x114e=Pointer or index to data structure | 02.asm |
 | `FUN_1000_6f56` | `1000:6f56` | segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s) | 02.asm |
 | `FUN_1000_6f78` | `1000:6f78` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_708a` | `1000:708a` | calls other functions, segment manipulation, conditional logic, arithmetic operations, referenced 1 time(s) | 02.asm |
 | `FUN_1000_71b2` | `1000:71b2` | calls other functions, conditional logic, stack operations, comparison, referenced 2 time(s) | 02.asm |
-|`FUN_1000_7429`|`1000:7429`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure |02.asm|
+| `FUN_1000_7429` | `1000:7429` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure | 02.asm |
 | `FUN_1000_765e` | `1000:765e` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_780a` | `1000:780a` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_7847` | `1000:7847` | conditional logic, comparison, initialization, referenced 2 time(s) | 02.asm |
@@ -302,7 +302,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_7b0f` | `1000:7b0f` | calls other functions, conditional logic, initialization, referenced 1 time(s) | 02.asm |
 | `FUN_1000_7b1b` | `1000:7b1b` | calls other functions, conditional logic, arithmetic operations, referenced 8 time(s) | 02.asm |
 | `FUN_1000_7b2b` | `1000:7b2b` | calls other functions, stack operations, arithmetic operations, referenced 1 time(s) | 02.asm |
-|`FUN_1000_7b36`|`1000:7b36`| calls other functions, conditional logic, initialization, referenced 4 time(s); uses: 0x46eb=Major graphics/display mode flag |02.asm|
+| `FUN_1000_7b36` | `1000:7b36` | calls other functions, conditional logic, initialization, referenced 4 time(s); uses: 0x46eb=Major graphics/display mode flag | 02.asm |
 | `FUN_1000_7c63` | `1000:7c63` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_7c8f` | `1000:7c8f` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s) | 02.asm |
 | `FUN_1000_7e3d` | `1000:7e3d` | calls other functions, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 02.asm |
@@ -311,7 +311,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_7f5f` | `1000:7f5f` | calls other functions, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 02.asm |
 | `FUN_1000_80df` | `1000:80df` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_813e` | `1000:813e` | calls other functions, conditional logic, referenced 1 time(s) | 02.asm |
-|`FUN_1000_81d7`|`1000:81d7`| calls other functions, string/memory operations, conditional logic, comparison, referenced 1 time(s); uses: 0xdbda=Primary video segment address |02.asm|
+| `FUN_1000_81d7` | `1000:81d7` | calls other functions, string/memory operations, conditional logic, comparison, referenced 1 time(s); uses: 0xdbda=Primary video segment address | 02.asm |
 | `FUN_1000_8308` | `1000:8308` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_8347` | `1000:8347` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_83bc` | `1000:83bc` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 02.asm |
@@ -321,9 +321,9 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_85cc` | `1000:85cc` | calls other functions, conditional logic, comparison, referenced 4 time(s) | 02.asm |
 | `FUN_1000_8604` | `1000:8604` | calls other functions, conditional logic, arithmetic operations, referenced 1 time(s) | 02.asm |
 | `FUN_1000_8770` | `1000:8770` | calls other functions, stack operations, referenced 1 time(s) | 02.asm |
-|`FUN_1000_878c`|`1000:878c`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x1bea=Secondary buffer value |02.asm|
+| `FUN_1000_878c` | `1000:878c` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x1bea=Secondary buffer value | 02.asm |
 | `FUN_1000_8865` | `1000:8865` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_88af`|`1000:88af`| calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x4774=Data structure pointer |02.asm|
+| `FUN_1000_88af` | `1000:88af` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x4774=Data structure pointer | 02.asm |
 | `FUN_1000_88d2` | `1000:88d2` | calls other functions, string/memory operations, stack operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_88f1` | `1000:88f1` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, comparison, initialization, referenced 1 time(s) | 02.asm |
 | `FUN_1000_8944` | `1000:8944` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, comparison, initialization, referenced 1 time(s) | 02.asm |
@@ -335,51 +335,51 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_8c8a` | `1000:8c8a` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_8ccd` | `1000:8ccd` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_8df0` | `1000:8df0` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_8e16`|`1000:8e16`| calls other functions, conditional logic, arithmetic operations, comparison, initialization, referenced 1 time(s); uses: 0x4788=Display dimension or offset |02.asm|
+| `FUN_1000_8e16` | `1000:8e16` | calls other functions, conditional logic, arithmetic operations, comparison, initialization, referenced 1 time(s); uses: 0x4788=Display dimension or offset | 02.asm |
 | `FUN_1000_8e9e` | `1000:8e9e` | calls other functions, conditional logic, arithmetic operations, referenced 1 time(s) | 02.asm |
 | `FUN_1000_8ed3` | `1000:8ed3` | calls other functions, conditional logic, arithmetic operations, referenced 1 time(s) | 02.asm |
 | `FUN_1000_8f28` | `1000:8f28` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
 | `FUN_1000_8fd1` | `1000:8fd1` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 02.asm |
-|`FUN_1000_9025`|`1000:9025`| calls other functions, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x22fc=Graphics or screen buffer pointer, 0xdbda=Primary video segment address |02.asm|
+| `FUN_1000_9025` | `1000:9025` | calls other functions, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x22fc=Graphics or screen buffer pointer, 0xdbda=Primary video segment address | 02.asm |
 | `FUN_1000_9046` | `1000:9046` | calls other functions, segment manipulation, conditional logic, comparison, initialization, referenced 1 time(s) | 02.asm |
-|`FUN_1000_908c`|`1000:908c`| calls other functions, segment manipulation, conditional logic, comparison, referenced 3 time(s); uses: 0xd83a=Coordinate or boundary value, 0x479e=Graphics context or mode identifier, 0x22fc=Graphics or screen buffer pointer |02.asm|
-|`FUN_1000_90bd`|`1000:90bd`| segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0x10a7=Hardware or configuration flag |03.asm|
-|`FUN_1000_9123`|`1000:9123`| conditional logic, comparison, referenced 3 time(s); uses: 0x114e=Pointer or index to data structure, 0x47d0=Graphics parameter byte |03.asm|
-|`FUN_1000_9197`|`1000:9197`| conditional logic, comparison, referenced 7 time(s); uses: 0x47c4=Current graphics context ID |03.asm|
-|`FUN_1000_91a0`|`1000:91a0`| calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 7 time(s); uses: 0x10a7=Hardware or configuration flag |03.asm|
-|`FUN_1000_920f`|`1000:920f`| segment manipulation, stack operations, arithmetic operations; uses: 0xdbb0=Far pointer to data segment, 0x47cc=Secondary graphics pointer, 0x47ca=Pointer to graphics data |03.asm|
+| `FUN_1000_908c` | `1000:908c` | calls other functions, segment manipulation, conditional logic, comparison, referenced 3 time(s); uses: 0xd83a=Coordinate or boundary value, 0x479e=Graphics context or mode identifier, 0x22fc=Graphics or screen buffer pointer | 02.asm |
+| `FUN_1000_90bd` | `1000:90bd` | segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0x10a7=Hardware or configuration flag | 03.asm |
+| `FUN_1000_9123` | `1000:9123` | conditional logic, comparison, referenced 3 time(s); uses: 0x114e=Pointer or index to data structure, 0x47d0=Graphics parameter byte | 03.asm |
+| `FUN_1000_9197` | `1000:9197` | conditional logic, comparison, referenced 7 time(s); uses: 0x47c4=Current graphics context ID | 03.asm |
+| `FUN_1000_91a0` | `1000:91a0` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 7 time(s); uses: 0x10a7=Hardware or configuration flag | 03.asm |
+| `FUN_1000_920f` | `1000:920f` | segment manipulation, stack operations, arithmetic operations; uses: 0xdbb0=Far pointer to data segment, 0x47cc=Secondary graphics pointer, 0x47ca=Pointer to graphics data | 03.asm |
 | `FUN_1000_9215` | `1000:9215` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9285` | `1000:9285` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_92c9`|`1000:92c9`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID |03.asm|
+| `FUN_1000_92c9` | `1000:92c9` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID | 03.asm |
 | `FUN_1000_9381` | `1000:9381` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_93df` | `1000:93df` | calls other functions, conditional logic, arithmetic operations, referenced 2 time(s) | 03.asm |
 | `FUN_1000_945b` | `1000:945b` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9472` | `1000:9472` | calls other functions, arithmetic operations, referenced 2 time(s) | 03.asm |
-|`FUN_1000_94f3`|`1000:94f3`| calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID, 0x11db=Pointer to entity or object |03.asm|
+| `FUN_1000_94f3` | `1000:94f3` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID, 0x11db=Pointer to entity or object | 03.asm |
 | `FUN_1000_9556` | `1000:9556` | calls other functions, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_956d` | `1000:956d` | comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9655` | `1000:9655` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_96b5`|`1000:96b5`| calls other functions, stack operations, referenced 1 time(s); uses: 0x47c4=Current graphics context ID, 0x47c2=Graphics configuration byte |03.asm|
-|`FUN_1000_96d8`|`1000:96d8`| calls other functions, conditional logic, referenced 2 time(s); uses: 0x47c4=Current graphics context ID; refs: Not enough standard memory for sounds |03.asm|
-|`FUN_1000_9702`|`1000:9702`| calls other functions, conditional logic, referenced 1 time(s); uses: 0x1bea=Secondary buffer value |03.asm|
+| `FUN_1000_96b5` | `1000:96b5` | calls other functions, stack operations, referenced 1 time(s); uses: 0x47c4=Current graphics context ID, 0x47c2=Graphics configuration byte | 03.asm |
+| `FUN_1000_96d8` | `1000:96d8` | calls other functions, conditional logic, referenced 2 time(s); uses: 0x47c4=Current graphics context ID; refs: Not enough standard memory for sounds | 03.asm |
+| `FUN_1000_9702` | `1000:9702` | calls other functions, conditional logic, referenced 1 time(s); uses: 0x1bea=Secondary buffer value | 03.asm |
 | `FUN_1000_978e` | `1000:978e` | calls other functions, conditional logic, comparison, referenced 3 time(s) | 03.asm |
-|`FUN_1000_98b2`|`1000:98b2`| calls other functions, segment manipulation, stack operations, arithmetic operations; uses: 0x22a6=Cached value or lookup result |03.asm|
+| `FUN_1000_98b2` | `1000:98b2` | calls other functions, segment manipulation, stack operations, arithmetic operations; uses: 0x22a6=Cached value or lookup result | 03.asm |
 | `FUN_1000_98e6` | `1000:98e6` | calls other functions, conditional logic, initialization, referenced 5 time(s) | 03.asm |
-|`FUN_1000_98f5`|`1000:98f5`| calls other functions, conditional logic, initialization, referenced 1 time(s); uses: 0x479e=Graphics context or mode identifier |03.asm|
-|`FUN_1000_9901`|`1000:9901`| calls other functions, segment manipulation, arithmetic operations, referenced 2 time(s); uses: 0x479e=Graphics context or mode identifier |03.asm|
+| `FUN_1000_98f5` | `1000:98f5` | calls other functions, conditional logic, initialization, referenced 1 time(s); uses: 0x479e=Graphics context or mode identifier | 03.asm |
+| `FUN_1000_9901` | `1000:9901` | calls other functions, segment manipulation, arithmetic operations, referenced 2 time(s); uses: 0x479e=Graphics context or mode identifier | 03.asm |
 | `FUN_1000_9908` | `1000:9908` | calls other functions, conditional logic, referenced 2 time(s) | 03.asm |
 | `FUN_1000_9945` | `1000:9945` | calls other functions, conditional logic, arithmetic operations, referenced 1 time(s) | 03.asm |
-|`FUN_1000_994f`|`1000:994f`| calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47d1=Graphics flags byte, 0x47ce=Graphics state byte |03.asm|
-|`FUN_1000_996c`|`1000:996c`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID |03.asm|
-|`FUN_1000_9985`|`1000:9985`| calls other functions, segment manipulation, conditional logic, referenced 3 time(s); uses: 0x47ce=Graphics state byte |03.asm|
+| `FUN_1000_994f` | `1000:994f` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47d1=Graphics flags byte, 0x47ce=Graphics state byte | 03.asm |
+| `FUN_1000_996c` | `1000:996c` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID | 03.asm |
+| `FUN_1000_9985` | `1000:9985` | calls other functions, segment manipulation, conditional logic, referenced 3 time(s); uses: 0x47ce=Graphics state byte | 03.asm |
 | `FUN_1000_998e` | `1000:998e` | calls other functions, referenced 2 time(s) | 03.asm |
 | `FUN_1000_99b2` | `1000:99b2` | calls other functions, string/memory operations, arithmetic operations, referenced 4 time(s) | 03.asm |
 | `FUN_1000_99be` | `1000:99be` | calls other functions, segment manipulation, conditional logic, referenced 3 time(s) | 03.asm |
 | `FUN_1000_99da` | `1000:99da` | calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 03.asm |
-|`FUN_1000_9a60`|`1000:9a60`| segment manipulation, conditional logic, referenced 2 time(s); uses: 0x47ce=Graphics state byte |03.asm|
+| `FUN_1000_9a60` | `1000:9a60` | segment manipulation, conditional logic, referenced 2 time(s); uses: 0x47ce=Graphics state byte | 03.asm |
 | `FUN_1000_9a7b` | `1000:9a7b` | calls other functions, segment manipulation, conditional logic, referenced 2 time(s) | 03.asm |
 | `FUN_1000_9ab4` | `1000:9ab4` | calls other functions, segment manipulation, conditional logic, referenced 2 time(s) | 03.asm |
-|`FUN_1000_9b09`|`1000:9b09`| calls other functions, string/memory operations, segment manipulation, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47ca=Pointer to graphics data, 0x47ce=Graphics state byte, 0x47e1=Graphics state or flag word |03.asm|
+| `FUN_1000_9b09` | `1000:9b09` | calls other functions, string/memory operations, segment manipulation, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47ca=Pointer to graphics data, 0x47ce=Graphics state byte, 0x47e1=Graphics state or flag word | 03.asm |
 | `FUN_1000_9b49` | `1000:9b49` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9b8b` | `1000:9b8b` | calls other functions, conditional logic, referenced 2 time(s) | 03.asm |
 | `FUN_1000_9bac` | `1000:9bac` | calls other functions, conditional logic, arithmetic operations, referenced 2 time(s) | 03.asm |
@@ -387,32 +387,32 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_9bee` | `1000:9bee` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9c2d` | `1000:9c2d` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9c54` | `1000:9c54` | calls other functions, string/memory operations, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_9cc6`|`1000:9cc6`| calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47e1=Graphics state or flag word |03.asm|
+| `FUN_1000_9cc6` | `1000:9cc6` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47e1=Graphics state or flag word | 03.asm |
 | `FUN_1000_9d16` | `1000:9d16` | string/memory operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_9d2d`|`1000:9d2d`| calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s); uses: 0xdbda=Primary video segment address, 0xdbb0=Far pointer to data segment |03.asm|
-|`FUN_1000_9d6a`|`1000:9d6a`| calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0xdbd8=Secondary video segment address, 0x47cc=Secondary graphics pointer |03.asm|
+| `FUN_1000_9d2d` | `1000:9d2d` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s); uses: 0xdbda=Primary video segment address, 0xdbb0=Far pointer to data segment | 03.asm |
+| `FUN_1000_9d6a` | `1000:9d6a` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0xdbd8=Secondary video segment address, 0x47cc=Secondary graphics pointer | 03.asm |
 | `FUN_1000_9d94` | `1000:9d94` | string/memory operations, conditional logic, arithmetic operations, referenced 3 time(s) | 03.asm |
-|`FUN_1000_9de3`|`1000:9de3`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID |03.asm|
-|`FUN_1000_9ed5`|`1000:9ed5`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID |03.asm|
+| `FUN_1000_9de3` | `1000:9de3` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID | 03.asm |
+| `FUN_1000_9ed5` | `1000:9ed5` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID | 03.asm |
 | `FUN_1000_9ef1` | `1000:9ef1` | calls other functions, referenced 2 time(s) | 03.asm |
 | `FUN_1000_9efd` | `1000:9efd` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9f1c` | `1000:9f1c` | calls other functions, conditional logic, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9f40` | `1000:9f40` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 03.asm |
-|`FUN_1000_9f82`|`1000:9f82`| calls other functions, conditional logic, stack operations, referenced 2 time(s); uses: 0xdbe4=Color or attribute byte for graphics |03.asm|
+| `FUN_1000_9f82` | `1000:9f82` | calls other functions, conditional logic, stack operations, referenced 2 time(s); uses: 0xdbe4=Color or attribute byte for graphics | 03.asm |
 | `FUN_1000_9f8b` | `1000:9f8b` | calls other functions, conditional logic, comparison, referenced 3 time(s) | 03.asm |
-|`FUN_1000_9f9e`|`1000:9f9e`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID |03.asm|
+| `FUN_1000_9f9e` | `1000:9f9e` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID | 03.asm |
 | `FUN_1000_a03f` | `1000:a03f` | segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_a0f1` | `1000:a0f1` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, comparison, referenced 2 time(s) | 03.asm |
 | `FUN_1000_a1c4` | `1000:a1c4` | string/memory operations, segment manipulation, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_a1e2` | `1000:a1e2` | string/memory operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_a30b` | `1000:a30b` | string/memory operations, segment manipulation, conditional logic, stack operations, comparison, referenced 2 time(s) | 03.asm |
 | `FUN_1000_a334` | `1000:a334` | calls other functions, string/memory operations, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 2 time(s) | 03.asm |
-|`FUN_1000_a396`|`1000:a396`| calls other functions, string/memory operations, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x47c4=Current graphics context ID |03.asm|
+| `FUN_1000_a396` | `1000:a396` | calls other functions, string/memory operations, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x47c4=Current graphics context ID | 03.asm |
 | `FUN_1000_a637` | `1000:a637` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_a650`|`1000:a650`| calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0x289e=Configuration byte |03.asm|
-|`FUN_1000_a6cc`|`1000:a6cc`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID |03.asm|
+| `FUN_1000_a650` | `1000:a650` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0x289e=Configuration byte | 03.asm |
+| `FUN_1000_a6cc` | `1000:a6cc` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID | 03.asm |
 | `FUN_1000_a75c` | `1000:a75c` | calls other functions, referenced 1 time(s) | 03.asm |
-|`FUN_1000_a7a5`|`1000:a7a5`| calls other functions, conditional logic, stack operations, initialization, referenced 1 time(s); uses: 0x47ce=Graphics state byte, 0x47d1=Graphics flags byte |03.asm|
+| `FUN_1000_a7a5` | `1000:a7a5` | calls other functions, conditional logic, stack operations, initialization, referenced 1 time(s); uses: 0x47ce=Graphics state byte, 0x47d1=Graphics flags byte | 03.asm |
 | `FUN_1000_a7c2` | `1000:a7c2` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s) | 03.asm |
 | `FUN_1000_a814` | `1000:a814` | calls other functions, conditional logic, stack operations, arithmetic operations, initialization, referenced 4 time(s) | 03.asm |
 | `FUN_1000_a82e` | `1000:a82e` | calls other functions, conditional logic, stack operations, arithmetic operations, initialization, referenced 4 time(s) | 03.asm |
@@ -420,24 +420,24 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_a87e` | `1000:a87e` | calls other functions, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 03.asm |
 | `FUN_1000_a8b1` | `1000:a8b1` | segment manipulation, stack operations, arithmetic operations, comparison, referenced 3 time(s) | 03.asm |
 | `FUN_1000_a8bc` | `1000:a8bc` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_a90b`|`1000:a90b`| calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0xdc26=Hardware configuration value |03.asm|
+| `FUN_1000_a90b` | `1000:a90b` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0xdc26=Hardware configuration value | 03.asm |
 | `FUN_1000_a93f` | `1000:a93f` | DOS interrupt call, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_a9a1` | `1000:a9a1` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 2 time(s) | 03.asm |
 | `FUN_1000_a9b9` | `1000:a9b9` | calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 03.asm |
-|`FUN_1000_a9e7`|`1000:a9e7`| calls other functions, conditional logic, stack operations, arithmetic operations, referenced 1 time(s); uses: 0xce7a=Data table or array pointer |03.asm|
+| `FUN_1000_a9e7` | `1000:a9e7` | calls other functions, conditional logic, stack operations, arithmetic operations, referenced 1 time(s); uses: 0xce7a=Data table or array pointer | 03.asm |
 | `FUN_1000_a9f4` | `1000:a9f4` | calls other functions, segment manipulation, conditional logic, arithmetic operations, initialization, referenced 1 time(s) | 03.asm |
 | `FUN_1000_aa0f` | `1000:aa0f` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, initialization, referenced 1 time(s) | 03.asm |
 | `FUN_1000_aa70` | `1000:aa70` | calls other functions, segment manipulation, conditional logic, initialization, referenced 1 time(s) | 03.asm |
-|`FUN_1000_aa96`|`1000:aa96`| conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x4774=Data structure pointer, 0x46d9=Graphics mode indicator, 0x11c9=Input/control state flag |03.asm|
+| `FUN_1000_aa96` | `1000:aa96` | conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x4774=Data structure pointer, 0x46d9=Graphics mode indicator, 0x11c9=Input/control state flag | 03.asm |
 | `FUN_1000_ab15` | `1000:ab15` | calls other functions, conditional logic, comparison, referenced 5 time(s) | 03.asm |
 | `FUN_1000_ab4f` | `1000:ab4f` | calls other functions, segment manipulation, conditional logic, arithmetic operations, referenced 3 time(s) | 03.asm |
 | `FUN_1000_ab92` | `1000:ab92` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_aba3` | `1000:aba3` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_aba9` | `1000:aba9` | calls other functions, conditional logic, stack operations, comparison, referenced 2 time(s) | 03.asm |
 | `FUN_1000_abc6` | `1000:abc6` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 03.asm |
-|`FUN_1000_abcc`|`1000:abcc`| conditional logic, comparison, referenced 3 time(s); uses: 0x47c4=Current graphics context ID, 0xd83a=Coordinate or boundary value, 0x47e1=Graphics state or flag word |03.asm|
+| `FUN_1000_abcc` | `1000:abcc` | conditional logic, comparison, referenced 3 time(s); uses: 0x47c4=Current graphics context ID, 0xd83a=Coordinate or boundary value, 0x47e1=Graphics state or flag word | 03.asm |
 | `FUN_1000_abd5` | `1000:abd5` | calls other functions, segment manipulation, conditional logic, arithmetic operations, referenced 1 time(s) | 03.asm |
-|`FUN_1000_abe9`|`1000:abe9`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer |03.asm|
+| `FUN_1000_abe9` | `1000:abe9` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer | 03.asm |
 | `FUN_1000_ac14` | `1000:ac14` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_ac30` | `1000:ac30` | calls other functions, arithmetic operations, referenced 5 time(s) | 03.asm |
 | `FUN_1000_acbf` | `1000:acbf` | calls other functions, arithmetic operations, referenced 1 time(s) | 03.asm |
@@ -454,9 +454,9 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_ae2f` | `1000:ae2f` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_ae3f` | `1000:ae3f` | calls other functions, conditional logic, referenced 1 time(s) | 03.asm |
 | `FUN_1000_ae54` | `1000:ae54` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_ae62`|`1000:ae62`| calls other functions, segment manipulation, initialization, referenced 9 time(s); uses: 0x3810=High memory flag or configuration, 0xdbcd=System configuration value |03.asm|
+| `FUN_1000_ae62` | `1000:ae62` | calls other functions, segment manipulation, initialization, referenced 9 time(s); uses: 0x3810=High memory flag or configuration, 0xdbcd=System configuration value | 03.asm |
 | `FUN_1000_aeb7` | `1000:aeb7` | calls other functions, conditional logic, comparison, referenced 5 time(s) | 03.asm |
-|`FUN_1000_aec6`|`1000:aec6`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0xdbcd=System configuration value |03.asm|
+| `FUN_1000_aec6` | `1000:aec6` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0xdbcd=System configuration value | 03.asm |
 | `FUN_1000_b17a` | `1000:b17a` | calls other functions, segment manipulation, stack operations, referenced 4 time(s) | 03.asm |
 | `FUN_1000_b270` | `1000:b270` | memory write operations, segment manipulation, stack operations, initialization, referenced 2 time(s) | 03.asm |
 | `FUN_1000_b2b3` | `1000:b2b3` | referenced 1 time(s) | 03.asm |
@@ -469,14 +469,14 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_b53b` | `1000:b53b` | calls other functions, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_b56c` | `1000:b56c` | calls other functions, stack operations, comparison, referenced 2 time(s) | 03.asm |
 | `FUN_1000_b58b` | `1000:b58b` | calls other functions, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_b5a0`|`1000:b5a0`| segment manipulation, stack operations, arithmetic operations, referenced 1 time(s); uses: 0xdcfe=System or hardware parameter |03.asm|
+| `FUN_1000_b5a0` | `1000:b5a0` | segment manipulation, stack operations, arithmetic operations, referenced 1 time(s); uses: 0xdcfe=System or hardware parameter | 03.asm |
 | `FUN_1000_b5c5` | `1000:b5c5` | calls other functions, conditional logic, arithmetic operations, comparison, initialization, referenced 1 time(s) | 03.asm |
 | `FUN_1000_b5cf` | `1000:b5cf` | conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_b5f9`|`1000:b5f9`| segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x197e=Save/restore position Y coordinate |03.asm|
-|`FUN_1000_b647`|`1000:b647`| segment manipulation, conditional logic, arithmetic operations, referenced 4 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x197e=Save/restore position Y coordinate, 0x197c=Save/restore position X coordinate |03.asm|
-|`FUN_1000_b69a`|`1000:b69a`| referenced 2 time(s); uses: 0x197c=Save/restore position X coordinate, 0x1980=Backup coordinate X, 0x197e=Save/restore position Y coordinate |03.asm|
-|`FUN_1000_b6c3`|`1000:b6c3`| segment manipulation, conditional logic, stack operations, comparison, referenced 4 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x197e=Save/restore position Y coordinate, 0x197c=Save/restore position X coordinate |03.asm|
-|`FUN_1000_b7d2`|`1000:b7d2`| calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, referenced 1 time(s); uses: 0xdbda=Primary video segment address, 0x46eb=Major graphics/display mode flag |03.asm|
+| `FUN_1000_b5f9` | `1000:b5f9` | segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x197e=Save/restore position Y coordinate | 03.asm |
+| `FUN_1000_b647` | `1000:b647` | segment manipulation, conditional logic, arithmetic operations, referenced 4 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x197e=Save/restore position Y coordinate, 0x197c=Save/restore position X coordinate | 03.asm |
+| `FUN_1000_b69a` | `1000:b69a` | referenced 2 time(s); uses: 0x197c=Save/restore position X coordinate, 0x1980=Backup coordinate X, 0x197e=Save/restore position Y coordinate | 03.asm |
+| `FUN_1000_b6c3` | `1000:b6c3` | segment manipulation, conditional logic, stack operations, comparison, referenced 4 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x197e=Save/restore position Y coordinate, 0x197c=Save/restore position X coordinate | 03.asm |
+| `FUN_1000_b7d2` | `1000:b7d2` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, referenced 1 time(s); uses: 0xdbda=Primary video segment address, 0x46eb=Major graphics/display mode flag | 03.asm |
 | `FUN_1000_b930` | `1000:b930` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 03.asm |
 | `FUN_1000_bdbb` | `1000:bdbb` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_bdfa` | `1000:bdfa` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 2 time(s) | 03.asm |
@@ -485,15 +485,15 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_bf61` | `1000:bf61` | calls other functions, segment manipulation, conditional logic, stack operations, referenced 4 time(s) | 03.asm |
 | `FUN_1000_bf73` | `1000:bf73` | calls other functions, conditional logic, referenced 4 time(s) | 03.asm |
 | `FUN_1000_bfa7` | `1000:bfa7` | calls other functions, segment manipulation, conditional logic, stack operations, referenced 1 time(s) | 03.asm |
-|`FUN_1000_bfe3`|`1000:bfe3`| string/memory operations, conditional logic, arithmetic operations, comparison, initialization, referenced 1 time(s); uses: 0xdd00=Segment address for extended data |03.asm|
+| `FUN_1000_bfe3` | `1000:bfe3` | string/memory operations, conditional logic, arithmetic operations, comparison, initialization, referenced 1 time(s); uses: 0xdd00=Segment address for extended data | 03.asm |
 | `FUN_1000_c02e` | `1000:c02e` | calls other functions, memory write operations, segment manipulation, stack operations | 03.asm |
-|`FUN_1000_c07c`|`1000:c07c`| calls other functions, conditional logic, referenced 2 time(s); uses: 0x4788=Display dimension or offset |03.asm|
-|`FUN_1000_c085`|`1000:c085`| stack operations, referenced 5 time(s); uses: 0xdbda=Primary video segment address |03.asm|
+| `FUN_1000_c07c` | `1000:c07c` | calls other functions, conditional logic, referenced 2 time(s); uses: 0x4788=Display dimension or offset | 03.asm |
+| `FUN_1000_c085` | `1000:c085` | stack operations, referenced 5 time(s); uses: 0xdbda=Primary video segment address | 03.asm |
 | `FUN_1000_c08e` | `1000:c08e` | calls other functions, string/memory operations, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_c097` | `1000:c097` | calls other functions, stack operations, referenced 10 time(s) | 03.asm |
-|`FUN_1000_c0ad`|`1000:c0ad`| calls other functions, segment manipulation, stack operations, referenced 3 time(s); uses: 0xdbda=Primary video segment address |03.asm|
-|`FUN_1000_c0d5`|`1000:c0d5`| calls other functions, segment manipulation, stack operations, referenced 1 time(s); uses: 0xdbd8=Secondary video segment address, 0xdbd6=Video segment address |03.asm|
-|`FUN_1000_c0e8`|`1000:c0e8`| calls other functions, segment manipulation, referenced 3 time(s); uses: 0xdbd8=Secondary video segment address |03.asm|
+| `FUN_1000_c0ad` | `1000:c0ad` | calls other functions, segment manipulation, stack operations, referenced 3 time(s); uses: 0xdbda=Primary video segment address | 03.asm |
+| `FUN_1000_c0d5` | `1000:c0d5` | calls other functions, segment manipulation, stack operations, referenced 1 time(s); uses: 0xdbd8=Secondary video segment address, 0xdbd6=Video segment address | 03.asm |
+| `FUN_1000_c0e8` | `1000:c0e8` | calls other functions, segment manipulation, referenced 3 time(s); uses: 0xdbd8=Secondary video segment address | 03.asm |
 | `FUN_1000_c0f4` | `1000:c0f4` | calls other functions, conditional logic, arithmetic operations, referenced 2 time(s) | 03.asm |
 | `FUN_1000_c102` | `1000:c102` | calls other functions, referenced 2 time(s) | 03.asm |
 | `FUN_1000_c108` | `1000:c108` | referenced 15 time(s) | 03.asm |
@@ -502,7 +502,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_c13e` | `1000:c13e` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_c1aa` | `1000:c1aa` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_c1ba` | `1000:c1ba` | calls other functions, string/memory operations, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 2 time(s) | 03.asm |
-|`FUN_1000_c1f4`|`1000:c1f4`| segment manipulation, stack operations, arithmetic operations, referenced 10 time(s); uses: 0xdbb0=Far pointer to data segment |03.asm|
+| `FUN_1000_c1f4` | `1000:c1f4` | segment manipulation, stack operations, arithmetic operations, referenced 10 time(s); uses: 0xdbb0=Far pointer to data segment | 03.asm |
 | `FUN_1000_c202` | `1000:c202` | calls other functions, string/memory operations, stack operations, referenced 2 time(s) | 03.asm |
 | `FUN_1000_c21b` | `1000:c21b` | calls other functions, string/memory operations, conditional logic, stack operations, comparison, referenced 6 time(s) | 03.asm |
 | `FUN_1000_c22f` | `1000:c22f` | conditional logic, referenced 19 time(s) | 03.asm |
@@ -511,33 +511,33 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_c2fd` | `1000:c2fd` | calls other functions, stack operations, referenced 5 time(s) | 03.asm |
 | `FUN_1000_c305` | `1000:c305` | calls other functions, segment manipulation, stack operations, referenced 3 time(s) | 03.asm |
 | `FUN_1000_c30d` | `1000:c30d` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, referenced 5 time(s) | 03.asm |
-|`FUN_1000_c343`|`1000:c343`| calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s); uses: 0xdbda=Primary video segment address, 0xdbb0=Far pointer to data segment |03.asm|
-|`FUN_1000_c370`|`1000:c370`| calls other functions, string/memory operations, stack operations, arithmetic operations, referenced 4 time(s); uses: 0xdbb0=Far pointer to data segment |03.asm|
-|`FUN_1000_c412`|`1000:c412`| calls other functions, segment manipulation, stack operations, referenced 11 time(s); uses: 0xdbde=Tertiary video segment address, 0xdbda=Primary video segment address |03.asm|
-|`FUN_1000_c432`|`1000:c432`| calls other functions, segment manipulation, conditional logic, referenced 1 time(s); uses: 0xdbda=Primary video segment address |03.asm|
+| `FUN_1000_c343` | `1000:c343` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s); uses: 0xdbda=Primary video segment address, 0xdbb0=Far pointer to data segment | 03.asm |
+| `FUN_1000_c370` | `1000:c370` | calls other functions, string/memory operations, stack operations, arithmetic operations, referenced 4 time(s); uses: 0xdbb0=Far pointer to data segment | 03.asm |
+| `FUN_1000_c412` | `1000:c412` | calls other functions, segment manipulation, stack operations, referenced 11 time(s); uses: 0xdbde=Tertiary video segment address, 0xdbda=Primary video segment address | 03.asm |
+| `FUN_1000_c432` | `1000:c432` | calls other functions, segment manipulation, conditional logic, referenced 1 time(s); uses: 0xdbda=Primary video segment address | 03.asm |
 | `FUN_1000_c43e` | `1000:c43e` | calls other functions, conditional logic, referenced 2 time(s) | 03.asm |
 | `FUN_1000_c443` | `1000:c443` | referenced 1 time(s) | 03.asm |
 | `FUN_1000_c446` | `1000:c446` | calls other functions, conditional logic, referenced 2 time(s) | 03.asm |
 | `FUN_1000_c46f` | `1000:c46f` | conditional logic, referenced 1 time(s) | 03.asm |
 | `FUN_1000_c474` | `1000:c474` | calls other functions, segment manipulation, stack operations, referenced 1 time(s) | 03.asm |
 | `FUN_1000_c477` | `1000:c477` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 03.asm |
-|`FUN_1000_c49a`|`1000:c49a`| calls other functions, segment manipulation, stack operations, referenced 3 time(s); uses: 0xdbd6=Video segment address, 0xdbd8=Secondary video segment address |03.asm|
-|`FUN_1000_c4aa`|`1000:c4aa`| calls other functions, segment manipulation, stack operations, referenced 2 time(s); uses: 0xdbd6=Video segment address, 0xdbd8=Secondary video segment address |03.asm|
+| `FUN_1000_c49a` | `1000:c49a` | calls other functions, segment manipulation, stack operations, referenced 3 time(s); uses: 0xdbd6=Video segment address, 0xdbd8=Secondary video segment address | 03.asm |
+| `FUN_1000_c4aa` | `1000:c4aa` | calls other functions, segment manipulation, stack operations, referenced 2 time(s); uses: 0xdbd6=Video segment address, 0xdbd8=Secondary video segment address | 03.asm |
 | `FUN_1000_c4cd` | `1000:c4cd` | calls other functions, referenced 15 time(s) | 03.asm |
 | `FUN_1000_c4dd` | `1000:c4dd` | calls other functions, conditional logic, arithmetic operations, referenced 2 time(s) | 03.asm |
 | `FUN_1000_c4f0` | `1000:c4f0` | calls other functions, conditional logic, referenced 2 time(s) | 03.asm |
-|`FUN_1000_c4fb`|`1000:c4fb`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x227d=Game mode or special state flag |03.asm|
+| `FUN_1000_c4fb` | `1000:c4fb` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x227d=Game mode or special state flag | 03.asm |
 | `FUN_1000_c51e` | `1000:c51e` | calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 5 time(s) | 03.asm |
-|`FUN_1000_c53e`|`1000:c53e`| calls other functions, string/memory operations, segment manipulation, referenced 4 time(s); uses: 0x2772=Timer or sequence counter, 0xdbe4=Color or attribute byte for graphics, 0xdbda=Primary video segment address |03.asm|
+| `FUN_1000_c53e` | `1000:c53e` | calls other functions, string/memory operations, segment manipulation, referenced 4 time(s); uses: 0x2772=Timer or sequence counter, 0xdbe4=Color or attribute byte for graphics, 0xdbda=Primary video segment address | 03.asm |
 | `FUN_1000_c551` | `1000:c551` | calls other functions, string/memory operations, referenced 1 time(s) | 03.asm |
-|`FUN_1000_c560`|`1000:c560`| calls other functions, stack operations, referenced 2 time(s); uses: 0xdbe4=Color or attribute byte for graphics |03.asm|
+| `FUN_1000_c560` | `1000:c560` | calls other functions, stack operations, referenced 2 time(s); uses: 0xdbe4=Color or attribute byte for graphics | 03.asm |
 | `FUN_1000_c58a` | `1000:c58a` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 3 time(s) | 03.asm |
 | `FUN_1000_c5cf` | `1000:c5cf` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 3 time(s) | 03.asm |
 | `FUN_1000_c60b` | `1000:c60b` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_c653` | `1000:c653` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_c6ad` | `1000:c6ad` | calls other functions, arithmetic operations, comparison, referenced 2 time(s) | 04.asm |
 | `FUN_1000_c7d4` | `1000:c7d4` | calls other functions, string/memory operations, conditional logic, arithmetic operations, comparison, referenced 2 time(s) | 04.asm |
-|`FUN_1000_c85b`|`1000:c85b`| calls other functions, stack operations, referenced 2 time(s); uses: 0xce7a=Data table or array pointer |04.asm|
+| `FUN_1000_c85b` | `1000:c85b` | calls other functions, stack operations, referenced 2 time(s); uses: 0xce7a=Data table or array pointer | 04.asm |
 | `FUN_1000_c8fb` | `1000:c8fb` | calls other functions, conditional logic, stack operations, referenced 2 time(s) | 04.asm |
 | `FUN_1000_c921` | `1000:c921` | calls other functions, arithmetic operations, referenced 5 time(s) | 04.asm |
 | `FUN_1000_c92b` | `1000:c92b` | calls other functions, referenced 2 time(s) | 04.asm |
@@ -545,7 +545,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_c9f4` | `1000:c9f4` | calls other functions, conditional logic, arithmetic operations, referenced 5 time(s) | 04.asm |
 | `FUN_1000_ca01` | `1000:ca01` | calls other functions, arithmetic operations, referenced 5 time(s) | 04.asm |
 | `FUN_1000_ca1b` | `1000:ca1b` | calls other functions, conditional logic, referenced 2 time(s) | 04.asm |
-|`FUN_1000_ca59`|`1000:ca59`| calls other functions, conditional logic, comparison, referenced 2 time(s); uses: 0xce7a=Data table or array pointer |04.asm|
+| `FUN_1000_ca59` | `1000:ca59` | calls other functions, conditional logic, comparison, referenced 2 time(s); uses: 0xce7a=Data table or array pointer | 04.asm |
 | `FUN_1000_ca60` | `1000:ca60` | calls other functions, conditional logic, comparison, referenced 9 time(s) | 04.asm |
 | `FUN_1000_ca8f` | `1000:ca8f` | calls other functions, conditional logic, referenced 1 time(s) | 04.asm |
 | `FUN_1000_ca9a` | `1000:ca9a` | string/memory operations, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
@@ -560,7 +560,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_cc96` | `1000:cc96` | calls other functions, segment manipulation, conditional logic, stack operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_ccf4` | `1000:ccf4` | calls other functions, segment manipulation, conditional logic, stack operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_cd8f` | `1000:cd8f` | calls other functions, string/memory operations, segment manipulation, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_cda0`|`1000:cda0`| calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0xdbde=Tertiary video segment address |04.asm|
+| `FUN_1000_cda0` | `1000:cda0` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0xdbde=Tertiary video segment address | 04.asm |
 | `FUN_1000_cdbf` | `1000:cdbf` | calls other functions, string/memory operations, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_cdf7` | `1000:cdf7` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_ce01` | `1000:ce01` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
@@ -575,13 +575,13 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_cfb9` | `1000:cfb9` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d00f` | `1000:d00f` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d03c` | `1000:d03c` | string/memory operations, comparison, referenced 6 time(s) | 04.asm |
-|`FUN_1000_d04e`|`1000:d04e`| referenced 9 time(s); uses: 0xd82c=Display coordinate or position |04.asm|
-|`FUN_1000_d05f`|`1000:d05f`| referenced 1 time(s); uses: 0xd82c=Display coordinate or position |04.asm|
+| `FUN_1000_d04e` | `1000:d04e` | referenced 9 time(s); uses: 0xd82c=Display coordinate or position | 04.asm |
+| `FUN_1000_d05f` | `1000:d05f` | referenced 1 time(s); uses: 0xd82c=Display coordinate or position | 04.asm |
 | `FUN_1000_d068` | `1000:d068` | referenced 8 time(s) | 04.asm |
 | `FUN_1000_d075` | `1000:d075` | referenced 9 time(s) | 04.asm |
 | `FUN_1000_d082` | `1000:d082` | segment manipulation, conditional logic, stack operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d0e3` | `1000:d0e3` | segment manipulation, conditional logic, stack operations, referenced 1 time(s) | 04.asm |
-|`FUN_1000_d194`|`1000:d194`| calls other functions, referenced 15 time(s); uses: 0xdbe4=Color or attribute byte for graphics |04.asm|
+| `FUN_1000_d194` | `1000:d194` | calls other functions, referenced 15 time(s); uses: 0xdbe4=Color or attribute byte for graphics | 04.asm |
 | `FUN_1000_d19b` | `1000:d19b` | calls other functions, string/memory operations, conditional logic, stack operations, referenced 2 time(s) | 04.asm |
 | `FUN_1000_d1a6` | `1000:d1a6` | calls other functions, string/memory operations, conditional logic, stack operations, referenced 3 time(s) | 04.asm |
 | `FUN_1000_d1bb` | `1000:d1bb` | calls other functions, string/memory operations, conditional logic, stack operations, referenced 2 time(s) | 04.asm |
@@ -608,19 +608,19 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_d65a` | `1000:d65a` | calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d694` | `1000:d694` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d6b7` | `1000:d6b7` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 2 time(s) | 04.asm |
-|`FUN_1000_d6fe`|`1000:d6fe`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID |04.asm|
-|`FUN_1000_d717`|`1000:d717`| segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x11c9=Input/control state flag |04.asm|
+| `FUN_1000_d6fe` | `1000:d6fe` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x47c4=Current graphics context ID | 04.asm |
+| `FUN_1000_d717` | `1000:d717` | segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0x46eb=Major graphics/display mode flag, 0x11c9=Input/control state flag | 04.asm |
 | `FUN_1000_d72b` | `1000:d72b` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d741` | `1000:d741` | calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
 | `FUN_1000_d763` | `1000:d763` | calls other functions, conditional logic, arithmetic operations, referenced 3 time(s) | 04.asm |
-|`FUN_1000_d7b7`|`1000:d7b7`| segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer, 0x1152=Entity slot or ID |04.asm|
-|`FUN_1000_d815`|`1000:d815`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer |04.asm|
+| `FUN_1000_d7b7` | `1000:d7b7` | segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer, 0x1152=Entity slot or ID | 04.asm |
+| `FUN_1000_d815` | `1000:d815` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer | 04.asm |
 | `FUN_1000_d95b` | `1000:d95b` | comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d95e` | `1000:d95e` | conditional logic, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_d962` | `1000:d962` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_d9d2`|`1000:d9d2`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x46d9=Graphics mode indicator |04.asm|
+| `FUN_1000_d9d2` | `1000:d9d2` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0x46d9=Graphics mode indicator | 04.asm |
 | `FUN_1000_da25` | `1000:da25` | memory write operations, segment manipulation, stack operations, arithmetic operations, comparison, referenced 10 time(s) | 04.asm |
-|`FUN_1000_da53`|`1000:da53`| referenced 2 time(s); uses: 0x46d7=Graphics/display state flag |04.asm|
+| `FUN_1000_da53` | `1000:da53` | referenced 2 time(s); uses: 0x46d7=Graphics/display state flag | 04.asm |
 | `FUN_1000_da5f` | `1000:da5f` | referenced 19 time(s) | 04.asm |
 | `FUN_1000_daa3` | `1000:daa3` | arithmetic operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_daaa` | `1000:daaa` | arithmetic operations, comparison, referenced 2 time(s) | 04.asm |
@@ -631,30 +631,30 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_db44` | `1000:db44` | Mouse interrupt, calls other functions, referenced 1 time(s) | 04.asm |
 | `FUN_1000_db4c` | `1000:db4c` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_db67` | `1000:db67` | calls other functions, conditional logic, comparison, referenced 6 time(s) | 04.asm |
-|`FUN_1000_db74`|`1000:db74`| arithmetic operations, comparison, referenced 6 time(s); uses: 0xdc46=Mouse or cursor state flag, 0xdc42=Mouse or cursor X coordinate, 0xdc44=Mouse or cursor Y coordinate |04.asm|
+| `FUN_1000_db74` | `1000:db74` | arithmetic operations, comparison, referenced 6 time(s); uses: 0xdc46=Mouse or cursor state flag, 0xdc42=Mouse or cursor X coordinate, 0xdc44=Mouse or cursor Y coordinate | 04.asm |
 | `FUN_1000_dbb2` | `1000:dbb2` | string/memory operations, memory write operations, segment manipulation, comparison, referenced 5 time(s) | 04.asm |
-|`FUN_1000_dbca`|`1000:dbca`| comparison, referenced 1 time(s); uses: 0xdc44=Mouse or cursor Y coordinate, 0xdc46=Mouse or cursor state flag |04.asm|
-|`FUN_1000_dbe3`|`1000:dbe3`| comparison, referenced 1 time(s); uses: 0xdc44=Mouse or cursor Y coordinate |04.asm|
+| `FUN_1000_dbca` | `1000:dbca` | comparison, referenced 1 time(s); uses: 0xdc44=Mouse or cursor Y coordinate, 0xdc46=Mouse or cursor state flag | 04.asm |
+| `FUN_1000_dbe3` | `1000:dbe3` | comparison, referenced 1 time(s); uses: 0xdc44=Mouse or cursor Y coordinate | 04.asm |
 | `FUN_1000_dbec` | `1000:dbec` | calls other functions, conditional logic, stack operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_dc20` | `1000:dc20` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_dc6a`|`1000:dc6a`| calls other functions, conditional logic, comparison, referenced 2 time(s); uses: 0xdc46=Mouse or cursor state flag, 0xdc42=Mouse or cursor X coordinate, 0xdc44=Mouse or cursor Y coordinate |04.asm|
+| `FUN_1000_dc6a` | `1000:dc6a` | calls other functions, conditional logic, comparison, referenced 2 time(s); uses: 0xdc46=Mouse or cursor state flag, 0xdc42=Mouse or cursor X coordinate, 0xdc44=Mouse or cursor Y coordinate | 04.asm |
 | `FUN_1000_dce0` | `1000:dce0` | conditional logic, stack operations, arithmetic operations, referenced 3 time(s) | 04.asm |
 | `FUN_1000_dd10` | `1000:dd10` | calls other functions, segment manipulation, conditional logic, comparison, initialization, referenced 1 time(s) | 04.asm |
 | `FUN_1000_dd5a` | `1000:dd5a` | calls other functions, conditional logic, referenced 2 time(s) | 04.asm |
 | `FUN_1000_dd63` | `1000:dd63` | Mouse interrupt, calls other functions, segment manipulation, conditional logic, comparison, referenced 6 time(s) | 04.asm |
 | `FUN_1000_ddb0` | `1000:ddb0` | calls other functions, conditional logic, stack operations, comparison, referenced 7 time(s) | 04.asm |
-|`FUN_1000_ddf0`|`1000:ddf0`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0xdbcd=System configuration value |04.asm|
-|`FUN_1000_de0c`|`1000:de0c`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s); uses: 0xdbcd=System configuration value |04.asm|
+| `FUN_1000_ddf0` | `1000:ddf0` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); uses: 0xdbcd=System configuration value | 04.asm |
+| `FUN_1000_de0c` | `1000:de0c` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s); uses: 0xdbcd=System configuration value | 04.asm |
 | `FUN_1000_de4e` | `1000:de4e` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_de54` | `1000:de54` | Mouse interrupt, calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_de68` | `1000:de68` | calls other functions, conditional logic, comparison, referenced 3 time(s) | 04.asm |
 | `FUN_1000_de7b` | `1000:de7b` | Mouse interrupt, calls other functions, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_df07`|`1000:df07`| calls other functions, conditional logic, stack operations, initialization, referenced 1 time(s); uses: 0xdbd6=Video segment address, 0xdbda=Primary video segment address, 0xce7a=Data table or array pointer |04.asm|
+| `FUN_1000_df07` | `1000:df07` | calls other functions, conditional logic, stack operations, initialization, referenced 1 time(s); uses: 0xdbd6=Video segment address, 0xdbda=Primary video segment address, 0xce7a=Data table or array pointer | 04.asm |
 | `FUN_1000_df1e` | `1000:df1e` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e068` | `1000:e068` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e0a2` | `1000:e0a2` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e0db` | `1000:e0db` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_e11c`|`1000:e11c`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer |04.asm|
+| `FUN_1000_e11c` | `1000:e11c` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer | 04.asm |
 | `FUN_1000_e159` | `1000:e159` | calls other functions, arithmetic operations, comparison, referenced 3 time(s) | 04.asm |
 | `FUN_1000_e1d1` | `1000:e1d1` | conditional logic, arithmetic operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e243` | `1000:e243` | calls other functions, conditional logic, arithmetic operations, referenced 2 time(s) | 04.asm |
@@ -666,14 +666,14 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_e2db` | `1000:e2db` | calls other functions, stack operations, arithmetic operations, comparison, referenced 2 time(s) | 04.asm |
 | `FUN_1000_e2e3` | `1000:e2e3` | segment manipulation, conditional logic, arithmetic operations, comparison, referenced 3 time(s) | 04.asm |
 | `FUN_1000_e31c` | `1000:e31c` | segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_e353`|`1000:e353`| calls other functions, conditional logic, stack operations, comparison, referenced 9 time(s); uses: 0xce7a=Data table or array pointer, 0x227d=Game mode or special state flag |04.asm|
+| `FUN_1000_e353` | `1000:e353` | calls other functions, conditional logic, stack operations, comparison, referenced 9 time(s); uses: 0xce7a=Data table or array pointer, 0x227d=Game mode or special state flag | 04.asm |
 | `FUN_1000_e387` | `1000:e387` | calls other functions, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_e3a0`|`1000:e3a0`| calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer |04.asm|
-|`FUN_1000_e3b7`|`1000:e3b7`| stack operations, arithmetic operations, referenced 7 time(s); uses: 0xd824=System parameter or hardware value |04.asm|
+| `FUN_1000_e3a0` | `1000:e3a0` | calls other functions, conditional logic, comparison, referenced 1 time(s); uses: 0xce7a=Data table or array pointer | 04.asm |
+| `FUN_1000_e3b7` | `1000:e3b7` | stack operations, arithmetic operations, referenced 7 time(s); uses: 0xd824=System parameter or hardware value | 04.asm |
 | `FUN_1000_e3cc` | `1000:e3cc` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_e3df`|`1000:e3df`| conditional logic, arithmetic operations, comparison, referenced 5 time(s); uses: 0xd828=Tertiary system parameter |04.asm|
+| `FUN_1000_e3df` | `1000:e3df` | conditional logic, arithmetic operations, comparison, referenced 5 time(s); uses: 0xd828=Tertiary system parameter | 04.asm |
 | `FUN_1000_e4ad` | `1000:e4ad` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_e56b`|`1000:e56b`| calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); refs: &8dune37s0.sav |04.asm|
+| `FUN_1000_e56b` | `1000:e56b` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s); refs: &8dune37s0.sav | 04.asm |
 | `FUN_1000_e57b` | `1000:e57b` | calls other functions, segment manipulation, stack operations, arithmetic operations, referenced 3 time(s) | 04.asm |
 | `FUN_1000_e594` | `1000:e594` | DOS interrupt call, calls other functions, memory write operations, segment manipulation, stack operations, arithmetic operations, initialization, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e675` | `1000:e675` | calls other functions, conditional logic, stack operations, referenced 1 time(s) | 04.asm |
@@ -681,7 +681,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_e75b` | `1000:e75b` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e76a` | `1000:e76a` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e826` | `1000:e826` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 04.asm |
-|`FUN_1000_e851`|`1000:e851`| calls other functions, segment manipulation, conditional logic, arithmetic operations, initialization, referenced 2 time(s); refs: Not enough standard memory for sounds |04.asm|
+| `FUN_1000_e851` | `1000:e851` | calls other functions, segment manipulation, conditional logic, arithmetic operations, initialization, referenced 2 time(s); refs: Not enough standard memory for sounds | 04.asm |
 | `FUN_1000_e85c` | `1000:e85c` | calls other functions, conditional logic, initialization, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e8a8` | `1000:e8a8` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e8d5` | `1000:e8d5` | DOS interrupt call, calls other functions, conditional logic, comparison, initialization, referenced 1 time(s) | 04.asm |
@@ -689,7 +689,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_e94a` | `1000:e94a` | DOS interrupt call, Mouse interrupt, segment manipulation, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e97a` | `1000:e97a` | calls other functions, conditional logic, initialization, referenced 1 time(s) | 04.asm |
 | `FUN_1000_ea32` | `1000:ea32` | calls other functions, segment manipulation, conditional logic, initialization, referenced 1 time(s) | 04.asm |
-|`FUN_1000_ea7b`|`1000:ea7b`| calls other functions, conditional logic, initialization, referenced 1 time(s); uses: 0xdc46=Mouse or cursor state flag |04.asm|
+| `FUN_1000_ea7b` | `1000:ea7b` | calls other functions, conditional logic, initialization, referenced 1 time(s); uses: 0xdc46=Mouse or cursor state flag | 04.asm |
 | `FUN_1000_eab7` | `1000:eab7` | calls other functions, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_eb74` | `1000:eb74` | memory write operations, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_ebaa` | `1000:ebaa` | segment manipulation, conditional logic, arithmetic operations, comparison, initialization, referenced 1 time(s) | 04.asm |
@@ -709,14 +709,14 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_f0a0` | `1000:f0a0` | calls other functions, segment manipulation, conditional logic, stack operations, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f0b9` | `1000:f0b9` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f0d6` | `1000:f0d6` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 04.asm |
-|`FUN_1000_f0f6`|`1000:f0f6`| calls other functions, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0xdbd6=Video segment address |04.asm|
+| `FUN_1000_f0f6` | `1000:f0f6` | calls other functions, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0xdbd6=Video segment address | 04.asm |
 | `FUN_1000_f0ff` | `1000:f0ff` | DOS interrupt call, calls other functions, conditional logic, arithmetic operations | 04.asm |
 | `FUN_1000_f11c` | `1000:f11c` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f13f` | `1000:f13f` | conditional logic, stack operations, arithmetic operations, initialization, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f1fb` | `1000:f1fb` | DOS interrupt call, calls other functions, string/memory operations, memory write operations, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f229` | `1000:f229` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f244` | `1000:f244` | calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
-|`FUN_1000_f260`|`1000:f260`| DOS interrupt call, calls other functions, string/memory operations, memory write operations, segment manipulation, conditional logic, comparison, referenced 2 time(s); refs: dune.dat |04.asm|
+| `FUN_1000_f260` | `1000:f260` | DOS interrupt call, calls other functions, string/memory operations, memory write operations, segment manipulation, conditional logic, comparison, referenced 2 time(s); refs: dune.dat | 04.asm |
 | `FUN_1000_f27c` | `1000:f27c` | DOS interrupt call, segment manipulation, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f2a7` | `1000:f2a7` | DOS interrupt call, calls other functions, stack operations, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f2d6` | `1000:f2d6` | calls other functions, memory write operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s) | 04.asm |
