@@ -7,7 +7,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t entry(void);
-                             //
+                             // C Signature: uint16_t entry(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -103,7 +103,6 @@
                              //
                              // C Signature: void FUN_1000_0083(void);
                              //
-                             //
                              undefined FUN_1000_0083()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -114,7 +113,6 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_0086(void);
-                             //
                              //
                              // Return Values:
                              //   BP (uint16_t): 16-bit output value in BP register
@@ -136,7 +134,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_0098(uint16_t di);
-                             //
+                             // C Signature: uint16_t FUN_1000_0098(uint16_t di);
                              // Input Parameters:
                              //   DI (uint16_t): 16-bit input value in DI register
                              //   ES (uint16_t): Segment register input value
@@ -172,7 +170,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_00b0(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_00b0(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -203,7 +201,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_00d1(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_00d1(void);
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -288,7 +286,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_0169(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_0169(void);
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -370,7 +368,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_021c(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_021c(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
@@ -467,7 +465,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_0309(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //   BP (uint16_t): 16-bit output value in BP register
@@ -501,7 +498,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_0579(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_0579(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -518,7 +515,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_0580(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_0580(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -607,7 +604,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_08f0(uint16_t bx, uint8_t dh);
-                             //
+                             // C Signature: uint32_t FUN_1000_08f0(uint16_t bx, uint8_t dh);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   DH (uint8_t): 8-bit input value in DH register
@@ -641,7 +638,6 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_0911(void);
-                             //
                              //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
@@ -680,7 +676,6 @@
                              //
                              // C Signature: void FUN_1000_093f(void);
                              //
-                             //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
                              //
@@ -703,7 +698,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_0945(uint16_t si);
-                             //
+                             // C Signature: void FUN_1000_0945(uint16_t si);
                              // Input Parameters:
                              //   SI (uint16_t): 16-bit input value in SI register
                              //
@@ -722,7 +717,6 @@
                              //
                              // C Signature: void FUN_1000_0a16(void);
                              //
-                             //
                              undefined __cdecl16near FUN_1000_0a16()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -738,7 +732,6 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_0a23(void);
-                             //
                              //
                              undefined FUN_1000_0a23()
                                assume CS = 0x1000
@@ -763,7 +756,6 @@
                              //
                              // C Signature: void FUN_1000_0a3e(void);
                              //
-                             //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
                              //
@@ -779,7 +771,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_0acd(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_0acd(void);
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -837,7 +829,6 @@
                              //
                              // C Signature: void FUN_1000_0b21(void);
                              //
-                             //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
                              //
@@ -873,7 +864,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_0d45(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_0d45(void);
                              // Input/Output Parameters:
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -925,7 +916,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_0d8e(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_0d8e(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -1025,7 +1016,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_0e66(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_0e66(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -1049,7 +1040,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_0e77(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_0e77(void);
                              // Input/Output Parameters:
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -1103,7 +1094,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_0fa7(void);
                              //
-                             //
                              // Return Values:
                              //   AL (uint8_t): 8-bit output value in AL register
                              //
@@ -1122,7 +1112,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_0fd9(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_0fd9(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
@@ -1168,7 +1158,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_1071(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //
@@ -1206,7 +1195,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_11cb(uint16_t bx, uint16_t dx);
-                             //
+                             // C Signature: void FUN_1000_11cb(uint16_t bx, uint16_t dx);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   DX (uint16_t): 16-bit input value in DX register
@@ -1239,7 +1228,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_121f(uint8_t al);
-                             //
+                             // C Signature: void FUN_1000_121f(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   BH (uint8_t): 8-bit value, both input and output (modified)
@@ -1277,7 +1266,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_1243(void);
-                             //
+                             // C Signature: void FUN_1000_1243(void);
                              // Input/Output Parameters:
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
@@ -1303,7 +1292,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_1258(void);
-                             //
+                             // C Signature: void FUN_1000_1258(void);
                              // Input/Output Parameters:
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -1328,7 +1317,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_127c(uint8_t al);
-                             //
+                             // C Signature: void FUN_1000_127c(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //
@@ -1354,7 +1343,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_16fc(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //
@@ -1374,7 +1362,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1707(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_1707(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -1445,7 +1433,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1771(uint16_t ax);
-                             //
+                             // C Signature: uint16_t FUN_1000_1771(uint16_t ax);
                              // Input Parameters:
                              //   AX (uint16_t): 16-bit input value in AX register
                              //
@@ -1485,7 +1473,6 @@
                              //
                              // C Signature: uint32_t FUN_1000_1797(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //   BX (uint16_t): 16-bit output value in BX register
@@ -1519,7 +1506,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_17be(void);
-                             //
+                             // C Signature: void FUN_1000_17be(void);
                              // Input/Output Parameters:
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -1560,7 +1547,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_17e6(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //
@@ -1588,7 +1574,6 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_1803(void);
-                             //
                              //
                              // Memory Access:
                              //   Write to: byte ptr [0xce66]
@@ -1619,7 +1604,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_181e(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //
@@ -1643,7 +1627,6 @@
                              //
                              // C Signature: void FUN_1000_1834(void);
                              //
-                             //
                              // Return Values:
                              //   BP (uint16_t): 16-bit output value in BP register
                              //   SI (uint16_t): 16-bit output value in SI register
@@ -1666,7 +1649,6 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1843(void);
-                             //
                              //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
@@ -1696,7 +1678,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1860(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_1860(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //
@@ -1743,7 +1725,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_189a(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_189a(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
@@ -1780,7 +1762,6 @@
                              //
                              // C Signature: void FUN_1000_18ba(void);
                              //
-                             //
                              // Memory Access:
                              //   Write to: word ptr [0x1c06]
                              //   Write to: word ptr [0x1c14]
@@ -1816,7 +1797,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_1a0f(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //   SI (uint16_t): 16-bit output value in SI register
@@ -1846,7 +1826,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_1a34(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_1a34(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
@@ -1913,7 +1893,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_1a9b(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_1a9b(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   CH (uint8_t): 8-bit value, both input and output (modified)
@@ -1965,7 +1945,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t divide_by_16(void);
-                             //
+                             // C Signature: uint16_t divide_by_16(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -1991,7 +1971,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1ad1(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_1ad1(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -2015,7 +1995,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1ae0(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_1ae0(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -2040,7 +2020,6 @@
                              //
                              // C Signature: void FUN_1000_1b0d(void);
                              //
-                             //
                              undefined __cdecl16near FUN_1000_1b0d()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2059,7 +2038,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1b23(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_1b23(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -2147,7 +2126,6 @@
                              //
                              // C Signature: void FUN_1000_1bb2(void);
                              //
-                             //
                              // Memory Access:
                              //   Write to: byte ptr [0x473b]
                              //
@@ -2196,7 +2174,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_1bec(void);
-                             //
+                             // C Signature: void FUN_1000_1bec(void);
                              // Input/Output Parameters:
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -2234,7 +2212,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_1c18(void);
-                             //
+                             // C Signature: void FUN_1000_1c18(void);
                              // Input/Output Parameters:
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
@@ -2276,7 +2254,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1c46(uint8_t bl);
-                             //
+                             // C Signature: uint16_t FUN_1000_1c46(uint8_t bl);
                              // Input Parameters:
                              //   BL (uint8_t): 8-bit input value in BL register
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -2367,7 +2345,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1cda(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_1cda(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -2416,7 +2394,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_1d66(uint16_t bx);
-                             //
+                             // C Signature: uint32_t FUN_1000_1d66(uint16_t bx);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   CS (uint16_t): Segment register input value
@@ -2477,7 +2455,6 @@
                              //
                              // C Signature: void FUN_1000_1d9f(void);
                              //
-                             //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
                              //
@@ -2499,7 +2476,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_1e01(uint8_t bl);
-                             //
+                             // C Signature: uint32_t FUN_1000_1e01(uint8_t bl);
                              // Input Parameters:
                              //   BL (uint8_t): 8-bit input value in BL register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -2538,7 +2515,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1e24(uint16_t di);
-                             //
+                             // C Signature: uint16_t FUN_1000_1e24(uint16_t di);
                              // Input Parameters:
                              //   DI (uint16_t): 16-bit input value in DI register
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -2581,7 +2558,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1e43(uint16_t ax);
-                             //
+                             // C Signature: uint16_t FUN_1000_1e43(uint16_t ax);
                              // Input Parameters:
                              //   AX (uint16_t): 16-bit input value in AX register
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
@@ -2647,7 +2624,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1ebe(uint16_t si);
-                             //
+                             // C Signature: uint16_t FUN_1000_1ebe(uint16_t si);
                              // Input Parameters:
                              //   SI (uint16_t): 16-bit input value in SI register
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -2677,7 +2654,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_1eda(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_1eda(void);
                              // Input/Output Parameters:
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
@@ -2727,7 +2704,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_2090(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_2090(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -2804,7 +2781,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_2170(uint8_t bh, uint8_t bl, uint8_t dh);
-                             //
+                             // C Signature: uint32_t FUN_1000_2170(uint8_t bh, uint8_t bl, uint8_t dh);
                              // Input Parameters:
                              //   BH (uint8_t): 8-bit input value in BH register
                              //   BL (uint8_t): 8-bit input value in BL register
@@ -2901,7 +2878,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_21fa(uint8_t al);
-                             //
+                             // C Signature: void FUN_1000_21fa(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //
@@ -2936,7 +2913,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_221d(uint8_t bh, uint16_t bx);
-                             //
+                             // C Signature: void FUN_1000_221d(uint8_t bh, uint16_t bx);
                              // Input Parameters:
                              //   BH (uint8_t): 8-bit input value in BH register
                              //   BX (uint16_t): 16-bit input value in BX register
@@ -2972,7 +2949,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_2524(uint16_t ax);
-                             //
+                             // C Signature: void FUN_1000_2524(uint16_t ax);
                              // Input Parameters:
                              //   AX (uint16_t): 16-bit input value in AX register
                              //
@@ -2988,7 +2965,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_2566(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_2566(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -3155,7 +3132,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_26ac(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_26ac(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
@@ -3198,7 +3175,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_26da(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_26da(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   CH (uint8_t): 8-bit value, both input and output (modified)
@@ -3258,7 +3235,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_272f(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_272f(void);
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -3298,7 +3275,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_274e(void);
                              //
-                             //
                              // Return Values:
                              //   AL (uint8_t): 8-bit output value in AL register
                              //   AX (uint16_t): 16-bit output value in AX register
@@ -3320,7 +3296,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_275f(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_275f(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -3346,7 +3322,6 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2773(void);
-                             //
                              //
                              // Return Values:
                              //   AL (uint8_t): 8-bit output value in AL register
@@ -3380,7 +3355,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_2795(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //   BP (uint16_t): 16-bit output value in BP register
@@ -3410,7 +3384,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_27c9(uint8_t al);
-                             //
+                             // C Signature: uint32_t FUN_1000_27c9(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -3464,7 +3438,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_2806(void);
                              //
-                             //
                              // Return Values:
                              //   AL (uint8_t): 8-bit output value in AL register
                              //   CX (uint16_t): 16-bit output value in CX register
@@ -3487,7 +3460,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_281c(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_281c(void);
                              // Input/Output Parameters:
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -3519,7 +3492,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_29ee(void);
-                             //
+                             // C Signature: void FUN_1000_29ee(void);
                              // Input/Output Parameters:
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -3534,7 +3507,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_29f0(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_29f0(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   CH (uint8_t): 8-bit value, both input and output (modified)
@@ -3600,7 +3573,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2a34(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_2a34(void);
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -3640,7 +3613,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2a51(uint8_t ah, uint8_t al);
-                             //
+                             // C Signature: uint16_t FUN_1000_2a51(uint8_t ah, uint8_t al);
                              // Input Parameters:
                              //   AH (uint8_t): 8-bit input value in AH register
                              //   AL (uint8_t): 8-bit input value in AL register
@@ -3704,7 +3677,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2ad8(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_2ad8(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -3768,7 +3741,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2b2a(uint16_t bx);
-                             //
+                             // C Signature: uint16_t FUN_1000_2b2a(uint16_t bx);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -3961,7 +3934,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_2c92(void);
                              //
-                             //
                              // Return Values:
                              //   AL (uint8_t): 8-bit output value in AL register
                              //   BP (uint16_t): 16-bit output value in BP register
@@ -3979,7 +3951,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2d74(uint8_t al);
-                             //
+                             // C Signature: uint16_t FUN_1000_2d74(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   DS (uint16_t): Segment register input value
@@ -4034,7 +4006,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2db1(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_2db1(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -4127,7 +4099,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2e52(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_2e52(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -4185,7 +4157,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2e98(uint16_t ax, uint16_t di);
-                             //
+                             // C Signature: uint16_t FUN_1000_2e98(uint16_t ax, uint16_t di);
                              // Input Parameters:
                              //   AX (uint16_t): 16-bit input value in AX register
                              //   DI (uint16_t): 16-bit input value in DI register
@@ -4222,7 +4194,6 @@
                              //
                              // C Signature: void FUN_1000_2ebf(void);
                              //
-                             //
                              // Return Values:
                              //   BP (uint16_t): 16-bit output value in BP register
                              //   BX (uint16_t): 16-bit output value in BX register
@@ -4243,7 +4214,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_2efb(uint8_t bh, uint8_t bl, uint8_t dl);
-                             //
+                             // C Signature: uint32_t FUN_1000_2efb(uint8_t bh, uint8_t bl, uint8_t dl);
                              // Input Parameters:
                              //   BH (uint8_t): 8-bit input value in BH register
                              //   BL (uint8_t): 8-bit input value in BL register
@@ -4413,7 +4384,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_2ffb(uint8_t bl, uint8_t dh, uint8_t dl);
-                             //
+                             // C Signature: uint16_t FUN_1000_2ffb(uint8_t bl, uint8_t dh, uint8_t dl);
                              // Input Parameters:
                              //   BL (uint8_t): 8-bit input value in BL register
                              //   DH (uint8_t): 8-bit input value in DH register
@@ -4516,7 +4487,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_31f6(uint16_t si);
-                             //
+                             // C Signature: uint16_t FUN_1000_31f6(uint16_t si);
                              // Input Parameters:
                              //   SI (uint16_t): 16-bit input value in SI register
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -4600,7 +4571,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_329d(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_329d(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
@@ -4641,7 +4612,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_32c7(uint8_t al);
-                             //
+                             // C Signature: uint32_t FUN_1000_32c7(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -4701,7 +4672,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_3310(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_3310(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -4724,7 +4695,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_331e(uint16_t ax);
-                             //
+                             // C Signature: uint16_t FUN_1000_331e(uint16_t ax);
                              // Input Parameters:
                              //   AX (uint16_t): 16-bit input value in AX register
                              //   DS (uint16_t): Segment register input value
@@ -4806,7 +4777,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3385(uint8_t al, uint16_t di);
-                             //
+                             // C Signature: uint32_t FUN_1000_3385(uint8_t al, uint16_t di);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   DI (uint16_t): 16-bit input value in DI register
@@ -4846,7 +4817,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_33ad(uint16_t bx, uint16_t si);
-                             //
+                             // C Signature: uint16_t FUN_1000_33ad(uint16_t bx, uint16_t si);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   SI (uint16_t): 16-bit input value in SI register
@@ -4877,7 +4848,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_33be(uint8_t al);
-                             //
+                             // C Signature: uint16_t FUN_1000_33be(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -4909,7 +4880,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_33d9(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_33d9(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -4955,7 +4926,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_34a5(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_34a5(void);
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -5001,7 +4972,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_3542(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //   DI (uint16_t): 16-bit output value in DI register
@@ -5025,7 +4995,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_3551(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_3551(void);
                              // Input/Output Parameters:
                              //   BP (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -5088,7 +5058,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_35ad(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_35ad(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -5199,7 +5169,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_366f(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_366f(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -5230,7 +5200,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_368b(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_368b(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   BL (uint8_t): 8-bit value, both input and output (modified)
@@ -5286,7 +5256,6 @@
                              //
                              // C Signature: void FUN_1000_36d3(void);
                              //
-                             //
                              // Return Values:
                              //   BP (uint16_t): 16-bit output value in BP register
                              //
@@ -5315,7 +5284,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_36ee(void);
-                             //
+                             // C Signature: void FUN_1000_36ee(void);
                              // Input/Output Parameters:
                              //   BP (uint16_t): 16-bit value, both input and output (modified)
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
@@ -5371,7 +5340,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3723(uint8_t dh);
-                             //
+                             // C Signature: uint32_t FUN_1000_3723(uint8_t dh);
                              // Input Parameters:
                              //   DH (uint8_t): 8-bit input value in DH register
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -5463,7 +5432,6 @@
                              //
                              // C Signature: uint16_t thunk_FUN_1000_c2f2(void);
                              //
-                             //
                              // Return Values:
                              //   AL (uint8_t): 8-bit output value in AL register
                              //
@@ -5481,7 +5449,6 @@
                              //
                              // C Signature: void FUN_1000_37b2(void);
                              //
-                             //
                              undefined FUN_1000_37b2()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5493,7 +5460,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_37b5(uint8_t al);
-                             //
+                             // C Signature: uint32_t FUN_1000_37b5(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -5538,7 +5505,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_37eb(void);
                              //
-                             //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
                              //
@@ -5569,7 +5535,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_380c(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_380c(void);
                              // Input Parameters:
                              //   ES (uint16_t): Segment register input value
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -5658,7 +5624,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_388d(uint8_t bl);
-                             //
+                             // C Signature: void FUN_1000_388d(uint8_t bl);
                              // Input Parameters:
                              //   BL (uint8_t): 8-bit input value in BL register
                              //
@@ -5695,7 +5661,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_38b4(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_38b4(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   BP (uint16_t): 16-bit value, both input and output (modified)
@@ -5740,7 +5706,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_38e1(uint8_t bl);
-                             //
+                             // C Signature: void FUN_1000_38e1(uint8_t bl);
                              // Input Parameters:
                              //   BL (uint8_t): 8-bit input value in BL register
                              //
@@ -5760,7 +5726,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_38f1(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_38f1(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //
@@ -5788,7 +5754,6 @@
                              //
                              // C Signature: void FUN_1000_3950(void);
                              //
-                             //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
                              //
@@ -5809,7 +5774,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_395c(uint8_t al);
-                             //
+                             // C Signature: uint16_t FUN_1000_395c(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -5843,7 +5808,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3971(uint8_t bl, uint16_t si);
-                             //
+                             // C Signature: uint32_t FUN_1000_3971(uint8_t bl, uint16_t si);
                              // Input Parameters:
                              //   BL (uint8_t): 8-bit input value in BL register
                              //   SI (uint16_t): 16-bit input value in SI register
@@ -5882,7 +5847,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_398c(void);
-                             //
+                             // C Signature: void FUN_1000_398c(void);
                              // Input/Output Parameters:
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -5919,7 +5884,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_39b9(void);
-                             //
+                             // C Signature: void FUN_1000_39b9(void);
                              // Input/Output Parameters:
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -5958,7 +5923,6 @@
                              //
                              // C Signature: void FUN_1000_39e6(void);
                              //
-                             //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
                              //
@@ -5977,7 +5941,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_39ec(uint8_t ah);
-                             //
+                             // C Signature: uint32_t FUN_1000_39ec(uint8_t ah);
                              // Input Parameters:
                              //   AH (uint8_t): 8-bit input value in AH register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -6078,7 +6042,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_3a7c(uint8_t ah, uint8_t al);
-                             //
+                             // C Signature: uint16_t FUN_1000_3a7c(uint8_t ah, uint8_t al);
                              // Input Parameters:
                              //   AH (uint8_t): 8-bit input value in AH register
                              //   AL (uint8_t): 8-bit input value in AL register
@@ -6114,7 +6078,6 @@
                              //
                              // C Signature: void FUN_1000_3a95(void);
                              //
-                             //
                              // Return Values:
                              //   BX (uint16_t): 16-bit output value in BX register
                              //   DX (uint16_t): 16-bit output value in DX register
@@ -6137,7 +6100,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3aa9(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_3aa9(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -6188,7 +6151,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_3ae9(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_3ae9(void);
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -6216,7 +6179,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3af9(uint8_t al);
-                             //
+                             // C Signature: uint32_t FUN_1000_3af9(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -6288,7 +6251,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3b59(uint8_t al);
-                             //
+                             // C Signature: uint32_t FUN_1000_3b59(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -6396,7 +6359,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3be9(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_3be9(void);
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -6575,7 +6538,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_3d12(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_3d12(void);
                              // Input/Output Parameters:
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -6608,7 +6571,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_3d2f(uint16_t bx, uint16_t dx);
-                             //
+                             // C Signature: uint16_t FUN_1000_3d2f(uint16_t bx, uint16_t dx);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   DX (uint16_t): 16-bit input value in DX register
@@ -6673,7 +6636,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3d83(uint8_t al);
-                             //
+                             // C Signature: uint32_t FUN_1000_3d83(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   DS (uint16_t): Segment register input value
@@ -6759,7 +6722,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_3df4(uint8_t al, uint16_t ax, uint8_t cl);
-                             //
+                             // C Signature: void FUN_1000_3df4(uint8_t al, uint16_t ax, uint8_t cl);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   AX (uint16_t): 16-bit input value in AX register
@@ -6800,7 +6763,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3e13(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_3e13(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
@@ -6885,7 +6848,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3e80(uint16_t sp);
-                             //
+                             // C Signature: uint32_t FUN_1000_3e80(uint16_t sp);
                              // Input Parameters:
                              //   SP (uint16_t): 16-bit input value in SP register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -6982,7 +6945,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3efe(uint8_t dh, uint8_t dl);
-                             //
+                             // C Signature: uint32_t FUN_1000_3efe(uint8_t dh, uint8_t dl);
                              // Input Parameters:
                              //   DH (uint8_t): 8-bit input value in DH register
                              //   DL (uint8_t): 8-bit input value in DL register
@@ -7020,7 +6983,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_3f15(uint8_t bl);
-                             //
+                             // C Signature: uint32_t FUN_1000_3f15(uint8_t bl);
                              // Input Parameters:
                              //   BL (uint8_t): 8-bit input value in BL register
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -7206,7 +7169,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_407e(uint8_t bl);
-                             //
+                             // C Signature: void FUN_1000_407e(uint8_t bl);
                              // Input Parameters:
                              //   BL (uint8_t): 8-bit input value in BL register
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
@@ -7256,7 +7219,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_409a(uint16_t di);
-                             //
+                             // C Signature: void FUN_1000_409a(uint16_t di);
                              // Input Parameters:
                              //   DI (uint16_t): 16-bit input value in DI register
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
@@ -7284,7 +7247,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_40ae(uint8_t al, uint16_t di);
-                             //
+                             // C Signature: uint32_t FUN_1000_40ae(uint8_t al, uint16_t di);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //   DI (uint16_t): 16-bit input value in DI register
@@ -7322,7 +7285,6 @@
                              //
                              // C Signature: void FUN_1000_40c3(void);
                              //
-                             //
                              // Return Values:
                              //   BP (uint16_t): 16-bit output value in BP register
                              //
@@ -7339,7 +7301,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_40e6(uint16_t si);
-                             //
+                             // C Signature: void FUN_1000_40e6(uint16_t si);
                              // Input Parameters:
                              //   SI (uint16_t): 16-bit input value in SI register
                              //
@@ -7360,7 +7322,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_40f9(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_40f9(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -7453,7 +7415,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_4182(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_4182(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //
@@ -7511,7 +7473,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_41cc(uint8_t al);
-                             //
+                             // C Signature: void FUN_1000_41cc(uint8_t al);
                              // Input Parameters:
                              //   AL (uint8_t): 8-bit input value in AL register
                              //
@@ -7539,7 +7501,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_41e1(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_41e1(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -7632,7 +7594,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_425b(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_425b(void);
                              // Input/Output Parameters:
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -7668,7 +7630,6 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_42e9(void);
-                             //
                              //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
@@ -7743,7 +7704,6 @@
                              //
                              // C Signature: uint16_t FUN_1000_439f(void);
                              //
-                             //
                              // Return Values:
                              //   AL (uint8_t): 8-bit output value in AL register
                              //   AX (uint16_t): 16-bit output value in AX register
@@ -7789,7 +7749,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_445d(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_445d(void);
                              // Input/Output Parameters:
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -7890,7 +7850,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_4658(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_4658(void);
                              // Input Parameters:
                              //   ES (uint16_t): Segment register input value
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -7941,7 +7901,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_47fb(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_47fb(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   CL (uint8_t): 8-bit value, both input and output (modified)
@@ -7979,7 +7939,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_488a(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_488a(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -8065,7 +8025,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_4944(uint16_t bx, uint16_t dx);
-                             //
+                             // C Signature: void FUN_1000_4944(uint16_t bx, uint16_t dx);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   DX (uint16_t): 16-bit input value in DX register
@@ -8111,7 +8071,6 @@
                              //
                              // C Signature: void FUN_1000_4988(void);
                              //
-                             //
                              // Return Values:
                              //   DI (uint16_t): 16-bit output value in DI register
                              //   SI (uint16_t): 16-bit output value in SI register
@@ -8137,7 +8096,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_49a0(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_49a0(void);
                              // Input/Output Parameters:
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -8181,7 +8140,6 @@
                              //
                              // C Signature: void FUN_1000_49d9(void);
                              //
-                             //
                              undefined FUN_1000_49d9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -8199,7 +8157,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_49ea(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_49ea(void);
                              // Input Parameters:
                              //   CS (uint16_t): Segment register input value
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
@@ -8231,7 +8189,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_4a00(uint16_t bx, uint16_t dx);
-                             //
+                             // C Signature: uint16_t FUN_1000_4a00(uint16_t bx, uint16_t dx);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   CS (uint16_t): Segment register input value
@@ -8267,7 +8225,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4a1a(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_4a1a(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
@@ -8317,7 +8275,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4a5a(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_4a5a(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
@@ -8377,7 +8335,6 @@
                              //
                              // C Signature: void FUN_1000_4ac4(void);
                              //
-                             //
                              // Memory Access:
                              //   Write to: byte ptr [0x11ca]
                              //
@@ -8393,7 +8350,6 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_4aca(void);
-                             //
                              //
                              // Memory Access:
                              //   Write to: byte ptr [0x11ca]
@@ -8413,7 +8369,6 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_4aeb(void);
-                             //
                              //
                              // Return Values:
                              //   AX (uint16_t): 16-bit output value in AX register
@@ -8435,7 +8390,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_4afd(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_4afd(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
@@ -8474,7 +8429,6 @@
                              //
                              // C Signature: void FUN_1000_4b2b(void);
                              //
-                             //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
                              //
@@ -8496,7 +8450,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_4b3b(uint16_t bx, uint16_t dx);
-                             //
+                             // C Signature: void FUN_1000_4b3b(uint16_t bx, uint16_t dx);
                              // Input Parameters:
                              //   BX (uint16_t): 16-bit input value in BX register
                              //   DX (uint16_t): 16-bit input value in DX register
@@ -8530,7 +8484,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4b5f(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_4b5f(void);
                              // Input/Output Parameters:
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
@@ -8596,7 +8550,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4bdf(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_4bdf(void);
                              // Input Parameters:
                              //   SS (uint16_t): Segment register input value
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -8670,7 +8624,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4c45(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_4c45(void);
                              // Input Parameters:
                              //   SS (uint16_t): Segment register input value
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -8739,7 +8693,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4c92(uint16_t cx, uint16_t si);
-                             //
+                             // C Signature: uint32_t FUN_1000_4c92(uint16_t cx, uint16_t si);
                              // Input Parameters:
                              //   CX (uint16_t): 16-bit input value in CX register
                              //   SI (uint16_t): 16-bit input value in SI register
@@ -8815,7 +8769,6 @@
                              //
                              // C Signature: void FUN_1000_4d00(void);
                              //
-                             //
                              // Return Values:
                              //   SI (uint16_t): 16-bit output value in SI register
                              //
@@ -8832,7 +8785,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4d06(uint8_t bh, uint8_t bl);
-                             //
+                             // C Signature: uint32_t FUN_1000_4d06(uint8_t bh, uint8_t bl);
                              // Input Parameters:
                              //   BH (uint8_t): 8-bit input value in BH register
                              //   BL (uint8_t): 8-bit input value in BL register
@@ -8898,7 +8851,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_4d57(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_4d57(void);
                              // Input/Output Parameters:
                              //   BH (uint8_t): 8-bit value, both input and output (modified)
                              //   BP (uint16_t): 16-bit value, both input and output (modified)
@@ -8929,7 +8882,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_4d6c(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_4d6c(void);
                              // Input Parameters:
                              //   CS (uint16_t): Segment register input value
                              //   SS (uint16_t): Segment register input value
@@ -8981,7 +8934,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4da0(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_4da0(void);
                              // Input Parameters:
                              //   SS (uint16_t): Segment register input value
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -9049,7 +9002,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_4ded(uint16_t di);
-                             //
+                             // C Signature: void FUN_1000_4ded(uint16_t di);
                              // Input Parameters:
                              //   DI (uint16_t): 16-bit input value in DI register
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
@@ -9083,7 +9036,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4e12(uint16_t si);
-                             //
+                             // C Signature: uint32_t FUN_1000_4e12(uint16_t si);
                              // Input Parameters:
                              //   SI (uint16_t): 16-bit input value in SI register
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
@@ -9191,7 +9144,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_4ec6(void);
-                             //
+                             // C Signature: uint16_t FUN_1000_4ec6(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -9245,7 +9198,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_4f0c(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_4f0c(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
@@ -9372,7 +9325,7 @@
                              **************************************************************
                              //
                              // C Signature: uint16_t FUN_1000_503c(uint16_t di);
-                             //
+                             // C Signature: uint16_t FUN_1000_503c(uint16_t di);
                              // Input Parameters:
                              //   DI (uint16_t): 16-bit input value in DI register
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
@@ -9429,7 +9382,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_5098(void);
-                             //
+                             // C Signature: void FUN_1000_5098(void);
                              // Input/Output Parameters:
                              //   CX (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
@@ -9453,7 +9406,6 @@
                              //
                              // C Signature: void FUN_1000_50be(void);
                              //
-                             //
                              // Memory Access:
                              //   Write to: byte ptr [0x11cb]
                              //
@@ -9469,7 +9421,6 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_5119(void);
-                             //
                              //
                              // Memory Access:
                              //   Write to: word ptr [0x11cc]
@@ -9487,7 +9438,7 @@
                              **************************************************************
                              //
                              // C Signature: void FUN_1000_5124(void);
-                             //
+                             // C Signature: void FUN_1000_5124(void);
                              // Input/Output Parameters:
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //
@@ -9517,7 +9468,7 @@
                              **************************************************************
                              //
                              // C Signature: uint32_t FUN_1000_5133(void);
-                             //
+                             // C Signature: uint32_t FUN_1000_5133(void);
                              // Input/Output Parameters:
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
