@@ -5,6 +5,30 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t entry(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AH (uint8_t): 8-bit output value in AH register
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   DL (uint8_t): 8-bit output value in DL register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [DAT_1f4b_3cbc]                      = ??
+                             //   Write to: byte ptr [0x3810]
+                             //   Write to: word ptr [0x2]
+                             //   Write to: byte ptr [0xce80]
+                             //
+                             // System Calls:
+                             //   INT 0x33
+                             //   INT 0x10
+                             //   INT 0x10
+                             //
                              undefined entry()
                                assume CS = 0x1000
                                assume SP = 0x3cbc
@@ -76,6 +100,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_0083(void);
+                             //
+                             //
                              undefined FUN_1000_0083()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -84,6 +112,14 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_0086(void);
+                             //
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined FUN_1000_0086()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -98,6 +134,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0098(uint16_t di);
+                             //
+                             // Input Parameters:
+                             //   DI (uint16_t): 16-bit input value in DI register
+                             //   ES (uint16_t): Segment register input value
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr ES:[DI]
+                             //   Read from: word ptr ES:[DI]
+                             //
                              undefined __cdecl16near FUN_1000_0098()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -118,6 +170,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_00b0(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: ES:[0x46c]
+                             //   Write to: [0xd824]
+                             //   Write to: [0xd826]
+                             //   Write to: [0xd828]
+                             //
                              undefined __cdecl16near FUN_1000_00b0()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -137,6 +201,26 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_00d1(void);
+                             //
+                             // Input Parameters:
+                             //   DS (uint16_t): Segment register input value
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI]
+                             //   Write to: [0xdcfe]
+                             //   Write to: word ptr [0xdd00]
+                             //   Write to: word ptr [0xaa72]
+                             //
                              undefined FUN_1000_00d1()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -202,6 +286,32 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_0169(void);
+                             //
+                             // Input Parameters:
+                             //   DS (uint16_t): Segment register input value
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BL (uint8_t): 8-bit output value in BL register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI + 0x2]
+                             //   Read from: word ptr [SI + 0x4]
+                             //   Read from: word ptr [0xdbb2]
+                             //   Write to: word ptr [SI + 0x2]
+                             //   Write to: word ptr [SI + 0x6]
+                             //   Write to: byte ptr [SI + 0x10]
+                             //
                              undefined __cdecl16near FUN_1000_0169()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -258,6 +368,26 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_021c(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   BL (uint8_t): 8-bit output value in BL register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbd8]
+                             //   Write to: byte ptr [0x289e]
+                             //   Write to: byte ptr [0x28e7]
+                             //   Write to: byte ptr [0x46df]
+                             //
                              undefined FUN_1000_021c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -334,6 +464,14 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0309(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
                              undefined __cdecl16near FUN_1000_0309()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -361,6 +499,12 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0579(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
                              undefined __cdecl16near FUN_1000_0579()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -372,6 +516,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0580(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbd8]
+                             //   Write to: word ptr [0x2]
+                             //
                              undefined __cdecl16near FUN_1000_0580()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -446,6 +605,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_08f0(uint16_t bx, uint8_t dh);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   DH (uint8_t): 8-bit input value in DH register
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Write to: [0x47a4]
+                             //   Write to: [0x46df]
+                             //   Write to: word ptr [0x4]
+                             //
                              undefined FUN_1000_08f0()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -465,6 +639,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_0911(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x22e3]
+                             //   Write to: byte ptr [0x46d7]
+                             //
                              undefined FUN_1000_0911()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -492,6 +677,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_093f(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x4854]
+                             //
                              undefined FUN_1000_093f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -506,6 +701,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_0945(uint16_t si);
+                             //
+                             // Input Parameters:
+                             //   SI (uint16_t): 16-bit input value in SI register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0x4854]
+                             //
                              undefined __cdecl16near FUN_1000_0945()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -515,6 +719,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_0a16(void);
+                             //
+                             //
                              undefined __cdecl16near FUN_1000_0a16()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -528,6 +736,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_0a23(void);
+                             //
+                             //
                              undefined FUN_1000_0a23()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -548,6 +760,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_0a3e(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined FUN_1000_0a3e()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -558,6 +777,25 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0acd(void);
+                             //
+                             // Input Parameters:
+                             //   DS (uint16_t): Segment register input value
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbda]
+                             //   Write to: word ptr [0x2786]
+                             //   Write to: byte ptr CS:[FUN_1000_c13b+1]
+                             //
                              undefined FUN_1000_0acd()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -596,6 +834,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_0b21(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr CS:[FUN_1000_c13b+1]
+                             //   Write to: word ptr [0x3cbe]
+                             //
                              undefined __cdecl16near FUN_1000_0b21()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -622,6 +871,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0d45(void);
+                             //
+                             // Input/Output Parameters:
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BL (uint8_t): 8-bit output value in BL register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x46d7]
+                             //
                              undefined __cdecl16near FUN_1000_0d45()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -660,6 +923,27 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_0d8e(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x2254]
+                             //   Read from: word ptr [0x2256]
+                             //   Write to: [0x473b]
+                             //   Write to: [0x46ec]
+                             //   Write to: word ptr [0x2]
+                             //
                              undefined __cdecl16near FUN_1000_0d8e()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -739,6 +1023,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0e66(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
                              undefined FUN_1000_0e66()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -754,6 +1047,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0e77(void);
+                             //
+                             // Input/Output Parameters:
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
                              undefined FUN_1000_0e77()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -796,6 +1100,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0fa7(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //
                              undefined FUN_1000_0fa7()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -809,6 +1120,19 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_0fd9(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x146e]
+                             //   Write to: byte ptr [0x46da]
+                             //   Write to: [0x46db]
+                             //   Write to: byte ptr [0x46dd]
+                             //
                              undefined __cdecl16near FUN_1000_0fd9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -841,6 +1165,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1071(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0xff]
+                             //   Write to: byte ptr [0x2a]
+                             //   Write to: byte ptr [0xfdb]
+                             //
                              undefined FUN_1000_1071()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -868,6 +1204,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_11cb(uint16_t bx, uint16_t dx);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   DX (uint16_t): 16-bit input value in DX register
+                             //
+                             // Return Values:
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //   DL (uint8_t): 8-bit output value in DL register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0xff]
+                             //   Write to: byte ptr [0x2a]
+                             //   Write to: word ptr [0x1048]
+                             //
                              undefined __cdecl16near FUN_1000_11cb()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -885,6 +1237,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_121f(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   BH (uint8_t): 8-bit value, both input and output (modified)
+                             //   BL (uint8_t): 8-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [0x2a]
+                             //   Write to: [0x2a]
+                             //   Write to: byte ptr [0xff]
+                             //
                              undefined __cdecl16near FUN_1000_121f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -909,6 +1275,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1243(void);
+                             //
+                             // Input/Output Parameters:
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
                              undefined __cdecl16near FUN_1000_1243()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -925,6 +1301,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1258(void);
+                             //
+                             // Input/Output Parameters:
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
                              undefined __cdecl16near FUN_1000_1258()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -941,6 +1326,12 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_127c(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //
                              undefined __cdecl16near FUN_1000_127c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -960,6 +1351,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_16fc(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x2a]
+                             //
                              undefined FUN_1000_16fc()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -971,6 +1372,26 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1707(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x477a]
+                             //   Read from: [0x4776]
+                             //   Write to: byte ptr [0xce9d]
+                             //   Write to: word ptr [0x477a]
+                             //   Write to: [0x4]
+                             //
                              undefined FUN_1000_1707()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1022,6 +1443,25 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1771(uint16_t ax);
+                             //
+                             // Input Parameters:
+                             //   AX (uint16_t): 16-bit input value in AX register
+                             //
+                             // Return Values:
+                             //   AH (uint8_t): 8-bit output value in AH register
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x4]
+                             //   Read from: byte ptr [0x46e0]
+                             //   Write to: [0x477a]
+                             //   Write to: word ptr [0x4778]
+                             //   Write to: [0x4776]
+                             //
                              undefined FUN_1000_1771()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1042,6 +1482,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_1797(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
                              undefined FUN_1000_1797()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1068,6 +1517,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_17be(void);
+                             //
+                             // Input/Output Parameters:
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbd6]
+                             //
                              undefined FUN_1000_17be()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1096,6 +1557,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_17e6(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
                              undefined __cdecl16near FUN_1000_17e6()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1118,6 +1586,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1803(void);
+                             //
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0xce66]
+                             //
                              undefined __cdecl16near FUN_1000_1803()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1141,6 +1616,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_181e(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
                              undefined __cdecl16near FUN_1000_181e()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1158,6 +1640,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1834(void);
+                             //
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbd6]
+                             //
                              undefined __cdecl16near FUN_1000_1834()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1171,6 +1664,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1843(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0xe8]
+                             //   Write to: byte ptr [0xe8]
+                             //
                              undefined FUN_1000_1843()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1190,6 +1694,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1860(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x28e8]
+                             //   Write to: [0x28e7]
+                             //   Write to: word ptr [0x1c14]
+                             //   Write to: word ptr [0x1c22]
+                             //
                              undefined __cdecl16near FUN_1000_1860()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1222,6 +1741,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_189a(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Read from: [0xce7a]
+                             //   Write to: [0xdc5a]
+                             //
                              undefined FUN_1000_189a()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1244,6 +1777,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_18ba(void);
+                             //
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0x1c06]
+                             //   Write to: word ptr [0x1c14]
+                             //   Write to: word ptr [0x1c22]
+                             //
                              undefined __cdecl16near FUN_1000_18ba()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1271,6 +1813,14 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1a0f(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined __cdecl16near FUN_1000_1a0f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1294,6 +1844,23 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_1a34(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x2]
+                             //   Write to: word ptr [0xdbe4]
+                             //
                              undefined __cdecl16near FUN_1000_1a34()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1344,6 +1911,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_1a9b(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbd8]
+                             //
                              undefined __cdecl16near FUN_1000_1a9b()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1378,6 +1963,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t divide_by_16(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x2]
+                             //
                              undefined __cdecl16near divide_by_16()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1395,6 +1989,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1ad1(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x2]
+                             //
                              undefined __cdecl16near FUN_1000_1ad1()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1410,6 +2013,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1ae0(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x2]
+                             //
                              undefined __cdecl16near FUN_1000_1ae0()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1425,6 +2037,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1b0d(void);
+                             //
+                             //
                              undefined __cdecl16near FUN_1000_1b0d()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1441,6 +2057,27 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1b23(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0xf4]
+                             //   Read from: [0x2]
+                             //   Read from: word ptr [0x114e]
+                             //   Write to: byte ptr [0x46dd]
+                             //   Write to: [0xf5]
+                             //   Write to: [0xf4]
+                             //
                              undefined FUN_1000_1b23()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1507,6 +2144,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1bb2(void);
+                             //
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x473b]
+                             //
                              undefined __cdecl16near FUN_1000_1bb2()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1550,6 +2194,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1bec(void);
+                             //
+                             // Input/Output Parameters:
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x114e]
+                             //   Write to: byte ptr [0x46d9]
+                             //
                              undefined __cdecl16near FUN_1000_1bec()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1578,6 +2232,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1c18(void);
+                             //
+                             // Input/Output Parameters:
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x46fa]
+                             //   Read from: word ptr [0x46f8]
+                             //
                              undefined __cdecl16near FUN_1000_1c18()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1609,6 +2274,26 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1c46(uint8_t bl);
+                             //
+                             // Input Parameters:
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x2a]
+                             //   Read from: [0xd5]
+                             //   Read from: word ptr [0xa0]
+                             //   Write to: byte ptr [0xff]
+                             //   Write to: [0xd5]
+                             //   Write to: [0xa6]
+                             //
                              undefined __cdecl16near FUN_1000_1c46()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1680,6 +2365,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1cda(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [DI + 0x12]
+                             //   Write to: word ptr [0xa8]
+                             //
                              undefined __cdecl16near FUN_1000_1cda()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1714,6 +2414,30 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_1d66(uint16_t bx);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   CS (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BH (uint8_t): 8-bit value, both input and output (modified)
+                             //   BL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI + 0x2]
+                             //   Read from: word ptr [SI]
+                             //   Read from: byte ptr [DI + 0x8]
+                             //   Write to: word ptr [SI]
+                             //
                              undefined __cdecl16near FUN_1000_1d66()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1750,6 +2474,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_1d9f(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined __cdecl16near FUN_1000_1d9f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1766,6 +2497,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_1e01(uint8_t bl);
+                             //
+                             // Input Parameters:
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI + 0x2]
+                             //   Write to: byte ptr [SI]
+                             //
                              undefined __cdecl16near FUN_1000_1e01()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1787,6 +2536,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1e24(uint16_t di);
+                             //
+                             // Input Parameters:
+                             //   DI (uint16_t): 16-bit input value in DI register
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [DI + 0x9]
+                             //   Read from: byte ptr [SI + 0x1]
+                             //
                              undefined __cdecl16near FUN_1000_1e24()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1818,6 +2579,23 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1e43(uint16_t ax);
+                             //
+                             // Input Parameters:
+                             //   AX (uint16_t): 16-bit input value in AX register
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0x11db]
+                             //
                              undefined __cdecl16near FUN_1000_1e43()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1867,6 +2645,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1ebe(uint16_t si);
+                             //
+                             // Input Parameters:
+                             //   SI (uint16_t): 16-bit input value in SI register
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x2a]
+                             //
                              undefined __cdecl16near FUN_1000_1ebe()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1887,6 +2675,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_1eda(void);
+                             //
+                             // Input/Output Parameters:
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0x11db]
+                             //
                              undefined __cdecl16near FUN_1000_1eda()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1922,6 +2725,28 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_2090(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DH (uint8_t): 8-bit value, both input and output (modified)
+                             //   DL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: [0xc3]
+                             //   Read from: [0xbe]
+                             //   Write to: [0x118d]
+                             //   Write to: word ptr [0xbc]
+                             //   Write to: byte ptr [0xcf]
+                             //
                              undefined FUN_1000_2090()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -1977,6 +2802,32 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_2170(uint8_t bh, uint8_t bl, uint8_t dh);
+                             //
+                             // Input Parameters:
+                             //   BH (uint8_t): 8-bit input value in BH register
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   DH (uint8_t): 8-bit input value in DH register
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI]
+                             //   Read from: word ptr [SI + 0x2]
+                             //   Read from: byte ptr [SI + 0xe]
+                             //   Write to: word ptr [SI]
+                             //   Write to: byte ptr [SI]
+                             //   Write to: byte ptr [SI]
+                             //
                              undefined __cdecl16near FUN_1000_2170()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2048,6 +2899,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_21fa(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //
                              undefined __cdecl16near FUN_1000_21fa()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2074,6 +2934,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_221d(uint8_t bh, uint16_t bx);
+                             //
+                             // Input Parameters:
+                             //   BH (uint8_t): 8-bit input value in BH register
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI]
+                             //   Write to: word ptr [SI]
+                             //   Write to: word ptr [SI + 0x2]
+                             //
                              undefined __cdecl16near FUN_1000_221d()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2095,6 +2970,12 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_2524(uint16_t ax);
+                             //
+                             // Input Parameters:
+                             //   AX (uint16_t): 16-bit input value in AX register
+                             //
                              undefined __cdecl16near FUN_1000_2524()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2105,6 +2986,29 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_2566(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BL (uint8_t): 8-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [0xc3]
+                             //   Read from: word ptr [0xdbd6]
+                             //   Write to: [0xbe]
+                             //   Write to: byte ptr [0xbe]
+                             //   Write to: byte ptr [0xbf]
+                             //
                              undefined FUN_1000_2566()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2249,6 +3153,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_26ac(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbd6]
+                             //
                              undefined __cdecl16near FUN_1000_26ac()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2277,6 +3196,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_26da(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [0xc8]
+                             //   Read from: byte ptr [0xc8]
+                             //   Write to: word ptr [SI]
+                             //
                              undefined __cdecl16near FUN_1000_26da()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2323,6 +3256,23 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_272f(void);
+                             //
+                             // Input Parameters:
+                             //   DS (uint16_t): Segment register input value
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [0xc8]
+                             //
                              undefined __cdecl16near FUN_1000_272f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2345,6 +3295,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_274e(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined FUN_1000_274e()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2359,6 +3318,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_275f(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
                              undefined FUN_1000_275f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2375,6 +3344,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2773(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0xd816]
+                             //
                              undefined FUN_1000_2773()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2396,6 +3377,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2795(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0xd816]
+                             //
                              undefined __cdecl16near FUN_1000_2795()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2416,6 +3408,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_27c9(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0xd816]
+                             //   Write to: byte ptr [SI]
+                             //   Write to: byte ptr [SI + 0x6]
+                             //
                              undefined FUN_1000_27c9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2451,6 +3461,14 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2806(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
                              undefined FUN_1000_2806()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2467,6 +3485,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_281c(void);
+                             //
+                             // Input/Output Parameters:
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0xd816]
+                             //
                              undefined __cdecl16near FUN_1000_281c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2487,6 +3517,12 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_29ee(void);
+                             //
+                             // Input/Output Parameters:
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
                              undefined FUN_1000_29ee()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2496,6 +3532,25 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_29f0(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [SI]
+                             //   Read from: byte ptr [SI]
+                             //   Write to: word ptr [SI]
+                             //   Write to: word ptr [SI + 0x2]
+                             //
                              undefined __cdecl16near FUN_1000_29f0()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2543,6 +3598,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2a34(void);
+                             //
+                             // Input Parameters:
+                             //   DS (uint16_t): Segment register input value
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [SI + -0x1]
+                             //
                              undefined __cdecl16near FUN_1000_2a34()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2568,6 +3638,25 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2a51(uint8_t ah, uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AH (uint8_t): 8-bit input value in AH register
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   DS (uint16_t): Segment register input value
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DL (uint8_t): 8-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //
                              undefined __cdecl16near FUN_1000_2a51()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2615,6 +3704,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2ad8(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x1191]
+                             //   Read from: word ptr [0x12]
+                             //   Read from: word ptr [0x1193]
+                             //   Write to: [0xea]
+                             //   Write to: byte ptr [0xea]
+                             //
                              undefined __cdecl16near FUN_1000_2ad8()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2661,6 +3768,29 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2b2a(uint16_t bx);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BL (uint8_t): 8-bit output value in BL register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x46d9]
+                             //   Read from: [0xce7a]
+                             //   Read from: word ptr [0x1193]
+                             //   Write to: byte ptr [0x23]
+                             //   Write to: byte ptr [0x1193]
+                             //   Write to: [0xea]
+                             //
                              undefined __cdecl16near FUN_1000_2b2a()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2830,6 +3960,14 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2c92(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
                              undefined FUN_1000_2c92()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2841,6 +3979,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2d74(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   DS (uint16_t): Segment register input value
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x114e]
+                             //   Write to: [0x144c]
+                             //
                              undefined __cdecl16near FUN_1000_2d74()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2880,6 +4034,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2db1(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x46df]
+                             //   Read from: [0xdbd6]
+                             //   Write to: byte ptr [0x47a6]
+                             //   Write to: [0xdce6]
+                             //   Write to: [0x47a4]
+                             //
                              undefined FUN_1000_2db1()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2955,6 +4127,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2e52(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0xce7a]
+                             //   Read from: [0x4735]
+                             //   Read from: word ptr [0x47aa]
+                             //   Write to: [0xdc5a]
+                             //   Write to: [0x47c4]
+                             //
                              undefined __cdecl16near FUN_1000_2e52()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -2998,6 +4185,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2e98(uint16_t ax, uint16_t di);
+                             //
+                             // Input Parameters:
+                             //   AX (uint16_t): 16-bit input value in AX register
+                             //   DI (uint16_t): 16-bit input value in DI register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [DI]
+                             //   Read from: byte ptr [DI + 0x1]
+                             //   Write to: word ptr [0x47e6]
+                             //   Write to: [0x11ed]
+                             //   Write to: [0x11ef]
+                             //
                              undefined __cdecl16near FUN_1000_2e98()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3016,6 +4221,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_2ebf(void);
+                             //
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x2220]
+                             //
                              undefined FUN_1000_2ebf()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3027,6 +4243,32 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_2efb(uint8_t bh, uint8_t bl, uint8_t dl);
+                             //
+                             // Input Parameters:
+                             //   BH (uint8_t): 8-bit input value in BH register
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   DL (uint8_t): 8-bit input value in DL register
+                             //   DS (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x6]
+                             //   Read from: word ptr [0x4]
+                             //   Read from: word ptr [0x114e]
+                             //   Write to: byte ptr [0x1248]
+                             //
                              undefined __cdecl16near FUN_1000_2efb()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3171,6 +4413,30 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_2ffb(uint8_t bl, uint8_t dh, uint8_t dl);
+                             //
+                             // Input Parameters:
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   DH (uint8_t): 8-bit input value in DH register
+                             //   DL (uint8_t): 8-bit input value in DL register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x6]
+                             //   Read from: word ptr [0x4]
+                             //   Write to: word ptr [DI + 0x2]
+                             //   Write to: byte ptr [DI + 0x46]
+                             //   Write to: [0x1cc4]
+                             //
                              undefined FUN_1000_2ffb()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3250,6 +4516,25 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_31f6(uint16_t si);
+                             //
+                             // Input Parameters:
+                             //   SI (uint16_t): 16-bit input value in SI register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI + 0x4]
+                             //   Read from: byte ptr [SI]
+                             //   Read from: byte ptr [SI + 0x3]
+                             //   Write to: word ptr [0x2c]
+                             //   Write to: [0x2e]
+                             //   Write to: [0x30]
+                             //
                              undefined __cdecl16near FUN_1000_31f6()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3315,6 +4600,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_329d(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x42]
+                             //   Read from: word ptr [SI + 0xe]
+                             //   Write to: [0x4a]
+                             //
                              undefined __cdecl16near FUN_1000_329d()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3342,6 +4641,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_32c7(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x2]
+                             //   Write to: [0x42]
+                             //   Write to: [0x41]
+                             //   Write to: [0x11f5]
+                             //
                              undefined __cdecl16near FUN_1000_32c7()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3384,6 +4701,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_3310(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
                              undefined __cdecl16near FUN_1000_3310()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3400,6 +4724,30 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_331e(uint16_t ax);
+                             //
+                             // Input Parameters:
+                             //   AX (uint16_t): 16-bit input value in AX register
+                             //   DS (uint16_t): Segment register input value
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AH (uint8_t): 8-bit output value in AH register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [DI]
+                             //   Read from: byte ptr [DI + 0x1]
+                             //   Read from: byte ptr [DI + 0xa]
+                             //   Write to: word ptr [0x11ce]
+                             //   Write to: [0x4e]
+                             //   Write to: [0x50]
+                             //
                              undefined __cdecl16near FUN_1000_331e()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3458,6 +4806,23 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3385(uint8_t al, uint16_t di);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   DI (uint16_t): 16-bit input value in DI register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BH (uint8_t): 8-bit output value in BH register
+                             //   BL (uint8_t): 8-bit output value in BL register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0xf7]
+                             //
                              undefined __cdecl16near FUN_1000_3385()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3481,6 +4846,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_33ad(uint16_t bx, uint16_t si);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   SI (uint16_t): 16-bit input value in SI register
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [SI + 0xe]
+                             //
                              undefined __cdecl16near FUN_1000_33ad()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3498,6 +4877,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_33be(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Write to: [0x94]
+                             //   Write to: [0x96]
+                             //   Write to: [0x5c]
+                             //
                              undefined __cdecl16near FUN_1000_33be()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3515,6 +4909,19 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_33d9(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x96]
+                             //   Read from: word ptr [0x94]
+                             //
                              undefined __cdecl16near FUN_1000_33d9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3548,6 +4955,25 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_34a5(void);
+                             //
+                             // Input Parameters:
+                             //   DS (uint16_t): Segment register input value
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x60]
+                             //   Read from: [0x61]
+                             //   Write to: [0x91]
+                             //   Write to: [0x92]
+                             //
                              undefined __cdecl16near FUN_1000_34a5()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3574,6 +5000,19 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_3542(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x47c4]
+                             //   Read from: word ptr [0x114e]
+                             //   Write to: byte ptr [0xe7]
+                             //
                              undefined FUN_1000_3542()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3586,6 +5025,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_3551(void);
+                             //
+                             // Input/Output Parameters:
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x47c4]
+                             //   Write to: word ptr [0x1bea]
+                             //   Write to: word ptr [0x1bf8]
+                             //   Write to: word ptr [0x1bea]
+                             //
                              undefined __cdecl16near FUN_1000_3551()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3633,6 +5088,27 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_35ad(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0xc0]
+                             //   Write to: [0x1a]
+                             //   Write to: [0x47a7]
+                             //   Write to: [0x1a]
+                             //
                              undefined __cdecl16near FUN_1000_35ad()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3723,6 +5199,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_366f(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x1152]
+                             //
                              undefined __cdecl16near FUN_1000_366f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3744,6 +5230,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_368b(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [0x11c9]
+                             //   Write to: byte ptr [0x473e]
+                             //   Write to: byte ptr [0x47a4]
+                             //   Write to: [0x47c4]
+                             //
                              undefined __cdecl16near FUN_1000_368b()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3783,6 +5285,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_36d3(void);
+                             //
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x47a7]
+                             //   Write to: byte ptr [0x23]
+                             //
                              undefined __cdecl16near FUN_1000_36d3()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3802,6 +5315,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_36ee(void);
+                             //
+                             // Input/Output Parameters:
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x6]
+                             //   Read from: word ptr [0x4]
+                             //   Read from: word ptr [0x6]
+                             //
                              undefined __cdecl16near FUN_1000_36ee()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3843,6 +5371,31 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3723(uint8_t dh);
+                             //
+                             // Input Parameters:
+                             //   DH (uint8_t): 8-bit input value in DH register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DL (uint8_t): 8-bit output value in DL register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x1150]
+                             //   Read from: word ptr [0x4]
+                             //   Read from: word ptr [0x6]
+                             //   Write to: byte ptr [0x47a6]
+                             //   Write to: byte ptr [0x47a6]
+                             //
                              undefined FUN_1000_3723()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3909,6 +5462,13 @@
                              **************************************************************
                              *                       THUNK FUNCTION                       *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t thunk_FUN_1000_c2f2(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //
                              thunk undefined thunk_FUN_1000_c2f2()
                                Thunked-Function: FUN_1000_c2f2
                                assume CS = 0x1000
@@ -3920,6 +5480,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_37b2(void);
+                             //
+                             //
                              undefined FUN_1000_37b2()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3929,6 +5493,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_37b5(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x4]
+                             //   Write to: word ptr [0x472d]
+                             //
                              undefined FUN_1000_37b5()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3959,6 +5537,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_37eb(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x487e]
+                             //   Write to: byte ptr [0x4728]
+                             //
                              undefined FUN_1000_37eb()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -3980,6 +5569,28 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_380c(void);
+                             //
+                             // Input Parameters:
+                             //   ES (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x1150]
+                             //   Read from: word ptr [0x4]
+                             //   Read from: [0x6]
+                             //   Write to: byte ptr [0x22e3]
+                             //
                              undefined FUN_1000_380c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4047,6 +5658,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_388d(uint8_t bl);
+                             //
+                             // Input Parameters:
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x46df]
+                             //   Write to: byte ptr [0x46d7]
+                             //
                              undefined __cdecl16near FUN_1000_388d()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4074,6 +5695,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_38b4(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
                              undefined __cdecl16near FUN_1000_38b4()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4109,6 +5740,12 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_38e1(uint8_t bl);
+                             //
+                             // Input Parameters:
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //
                              undefined __cdecl16near FUN_1000_38e1()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4123,6 +5760,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_38f1(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined FUN_1000_38f1()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4140,6 +5787,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_3950(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x46d7]
+                             //
                              undefined FUN_1000_3950()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4152,6 +5809,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_395c(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BL (uint8_t): 8-bit output value in BL register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x2]
+                             //
                              undefined __cdecl16near FUN_1000_395c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4171,6 +5843,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3971(uint8_t bl, uint16_t si);
+                             //
+                             // Input Parameters:
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   SI (uint16_t): 16-bit input value in SI register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: [SI + 0x6]
+                             //   Write to: [0xdbb4]
+                             //   Write to: [0x46d6]
+                             //
                              undefined __cdecl16near FUN_1000_3971()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4192,6 +5882,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_398c(void);
+                             //
+                             // Input/Output Parameters:
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //
                              undefined __cdecl16near FUN_1000_398c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4220,6 +5919,15 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_39b9(void);
+                             //
+                             // Input/Output Parameters:
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //
                              undefined __cdecl16near FUN_1000_39b9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4249,6 +5957,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_39e6(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined FUN_1000_39e6()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4262,6 +5977,30 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_39ec(uint8_t ah);
+                             //
+                             // Input Parameters:
+                             //   AH (uint8_t): 8-bit input value in AH register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x4]
+                             //   Read from: word ptr [0x114e]
+                             //   Read from: byte ptr [DI]
+                             //   Write to: byte ptr [0x22e3]
+                             //   Write to: byte ptr [0x22e3]
+                             //   Write to: byte ptr [0x4731]
+                             //
                              undefined __cdecl16near FUN_1000_39ec()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4339,6 +6078,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_3a7c(uint8_t ah, uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AH (uint8_t): 8-bit input value in AH register
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x4]
+                             //
                              undefined __cdecl16near FUN_1000_3a7c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4359,6 +6113,14 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_3a95(void);
+                             //
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
                              undefined __cdecl16near FUN_1000_3a95()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4375,6 +6137,19 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3aa9(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0x4731]
+                             //
                              undefined FUN_1000_3aa9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4413,6 +6188,17 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_3ae9(void);
+                             //
+                             // Input Parameters:
+                             //   DS (uint16_t): Segment register input value
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
                              undefined __cdecl16near FUN_1000_3ae9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4430,6 +6216,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3af9(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x47c4]
+                             //   Read from: word ptr [DI + 0x47f8]
+                             //   Read from: word ptr [0xdbde]
+                             //
                              undefined __cdecl16near FUN_1000_3af9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4484,6 +6288,31 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3b59(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //   SP (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI]
+                             //   Read from: word ptr [0xdbda]
+                             //   Write to: word ptr [0x47f6]
+                             //   Write to: CS:[DAT_1000_c21a]
+                             //   Write to: byte ptr CS:[DAT_1000_c21a]
+                             //
                              undefined __cdecl16near FUN_1000_3b59()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4567,6 +6396,31 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3be9(void);
+                             //
+                             // Input Parameters:
+                             //   DS (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [SI + -0x2]
+                             //   Read from: byte ptr [SI + -0x1]
+                             //   Read from: word ptr [0x47ee]
+                             //   Write to: word ptr [0x22d9]
+                             //   Write to: [0x47ed]
+                             //   Write to: [0x47ec]
+                             //
                              undefined __cdecl16near FUN_1000_3be9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4723,6 +6577,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_3d12(void);
+                             //
+                             // Input/Output Parameters:
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x47f6]
+                             //   Read from: byte ptr [DI]
+                             //
                              undefined __cdecl16near FUN_1000_3d12()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4742,6 +6610,23 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_3d2f(uint16_t bx, uint16_t dx);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   DX (uint16_t): 16-bit input value in DX register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [DI + 0x47f8]
+                             //   Write to: word ptr [DI + 0x47fa]
+                             //   Write to: [0x476c]
+                             //
                              undefined FUN_1000_3d2f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4790,6 +6675,30 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3d83(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   DS (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DL (uint8_t): 8-bit output value in DL register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x47f6]
+                             //   Read from: word ptr [0x47f6]
+                             //   Read from: [0x4778]
+                             //   Write to: word ptr [0x47f6]
+                             //
                              undefined __cdecl16near FUN_1000_3d83()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4852,6 +6761,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_3df4(uint8_t al, uint16_t ax, uint8_t cl);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   AX (uint16_t): 16-bit input value in AX register
+                             //   CL (uint8_t): 8-bit input value in CL register
+                             //   BL (uint8_t): 8-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [BX + DI]
+                             //
                              undefined __cdecl16near FUN_1000_3df4()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4879,6 +6802,27 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3e13(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x47ea]
+                             //   Read from: word ptr [0x47e8]
+                             //   Read from: word ptr [0x22d9]
+                             //   Write to: word ptr [0x47e8]
+                             //   Write to: word ptr [0x47ea]
+                             //   Write to: word ptr [0x22d9]
+                             //
                              undefined __cdecl16near FUN_1000_3e13()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -4943,6 +6887,27 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3e80(uint16_t sp);
+                             //
+                             // Input Parameters:
+                             //   SP (uint16_t): 16-bit input value in SP register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [BP + 0x4]
+                             //   Read from: word ptr [BP + 0x6]
+                             //   Read from: word ptr [BP + 0x0]
+                             //   Write to: word ptr [BP + 0x2]
+                             //   Write to: word ptr [BP + 0x0]
+                             //   Write to: word ptr [0x22d9]
+                             //
                              undefined __cdecl16near FUN_1000_3e80()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5019,6 +6984,23 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3efe(uint8_t dh, uint8_t dl);
+                             //
+                             // Input Parameters:
+                             //   DH (uint8_t): 8-bit input value in DH register
+                             //   DL (uint8_t): 8-bit input value in DL register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI + 0x13c4]
+                             //
                              undefined __cdecl16near FUN_1000_3efe()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5040,6 +7022,33 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_3f15(uint8_t bl);
+                             //
+                             // Input Parameters:
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BH (uint8_t): 8-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DH (uint8_t): 8-bit value, both input and output (modified)
+                             //   DL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x4]
+                             //   Read from: word ptr [0x6]
+                             //   Read from: [0x4735]
+                             //   Write to: byte ptr [0x47a9]
+                             //   Write to: byte ptr [0x26]
+                             //   Write to: [0x4735]
+                             //
                              undefined __cdecl16near FUN_1000_3f15()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5199,6 +7208,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_407e(uint8_t bl);
+                             //
+                             // Input Parameters:
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x4]
+                             //   Read from: word ptr [0x6]
+                             //   Read from: word ptr [0x114e]
+                             //
                              undefined __cdecl16near FUN_1000_407e()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5233,6 +7258,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_409a(uint16_t di);
+                             //
+                             // Input Parameters:
+                             //   DI (uint16_t): 16-bit input value in DI register
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
                              undefined __cdecl16near FUN_1000_409a()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5254,6 +7286,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_40ae(uint8_t al, uint16_t di);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //   DI (uint16_t): 16-bit input value in DI register
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BH (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BL (uint8_t): 8-bit output value in BL register
+                             //   DH (uint8_t): 8-bit output value in DH register
+                             //   DL (uint8_t): 8-bit output value in DL register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [DI + 0x8]
+                             //
                              undefined __cdecl16near FUN_1000_40ae()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5273,6 +7323,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_40c3(void);
+                             //
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
                              undefined FUN_1000_40c3()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5284,6 +7341,12 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_40e6(uint16_t si);
+                             //
+                             // Input Parameters:
+                             //   SI (uint16_t): 16-bit input value in SI register
+                             //
                              undefined __cdecl16near FUN_1000_40e6()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5299,6 +7362,26 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_40f9(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI]
+                             //   Read from: [0x2a]
+                             //   Write to: word ptr [0x11f5]
+                             //   Write to: byte ptr [0xe1]
+                             //   Write to: [0x11f3]
+                             //
                              undefined __cdecl16near FUN_1000_40f9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5372,6 +7455,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_4182(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x11c9]
+                             //   Read from: word ptr [0x11c5]
+                             //   Write to: byte ptr [0x23]
+                             //   Write to: byte ptr [0x46d9]
+                             //   Write to: byte ptr [0x4726]
+                             //
                              undefined __cdecl16near FUN_1000_4182()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5414,6 +7513,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_41cc(uint8_t al);
+                             //
+                             // Input Parameters:
+                             //   AL (uint8_t): 8-bit input value in AL register
+                             //
+                             // Memory Access:
+                             //   Write to: [0x21fd]
+                             //   Write to: [0x1f11]
+                             //
                              undefined __cdecl16near FUN_1000_41cc()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5432,6 +7541,27 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_41e1(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x11c7]
+                             //   Read from: word ptr [SI]
+                             //   Read from: [0x2a]
+                             //   Write to: [0x1968]
+                             //   Write to: [0x196a]
+                             //   Write to: byte ptr [0x196c]
+                             //
                              undefined __cdecl16near FUN_1000_41e1()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5504,6 +7634,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_425b(void);
+                             //
+                             // Input/Output Parameters:
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [DI + 0xb]
+                             //
                              undefined __cdecl16near FUN_1000_425b()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5528,6 +7670,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_42e9(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x473e]
+                             //   Write to: byte ptr [0x11c9]
+                             //   Write to: word ptr [0x487e]
+                             //
                              undefined FUN_1000_42e9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5586,6 +7744,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_439f(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbda]
+                             //
                              undefined __cdecl16near FUN_1000_439f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5621,6 +7791,29 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_445d(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BL (uint8_t): 8-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI]
+                             //   Read from: word ptr [SI + 0x2]
+                             //   Read from: word ptr [SI + 0x4]
+                             //   Write to: word ptr [0x4749]
+                             //   Write to: word ptr [DI]
+                             //   Write to: word ptr [DI + 0x2]
+                             //
                              undefined __cdecl16near FUN_1000_445d()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5699,6 +7892,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_4658(void);
+                             //
+                             // Input Parameters:
+                             //   ES (uint16_t): Segment register input value
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   CH (uint8_t): 8-bit output value in CH register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0x4741]
+                             //   Write to: word ptr [0x473f]
+                             //   Write to: word ptr [0x4743]
+                             //
                              undefined __cdecl16near FUN_1000_4658()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5732,6 +7943,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_47fb(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x4731]
+                             //
                              undefined __cdecl16near FUN_1000_47fb()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5756,6 +7981,25 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_488a(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   CL (uint8_t): 8-bit output value in CL register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x114e]
+                             //   Write to: byte ptr [0x4728]
+                             //   Write to: byte ptr [0x4732]
+                             //   Write to: byte ptr [0x4731]
+                             //
                              undefined FUN_1000_488a()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5823,6 +8067,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_4944(uint16_t bx, uint16_t dx);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   DX (uint16_t): 16-bit input value in DX register
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x1150]
+                             //   Write to: word ptr [0x11c5]
+                             //   Write to: byte ptr [0x11c8]
+                             //   Write to: byte ptr [0x11c7]
+                             //
                              undefined FUN_1000_4944()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5852,6 +8112,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_4988(void);
+                             //
+                             //
+                             // Return Values:
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0x46fc]
+                             //   Write to: word ptr [0x46ed]
+                             //
                              undefined FUN_1000_4988()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5867,6 +8139,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_49a0(void);
+                             //
+                             // Input/Output Parameters:
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x11c5]
+                             //   Write to: byte ptr [0x46eb]
+                             //   Write to: byte ptr [0x46eb]
+                             //
                              undefined FUN_1000_49a0()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5896,6 +8182,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_49d9(void);
+                             //
+                             //
                              undefined FUN_1000_49d9()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5911,6 +8201,19 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_49ea(void);
+                             //
+                             // Input Parameters:
+                             //   CS (uint16_t): Segment register input value
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x4728]
+                             //
                              undefined __cdecl16near FUN_1000_49ea()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5930,6 +8233,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_4a00(uint16_t bx, uint16_t dx);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   CS (uint16_t): Segment register input value
+                             //   DX (uint16_t): 16-bit input value in DX register
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x149a]
+                             //   Write to: word ptr [0x149a]
+                             //
                              undefined __cdecl16near FUN_1000_4a00()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5950,6 +8269,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4a1a(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x149a]
+                             //
                              undefined __cdecl16near FUN_1000_4a1a()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5986,6 +8319,18 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4a5a(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x149a]
+                             //
                              undefined __cdecl16near FUN_1000_4a5a()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6033,6 +8378,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_4ac4(void);
+                             //
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x11ca]
+                             //
                              undefined __cdecl16near FUN_1000_4ac4()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6043,6 +8395,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_4aca(void);
+                             //
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x11ca]
+                             //
                              undefined __cdecl16near FUN_1000_4aca()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6056,6 +8415,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_4aeb(void);
+                             //
+                             //
+                             // Return Values:
+                             //   AX (uint16_t): 16-bit output value in AX register
+                             //
                              undefined FUN_1000_4aeb()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6071,6 +8437,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_4afd(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xdbd8]
+                             //   Read from: word ptr [0xdbd6]
+                             //   Read from: [0xdbd8]
+                             //
                              undefined __cdecl16near FUN_1000_4afd()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6097,6 +8477,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_4b2b(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined FUN_1000_4b2b()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6113,6 +8500,20 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_4b3b(uint16_t bx, uint16_t dx);
+                             //
+                             // Input Parameters:
+                             //   BX (uint16_t): 16-bit input value in BX register
+                             //   DX (uint16_t): 16-bit input value in DX register
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0x4]
+                             //   Write to: word ptr [0x6]
+                             //
                              undefined __cdecl16near FUN_1000_4b3b()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6133,6 +8534,23 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4b5f(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI]
+                             //   Read from: word ptr [SI + 0x4]
+                             //   Read from: word ptr [SI]
+                             //   Write to: word ptr [0x4860]
+                             //   Write to: [0x4864]
+                             //   Write to: word ptr [0x4862]
+                             //
                              undefined __cdecl16near FUN_1000_4b5f()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6182,6 +8600,28 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4bdf(void);
+                             //
+                             // Input Parameters:
+                             //   SS (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: [0x485e]
+                             //   Read from: [0x4878]
+                             //   Read from: [0x4876]
+                             //   Write to: [0x4878]
+                             //   Write to: [0x4876]
+                             //   Write to: word ptr [0x486a]
+                             //
                              undefined __cdecl16near FUN_1000_4bdf()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6234,6 +8674,28 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4c45(void);
+                             //
+                             // Input Parameters:
+                             //   SS (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr SS:[0x486c]
+                             //   Read from: word ptr SS:[0xdbda]
+                             //   Read from: word ptr SS:[0xdbb0]
+                             //
                              undefined __cdecl16near FUN_1000_4c45()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6281,6 +8743,28 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4c92(uint16_t cx, uint16_t si);
+                             //
+                             // Input Parameters:
+                             //   CX (uint16_t): 16-bit input value in CX register
+                             //   SI (uint16_t): 16-bit input value in SI register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI]
+                             //   Write to: [0x485e]
+                             //   Write to: word ptr [0x486e]
+                             //   Write to: word ptr [0x4870]
+                             //
                              undefined __cdecl16near FUN_1000_4c92()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6334,6 +8818,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_4d00(void);
+                             //
+                             //
+                             // Return Values:
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
                              undefined FUN_1000_4d00()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6345,6 +8836,29 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4d06(uint8_t bh, uint8_t bl);
+                             //
+                             // Input Parameters:
+                             //   BH (uint8_t): 8-bit input value in BH register
+                             //   BL (uint8_t): 8-bit input value in BL register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   SI (uint16_t): 16-bit output value in SI register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x1150]
+                             //   Read from: word ptr [DI + 0x2]
+                             //   Read from: [0x4733]
+                             //   Write to: byte ptr [0xf6]
+                             //
                              undefined __cdecl16near FUN_1000_4d06()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6388,6 +8902,19 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_4d57(void);
+                             //
+                             // Input/Output Parameters:
+                             //   BH (uint8_t): 8-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   AL (uint8_t): 8-bit output value in AL register
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
                              undefined FUN_1000_4d57()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6406,6 +8933,24 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_4d6c(void);
+                             //
+                             // Input Parameters:
+                             //   CS (uint16_t): Segment register input value
+                             //   SS (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0xaa6e]
+                             //   Read from: word ptr CS:[DAT_1000_0167]
+                             //   Write to: word ptr [0xaa6e]
+                             //   Write to: word ptr [0xaa6e]
+                             //
                              undefined __cdecl16near FUN_1000_4d6c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6442,6 +8987,26 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4da0(void);
+                             //
+                             // Input Parameters:
+                             //   SS (uint16_t): Segment register input value
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BP (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //   DI (uint16_t): 16-bit output value in DI register
+                             //   DX (uint16_t): 16-bit output value in DX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr SS:[0xdbda]
+                             //
                              undefined __cdecl16near FUN_1000_4da0()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6490,6 +9055,22 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_4ded(uint16_t di);
+                             //
+                             // Input Parameters:
+                             //   DI (uint16_t): 16-bit input value in DI register
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //   CH (uint8_t): 8-bit output value in CH register
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [DI + 0x14]
+                             //   Write to: word ptr [0x4733]
+                             //
                              undefined __cdecl16near FUN_1000_4ded()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6508,6 +9089,29 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4e12(uint16_t si);
+                             //
+                             // Input Parameters:
+                             //   SI (uint16_t): 16-bit input value in SI register
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CH (uint8_t): 8-bit value, both input and output (modified)
+                             //   CL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BX (uint16_t): 16-bit output value in BX register
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [SI + 0x2]
+                             //   Read from: [0x196a]
+                             //   Read from: word ptr [0x4733]
+                             //   Write to: word ptr [0x4733]
+                             //   Write to: word ptr [0x196a]
+                             //   Write to: [0x1968]
+                             //
                              undefined __cdecl16near FUN_1000_4e12()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6593,6 +9197,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_4ec6(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [0x487e]
+                             //   Read from: [0xdc00]
+                             //   Write to: word ptr [0x487e]
+                             //   Write to: word ptr [0xdc02]
+                             //   Write to: word ptr [0xdc02]
+                             //
                              undefined __cdecl16near FUN_1000_4ec6()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6632,6 +9251,25 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_4f0c(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //   SI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: [0xce7a]
+                             //   Read from: [0xce7a]
+                             //   Read from: word ptr [0x11c5]
+                             //   Write to: word ptr [0x1c06]
+                             //   Write to: [0x4729]
+                             //   Write to: byte ptr [0x4728]
+                             //
                              undefined __cdecl16near FUN_1000_4f0c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6740,6 +9378,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint16_t FUN_1000_503c(uint16_t di);
+                             //
+                             // Input Parameters:
+                             //   DI (uint16_t): 16-bit input value in DI register
+                             //   AH (uint8_t): 8-bit value, both input and output (modified)
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Memory Access:
+                             //   Read from: byte ptr [DI + 0x8]
+                             //   Write to: byte ptr [0xfd]
+                             //   Write to: byte ptr [0x2b]
+                             //   Write to: byte ptr [0x11dd]
+                             //
                              undefined __cdecl16near FUN_1000_503c()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6782,6 +9435,16 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_5098(void);
+                             //
+                             // Input/Output Parameters:
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BP (uint16_t): 16-bit output value in BP register
+                             //
                              undefined FUN_1000_5098()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6795,6 +9458,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_50be(void);
+                             //
+                             //
+                             // Memory Access:
+                             //   Write to: byte ptr [0x11cb]
+                             //
                              undefined __cdecl16near FUN_1000_50be()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6805,6 +9475,13 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_5119(void);
+                             //
+                             //
+                             // Memory Access:
+                             //   Write to: word ptr [0x11cc]
+                             //
                              undefined __cdecl16near FUN_1000_5119()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6816,6 +9493,19 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: void FUN_1000_5124(void);
+                             //
+                             // Input/Output Parameters:
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   CX (uint16_t): 16-bit output value in CX register
+                             //
+                             // Memory Access:
+                             //   Read from: word ptr [DI + 0x4]
+                             //   Read from: word ptr [DI + 0x2]
+                             //
                              undefined __cdecl16near FUN_1000_5124()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6833,6 +9523,21 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
+                             //
+                             // C Signature: uint32_t FUN_1000_5133(void);
+                             //
+                             // Input/Output Parameters:
+                             //   AL (uint8_t): 8-bit value, both input and output (modified)
+                             //   AX (uint16_t): 16-bit value, both input and output (modified)
+                             //   BL (uint8_t): 8-bit value, both input and output (modified)
+                             //   BX (uint16_t): 16-bit value, both input and output (modified)
+                             //   CX (uint16_t): 16-bit value, both input and output (modified)
+                             //   DI (uint16_t): 16-bit value, both input and output (modified)
+                             //   DX (uint16_t): 16-bit value, both input and output (modified)
+                             //
+                             // Return Values:
+                             //   BH (uint8_t): 8-bit output value in BH register
+                             //
                              undefined __cdecl16near FUN_1000_5133()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
