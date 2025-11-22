@@ -1266,8 +1266,6 @@
                              // Input Parameters:
                              //   DS (uint16_t): Segment register input value
                              //
-                             // Return Values:
-                             //
                              undefined __cdecl16near FUN_1000_5b99()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -5687,8 +5685,6 @@
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: [DI + 0x2]

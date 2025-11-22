@@ -3655,8 +3655,6 @@
                              //   DL (uint8_t): 8-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              undefined __cdecl16near FUN_1000_2a51()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
@@ -6411,8 +6409,6 @@
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: byte ptr [SI + -0x2]
                              //   Read from: byte ptr [SI + -0x1]
@@ -8444,8 +8440,6 @@
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: word ptr [0xdbd8]
                              //   Read from: word ptr [0xdbd6]
@@ -8942,8 +8936,6 @@
                              //   AH (uint8_t): 8-bit value, both input and output (modified)
                              //   AL (uint8_t): 8-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: word ptr [0xaa6e]

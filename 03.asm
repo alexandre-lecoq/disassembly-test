@@ -5183,8 +5183,6 @@
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //   DL (uint8_t): 8-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Write to: word ptr ES:[DI]
                              //   Write to: word ptr ES:[DI + 0x2]
@@ -6099,8 +6097,6 @@
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Write to: byte ptr ES:[SI]
                              //
@@ -6462,8 +6458,6 @@
                              //
                              // C Signature: void FUN_1000_c0ad(void);
                              //
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: word ptr [0xdbda]
@@ -7120,8 +7114,6 @@
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: word ptr [SI + -0x2]
                              //
@@ -7467,8 +7459,6 @@
                              //
                              // Input/Output Parameters:
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: word ptr [0xdbde]
                              //   Read from: word ptr [0xdbda]
@@ -7562,8 +7552,6 @@
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: [0xdbde]
                              //   Read from: word ptr [SI]
@@ -7646,8 +7634,6 @@
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: word ptr [SI]
                              //   Read from: word ptr [SI + 0x2]
@@ -7681,8 +7667,6 @@
                              //
                              // Input/Output Parameters:
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: word ptr [0xdbd6]
                              //   Read from: word ptr [0xdbd8]
@@ -7712,8 +7696,6 @@
                              //   BP (uint16_t): 16-bit value, both input and output (modified)
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: word ptr [SI]
@@ -7748,8 +7730,6 @@
                              // C Signature: void FUN_1000_c4cd(void);
                              //
                              // Input/Output Parameters:
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: word ptr [0xdbd8]
@@ -7888,8 +7868,6 @@
                              //   DX (uint16_t): 16-bit input value in DX register
                              //   AX (uint16_t): 16-bit value, both input and output (modified)
                              //   BP (uint16_t): 16-bit value, both input and output (modified)
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: word ptr [0xdbd8]

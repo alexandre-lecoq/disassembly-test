@@ -14,8 +14,6 @@
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //   SP (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: word ptr [DI + 0x8]
                              //   Read from: word ptr [SI + 0x4]
@@ -90,8 +88,6 @@
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //   SP (uint16_t): 16-bit value, both input and output (modified)
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: [0xdc44]
@@ -265,8 +261,6 @@
                              //   BP (uint16_t): 16-bit value, both input and output (modified)
                              //   BX (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: word ptr [DI]
@@ -2821,8 +2815,6 @@
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: word ptr [DI + 0x2]
@@ -7238,8 +7230,6 @@
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
                              //
-                             // Return Values:
-                             //
                              // Memory Access:
                              //   Read from: word ptr CS:[DI]
                              //   Read from: word ptr CS:[DI + 0x2]
@@ -8601,8 +8591,6 @@
                              //   DI (uint16_t): 16-bit value, both input and output (modified)
                              //   DX (uint16_t): 16-bit value, both input and output (modified)
                              //   SI (uint16_t): 16-bit value, both input and output (modified)
-                             //
-                             // Return Values:
                              //
                              // Memory Access:
                              //   Read from: word ptr [0x2]
