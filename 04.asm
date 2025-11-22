@@ -5250,36 +5250,50 @@
        1000:e97f 8c c0           MOV        AX,ES
        1000:e981 0b c3           OR         AX,BX
        1000:e983 74 6e           JZ         LAB_1000_e9f3
-       1000:e985 b8 00 00        MOV        AX,0x0
-       1000:e988 cd 33           INT        0x33
+       1000:e985 b8 00 00        MOV        AX,0x0                       ; AX=00h: Reset mouse driver and get status
+                                                                        ; Returns: AX=FFFFh if mouse installed, 0000h if not
+                                                                        ;          BX = number of buttons
+       1000:e988 cd 33           INT        0x33                         ; INT 33h, AX=00h: Reset mouse driver
        1000:e98a 40              INC        AX
        1000:e98b 75 66           JNZ        LAB_1000_e9f3
-       1000:e98d 33 c9           XOR        CX,CX
-       1000:e98f 33 d2           XOR        DX,DX
-       1000:e991 b8 04 00        MOV        AX,0x4
-       1000:e994 cd 33           INT        0x33
+       1000:e98d 33 c9           XOR        CX,CX                        ; CX = 0 (horizontal position)
+       1000:e98f 33 d2           XOR        DX,DX                        ; DX = 0 (vertical position)
+       1000:e991 b8 04 00        MOV        AX,0x4                       ; AX=04h: Set mouse cursor position
+                                                                        ; CX = horizontal position
+                                                                        ; DX = vertical position
+       1000:e994 cd 33           INT        0x33                         ; INT 33h, AX=04h: Set mouse cursor position to (0, 0)
                              LAB_1000_e996                                   XREF[1]:     1000:e9b1(j)  
        1000:e996 fe 06 80 25     INC        byte ptr [0x2580]
        1000:e99a 78 17           JS         LAB_1000_e9b3
        1000:e99c 8a 0e 80 25     MOV        CL,byte ptr [0x2580]
        1000:e9a0 b8 01 00        MOV        AX,0x1
        1000:e9a3 d3 e0           SHL        AX,CL
-       1000:e9a5 8b c8           MOV        CX,AX
-       1000:e9a7 b8 04 00        MOV        AX,0x4
-       1000:e9aa cd 33           INT        0x33
-       1000:e9ac b8 03 00        MOV        AX,0x3
-       1000:e9af cd 33           INT        0x33
+       1000:e9a5 8b c8           MOV        CX,AX                        ; CX = scaled position value
+       1000:e9a7 b8 04 00        MOV        AX,0x4                       ; AX=04h: Set mouse cursor position
+                                                                        ; CX = horizontal position
+                                                                        ; DX = vertical position (0)
+       1000:e9aa cd 33           INT        0x33                         ; INT 33h, AX=04h: Set mouse cursor horizontal position
+       1000:e9ac b8 03 00        MOV        AX,0x3                       ; AX=03h: Get mouse position and button status
+                                                                        ; Returns: BX = button status
+                                                                        ;          CX = horizontal position
+                                                                        ;          DX = vertical position
+       1000:e9af cd 33           INT        0x33                         ; INT 33h, AX=03h: Get mouse position
        1000:e9b1 e3 e3           JCXZ       LAB_1000_e996
                              LAB_1000_e9b3                                   XREF[2]:     1000:e99a(j), 1000:e9ce(j)  
        1000:e9b3 fe 06 81 25     INC        byte ptr [0x2581]
        1000:e9b7 78 17           JS         LAB_1000_e9d0
        1000:e9b9 8a 0e 81 25     MOV        CL,byte ptr [0x2581]
        1000:e9bd ba 01 00        MOV        DX,0x1
-       1000:e9c0 d3 e2           SHL        DX,CL
-       1000:e9c2 b8 04 00        MOV        AX,0x4
-       1000:e9c5 cd 33           INT        0x33
-       1000:e9c7 b8 03 00        MOV        AX,0x3
-       1000:e9ca cd 33           INT        0x33
+       1000:e9c0 d3 e2           SHL        DX,CL                        ; Scale vertical position
+       1000:e9c2 b8 04 00        MOV        AX,0x4                       ; AX=04h: Set mouse cursor position
+                                                                        ; CX = horizontal position (0)
+                                                                        ; DX = vertical position
+       1000:e9c5 cd 33           INT        0x33                         ; INT 33h, AX=04h: Set mouse cursor vertical position
+       1000:e9c7 b8 03 00        MOV        AX,0x3                       ; AX=03h: Get mouse position and button status
+                                                                        ; Returns: BX = button status
+                                                                        ;          CX = horizontal position
+                                                                        ;          DX = vertical position
+       1000:e9ca cd 33           INT        0x33                         ; INT 33h, AX=03h: Get mouse position
        1000:e9cc 0b d2           OR         DX,DX
        1000:e9ce 74 e3           JZ         LAB_1000_e9b3
                              LAB_1000_e9d0                                   XREF[1]:     1000:e9b7(j)  
@@ -5292,12 +5306,15 @@
        1000:e9e1 8a cd           MOV        CL,CH
        1000:e9e3 d3 ea           SHR        DX,CL
        1000:e9e5 8b c8           MOV        CX,AX
-       1000:e9e7 b8 0f 00        MOV        AX,0xf
+       1000:e9e7 b8 0f 00        MOV        AX,0xf                       ; AX=0Fh: Set mouse sensitivity (Mickey to pixel ratio)
+                                                                        ; CX = horizontal sensitivity
+                                                                        ; DX = vertical sensitivity (saved on stack)
        1000:e9ea 52              PUSH       DX
-       1000:e9eb cd 33           INT        0x33
+       1000:e9eb cd 33           INT        0x33                         ; INT 33h, AX=0Fh: Set mouse sensitivity
        1000:e9ed 5a              POP        DX
-       1000:e9ee b8 13 00        MOV        AX,0x13
-       1000:e9f1 cd 33           INT        0x33
+       1000:e9ee b8 13 00        MOV        AX,0x13                      ; AX=13h: Set double-speed threshold
+                                                                        ; DX = threshold value in mickeys/second
+       1000:e9f1 cd 33           INT        0x33                         ; INT 33h, AX=13h: Set double-speed threshold
                              LAB_1000_e9f3                                   XREF[4]:     1000:e983(j), 1000:e98b(j), 
                                                                                           FUN_1000_ea32:1000:ea4e(j), 
                                                                                           FUN_1000_ea32:1000:ea58(j)  
@@ -5705,10 +5722,13 @@
        1000:ecde 2e 89 55 1c     MOV        word ptr CS:[DI + 0x1c]=>DAT_1000_ec88,DX        = 9200h
        1000:ece2 8b f7           MOV        SI,DI
        1000:ece4 0e              PUSH       CS
-       1000:ece5 07              POP        ES
+       1000:ece5 07              POP        ES                           ; ES = CS (set ES to code segment)
        1000:ece6 59              POP        CX
-       1000:ece7 b4 87           MOV        AH,0x87
-       1000:ece9 cd 15           INT        0x15
+       1000:ece7 b4 87           MOV        AH,0x87                      ; AH=87h: Move block (copy extended memory)
+                                                                        ; CX = number of words to move
+                                                                        ; ES:SI = pointer to Global Descriptor Table (GDT)
+                                                                        ; GDT contains source and destination addresses
+       1000:ece9 cd 15           INT        0x15                         ; INT 15h, AH=87h: Copy CX words using GDT at ES:SI
        1000:eceb c3              RET
                              **************************************************************
                              *                          FUNCTION                          *
@@ -5747,10 +5767,13 @@
        1000:ed2a 2e 89 5c 12     MOV        word ptr CS:[SI + 0x12]=>DAT_1000_ec7e,BX
        1000:ed2e 2e 89 54 14     MOV        word ptr CS:[SI + 0x14]=>DAT_1000_ec80,DX        = 9200h
        1000:ed32 0e              PUSH       CS
-       1000:ed33 07              POP        ES
+       1000:ed33 07              POP        ES                           ; ES = CS (set ES to code segment)
        1000:ed34 59              POP        CX
-       1000:ed35 b4 87           MOV        AH,0x87
-       1000:ed37 cd 15           INT        0x15
+       1000:ed35 b4 87           MOV        AH,0x87                      ; AH=87h: Move block (copy extended memory)
+                                                                        ; CX = number of words to move
+                                                                        ; ES:SI = pointer to Global Descriptor Table (GDT)
+                                                                        ; GDT contains source and destination addresses
+       1000:ed37 cd 15           INT        0x15                         ; INT 15h, AH=87h: Copy CX words using GDT at ES:SI
        1000:ed39 c3              RET
                              DAT_1000_ed3a                                   XREF[3]:     FUN_1000_e8d5:1000:e8e2(R), 
                                                                                           FUN_1000_ed40:1000:ed40(R), 
@@ -5787,7 +5810,10 @@
                                                                                           FUN_1000_edb9:1000:eddf(c), 
                                                                                           FUN_1000_edb9:1000:edea(c), 
                                                                                           FUN_1000_edb9:1000:edff(c)  
-       1000:ed45 cd 67           INT        0x67
+       1000:ed45 cd 67           INT        0x67                         ; INT 67h: Expanded Memory Manager (EMM) services
+                                                                        ; AH = function number
+                                                                        ; Various functions for managing expanded memory
+                                                                        ; Returns: AH = status (00h = success, 80h+ = error)
        1000:ed47 80 fc 80        CMP        AH,0x80
        1000:ed4a f5              CMC
        1000:ed4b c3              RET
@@ -5903,8 +5929,10 @@
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_eea0                                   XREF[1]:     FUN_1000_ea7b:1000:ea82(c)  
-       1000:eea0 b8 10 43        MOV        AX,0x4310
-       1000:eea3 cd 2f           INT        0x2f
+       1000:eea0 b8 10 43        MOV        AX,0x4310                    ; AH=43h: Get XMS driver address
+                                                                        ; AL=10h: Subfunction
+                                                                        ; Returns: ES:BX = address of XMS driver entry point
+       1000:eea3 cd 2f           INT        0x2f                         ; INT 2Fh, AX=4310h: Get XMS driver entry point address
        1000:eea5 2e 89 1e        MOV        word ptr CS:[DAT_1000_ee8c],BX
                  8c ee
        1000:eeaa 2e 8c 06        MOV        word ptr CS:[DAT_1000_ee8e],ES
