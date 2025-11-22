@@ -93,8 +93,8 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_29ee` | `1000:29ee` | calls other functions, referenced 1 time(s) | 01.asm |
 | `FUN_1000_29f0` | `1000:29f0` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_2a34` | `1000:2a34` | conditional logic, arithmetic operations, referenced 1 time(s) | 01.asm |
-| `FUN_1000_2a51` | `1000:2a51` | string/memory operations, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_2ad8`|`1000:2ad8`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure |01.asm|
+|`FUN_1000_2a51`|`1000:2a51`| string/memory operations, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); refs: PHRASE32.HSQ |01.asm|
+|`FUN_1000_2ad8`|`1000:2ad8`| calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x114e=Pointer or index to data structure; refs: COMMAND6.HSQ |01.asm|
 | `FUN_1000_2b2a` | `1000:2b2a` | calls other functions, conditional logic, comparison, referenced 2 time(s) | 01.asm |
 | `FUN_1000_2c92` | `1000:2c92` | calls other functions, conditional logic, initialization | 01.asm |
 | `FUN_1000_2d74` | `1000:2d74` | calls other functions, referenced 4 time(s) | 01.asm |
@@ -114,12 +114,12 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_33be` | `1000:33be` | calls other functions, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_33d9` | `1000:33d9` | stack operations, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_34a5` | `1000:34a5` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-| `FUN_1000_3542` | `1000:3542` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 01.asm |
+|`FUN_1000_3542`|`1000:3542`| calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s); refs: CONDIT.HSQ |01.asm|
 | `FUN_1000_3551` | `1000:3551` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
 |`FUN_1000_35ad`|`1000:35ad`| calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0xce7a=Data table or array pointer |01.asm|
 | `FUN_1000_366f` | `1000:366f` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 4 time(s) | 01.asm |
 | `FUN_1000_368b` | `1000:368b` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 4 time(s) | 01.asm |
-| `FUN_1000_36d3` | `1000:36d3` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
+|`FUN_1000_36d3`|`1000:36d3`| calls other functions, conditional logic, comparison, referenced 1 time(s); refs: SEKENCE.HSQ, WORMSUIT.HSQ |01.asm|
 |`FUN_1000_36ee`|`1000:36ee`| calls other functions, conditional logic, stack operations, comparison, initialization, referenced 1 time(s); uses: 0x1152=Entity slot or ID |01.asm|
 |`FUN_1000_3723`|`1000:3723`| calls other functions, conditional logic, comparison, initialization, referenced 1 time(s); uses: 0x4774=Data structure pointer |01.asm|
 |`FUN_1000_37b2`|`1000:37b2`| calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s); uses: 0x11c9=Input/control state flag |01.asm|
@@ -140,7 +140,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_3a7c` | `1000:3a7c` | calls other functions, segment manipulation, conditional logic, stack operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_3a95` | `1000:3a95` | calls other functions, stack operations, arithmetic operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_3aa9` | `1000:3aa9` | calls other functions, conditional logic, arithmetic operations, comparison, referenced 3 time(s) | 01.asm |
-|`FUN_1000_3ae9`|`1000:3ae9`| calls other functions, segment manipulation, conditional logic, referenced 1 time(s); uses: 0x47a4=Graphics state flag, 0x11c9=Input/control state flag |01.asm|
+|`FUN_1000_3ae9`|`1000:3ae9`| calls other functions, segment manipulation, conditional logic, referenced 1 time(s); uses: 0x47a4=Graphics state flag, 0x11c9=Input/control state flag; refs: dune.dat |01.asm|
 | `FUN_1000_3af9` | `1000:3af9` | calls other functions, conditional logic, stack operations, arithmetic operations, comparison, referenced 2 time(s) | 01.asm |
 |`FUN_1000_3b59`|`1000:3b59`| calls other functions, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s); uses: 0x46df=Screen update flag, 0x4731=Display coordinate or offset, 0x47a4=Graphics state flag |01.asm|
 |`FUN_1000_3be9`|`1000:3be9`| calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, referenced 1 time(s); uses: 0xdbda=Primary video segment address |01.asm|
@@ -187,7 +187,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_4c45` | `1000:4c45` | string/memory operations, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4c92` | `1000:4c92` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4d00` | `1000:4d00` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 01.asm |
-|`FUN_1000_4d06`|`1000:4d06`| calls other functions, conditional logic, referenced 1 time(s); uses: 0x4728=Graphics buffer or data pointer |01.asm|
+|`FUN_1000_4d06`|`1000:4d06`| calls other functions, conditional logic, referenced 1 time(s); uses: 0x4728=Graphics buffer or data pointer; refs: dune.dat |01.asm|
 | `FUN_1000_4d57` | `1000:4d57` | calls other functions, comparison, referenced 5 time(s) | 01.asm |
 | `FUN_1000_4d6c` | `1000:4d6c` | calls other functions, segment manipulation, conditional logic, arithmetic operations, comparison, referenced 1 time(s) | 01.asm |
 | `FUN_1000_4da0` | `1000:4da0` | string/memory operations, conditional logic, stack operations, arithmetic operations, referenced 1 time(s) | 01.asm |
@@ -360,7 +360,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_956d` | `1000:956d` | comparison, referenced 1 time(s) | 03.asm |
 | `FUN_1000_9655` | `1000:9655` | calls other functions, conditional logic, comparison, referenced 1 time(s) | 03.asm |
 |`FUN_1000_96b5`|`1000:96b5`| calls other functions, stack operations, referenced 1 time(s); uses: 0x47c4=Current graphics context ID, 0x47c2=Graphics configuration byte |03.asm|
-|`FUN_1000_96d8`|`1000:96d8`| calls other functions, conditional logic, referenced 2 time(s); uses: 0x47c4=Current graphics context ID |03.asm|
+|`FUN_1000_96d8`|`1000:96d8`| calls other functions, conditional logic, referenced 2 time(s); uses: 0x47c4=Current graphics context ID; refs: Not enough standard memory for sounds |03.asm|
 |`FUN_1000_9702`|`1000:9702`| calls other functions, conditional logic, referenced 1 time(s); uses: 0x1bea=Secondary buffer value |03.asm|
 | `FUN_1000_978e` | `1000:978e` | calls other functions, conditional logic, comparison, referenced 3 time(s) | 03.asm |
 |`FUN_1000_98b2`|`1000:98b2`| calls other functions, segment manipulation, stack operations, arithmetic operations; uses: 0x22a6=Cached value or lookup result |03.asm|
@@ -681,7 +681,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_e75b` | `1000:e75b` | calls other functions, memory write operations, segment manipulation, conditional logic, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e76a` | `1000:e76a` | calls other functions, segment manipulation, conditional logic, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e826` | `1000:e826` | calls other functions, string/memory operations, segment manipulation, conditional logic, stack operations, comparison, referenced 1 time(s) | 04.asm |
-| `FUN_1000_e851` | `1000:e851` | calls other functions, segment manipulation, conditional logic, arithmetic operations, initialization, referenced 2 time(s) | 04.asm |
+|`FUN_1000_e851`|`1000:e851`| calls other functions, segment manipulation, conditional logic, arithmetic operations, initialization, referenced 2 time(s); refs: Not enough standard memory for sounds |04.asm|
 | `FUN_1000_e85c` | `1000:e85c` | calls other functions, conditional logic, initialization, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e8a8` | `1000:e8a8` | calls other functions, conditional logic, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_e8d5` | `1000:e8d5` | DOS interrupt call, calls other functions, conditional logic, comparison, initialization, referenced 1 time(s) | 04.asm |
@@ -716,7 +716,7 @@ This document lists all functions found in the disassembled Dune game executable
 | `FUN_1000_f1fb` | `1000:f1fb` | DOS interrupt call, calls other functions, string/memory operations, memory write operations, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f229` | `1000:f229` | calls other functions, string/memory operations, segment manipulation, stack operations, arithmetic operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f244` | `1000:f244` | calls other functions, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
-| `FUN_1000_f260` | `1000:f260` | DOS interrupt call, calls other functions, string/memory operations, memory write operations, segment manipulation, conditional logic, comparison, referenced 2 time(s) | 04.asm |
+|`FUN_1000_f260`|`1000:f260`| DOS interrupt call, calls other functions, string/memory operations, memory write operations, segment manipulation, conditional logic, comparison, referenced 2 time(s); refs: dune.dat |04.asm|
 | `FUN_1000_f27c` | `1000:f27c` | DOS interrupt call, segment manipulation, stack operations, comparison, referenced 1 time(s) | 04.asm |
 | `FUN_1000_f2a7` | `1000:f2a7` | DOS interrupt call, calls other functions, stack operations, referenced 2 time(s) | 04.asm |
 | `FUN_1000_f2d6` | `1000:f2d6` | calls other functions, memory write operations, segment manipulation, stack operations, arithmetic operations, referenced 2 time(s) | 04.asm |
