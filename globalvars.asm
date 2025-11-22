@@ -389,10 +389,6 @@
                              colorAttribute                                  XREF[11]
        0000:dbe4              byte ptr [0xdbe4]
 
-                             // System or hardware parameter
-                             hardwareParam1                                  XREF[4]
-       0000:dcfe              word ptr [0xdcfe]
-
                              // Hardware configuration value
                              hardwareConfig                                  XREF[6]
        0000:dc26              word ptr [0xdc26]
@@ -408,6 +404,10 @@
                              // Mouse or cursor state flag
                              mouseState                                      XREF[4]
        0000:dc46              byte ptr [0xdc46]
+
+                             // System or hardware parameter
+                             hardwareParam1                                  XREF[4]
+       0000:dcfe              word ptr [0xdcfe]
 
                              // Segment address for extended data
                              extendedDataSegment                             XREF[8]

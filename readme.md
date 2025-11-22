@@ -144,6 +144,7 @@ The repository includes several documentation files that provide additional info
 - **[functions.md](functions.md)** - Complete list of all 718 functions with addresses and auto-generated descriptions
 - **[globalvars.md](globalvars.md)** - Documentation of global variables and their likely purposes
 - **[globalvars.asm](globalvars.asm)** - Assembly declarations with named variables for all global variables in the code
+- **[GLOBALVARS_SUMMARY.md](GLOBALVARS_SUMMARY.md)** - Summary of global variable naming conventions and organization
 - **[strings.md](strings.md)** - Collection of all strings found in the code, including file names and resources
 
 ## File Format
