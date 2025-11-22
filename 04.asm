@@ -4773,6 +4773,8 @@
                              *                          FUNCTION                          *
                              **************************************************************
                              undefined __cdecl16near FUN_1000_e675()
+                             ; Archive opening and directory loading function
+                             ; Opens dune.dat archive file and processes its directory entries
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_e675                                   XREF[2]:     FUN_1000_e594:1000:e5dc(c), 
@@ -4792,33 +4794,34 @@
        1000:e695 fe 04           INC        byte ptr [SI]
        1000:e697 80 3c 39        CMP        byte ptr [SI],0x39
        1000:e69a 76 d9           JBE        FUN_1000_e675
-       1000:e69c ba e9 37        MOV        DX,0x37e9
-       1000:e69f b8 00 3d        MOV        AX,0x3d00
-       1000:e6a2 cd 21           INT        0x21
-       1000:e6a4 72 ce           JC         LAB_1000_e674
-       1000:e6a6 a3 ba db        MOV        [0xdbba],AX
-       1000:e6a9 e8 95 00        CALL       FUN_1000_e741                                    undefined FUN_1000_e741()
-       1000:e6ac 8b f7           MOV        SI,DI
-       1000:e6ae 8c c5           MOV        BP,ES
-       1000:e6b0 c4 3e b7 39     LES        DI,[0x39b7]
-       1000:e6b4 89 3e bc db     MOV        word ptr [0xdbbc],DI
-       1000:e6b8 8c 06 be db     MOV        word ptr [0xdbbe],ES
-       1000:e6bc b8 45 01        MOV        AX,0x145
+       1000:e69c ba e9 37        MOV        DX,0x37e9                    ; Load address of "dune.dat" string
+       1000:e69f b8 00 3d        MOV        AX,0x3d00                    ; DOS function 3Dh: Open file (AL=00h: read-only mode)
+       1000:e6a2 cd 21           INT        0x21                         ; Open dune.dat archive file
+       1000:e6a4 72 ce           JC         LAB_1000_e674                ; Jump if open failed (carry flag set)
+       1000:e6a6 a3 ba db        MOV        [0xdbba],AX                  ; Store file handle for archive
+       1000:e6a9 e8 95 00        CALL       FUN_1000_e741                ; Read archive directory/header from start of file
+       1000:e6ac 8b f7           MOV        SI,DI                        ; SI points to loaded archive directory data
+       1000:e6ae 8c c5           MOV        BP,ES                        ; Save segment of directory data
+       1000:e6b0 c4 3e b7 39     LES        DI,[0x39b7]                  ; Load destination for processed directory
+       1000:e6b4 89 3e bc db     MOV        word ptr [0xdbbc],DI         ; Store directory base offset
+       1000:e6b8 8c 06 be db     MOV        word ptr [0xdbbe],ES         ; Store directory base segment
+       1000:e6bc b8 45 01        MOV        AX,0x145                     ; Initialize directory with 0x145
        1000:e6bf ab              STOSW      ES:DI
-       1000:e6c0 b9 4d 01        MOV        CX,0x14d
+       1000:e6c0 b9 4d 01        MOV        CX,0x14d                     ; Fill 333 bytes with 0xFF
        1000:e6c3 b0 ff           MOV        AL,0xff
        1000:e6c5 f3 aa           STOSB.REP  ES:DI
-       1000:e6c7 89 3e 20 d8     MOV        word ptr [0xd820],DI
+       1000:e6c7 89 3e 20 d8     MOV        word ptr [0xd820],DI         ; Store current directory position
        1000:e6cb 1e              PUSH       DS
-       1000:e6cc 8e dd           MOV        DS,BP
-       1000:e6ce ad              LODSW      SI
+       1000:e6cc 8e dd           MOV        DS,BP                        ; Set DS to archive directory segment
+       1000:e6ce ad              LODSW      SI                           ; Read first word from archive directory (entry count or offset)
                              LAB_1000_e6cf                                   XREF[1]:     1000:e708(j)  
-       1000:e6cf 56              PUSH       SI
-       1000:e6d0 e8 41 0c        CALL       FUN_1000_f314                                    undefined FUN_1000_f314()
-       1000:e6d3 5e              POP        SI
-       1000:e6d4 72 2c           JC         LAB_1000_e702
-       1000:e6d6 e8 ce 0c        CALL       FUN_1000_f3a7                                    undefined FUN_1000_f3a7()
-       1000:e6d9 74 1e           JZ         LAB_1000_e6f9
+                             ; Archive entry processing loop - processes each 25-byte entry
+       1000:e6cf 56              PUSH       SI                           ; Save SI (points to current entry)
+       1000:e6d0 e8 41 0c        CALL       FUN_1000_f314                ; Parse and decode filename from entry
+       1000:e6d3 5e              POP        SI                           ; Restore SI
+       1000:e6d4 72 2c           JC         LAB_1000_e702                ; Skip if filename parsing failed
+       1000:e6d6 e8 ce 0c        CALL       FUN_1000_f3a7                ; Search for entry in directory structure
+       1000:e6d9 74 1e           JZ         LAB_1000_e6f9                ; Jump if entry not found (new entry)
        1000:e6db 50              PUSH       AX
        1000:e6dc 52              PUSH       DX
        1000:e6dd 56              PUSH       SI
@@ -4838,13 +4841,13 @@
        1000:e6f7 5a              POP        DX
        1000:e6f8 58              POP        AX
                              LAB_1000_e6f9                                   XREF[1]:     1000:e6d9(j)  
-       1000:e6f9 e8 5f 00        CALL       FUN_1000_e75b                                    undefined FUN_1000_e75b()
-       1000:e6fc 36 83 06        ADD        word ptr SS:[0xd820],0xa
+       1000:e6f9 e8 5f 00        CALL       FUN_1000_e75b                ; Store 10-byte directory entry
+       1000:e6fc 36 83 06        ADD        word ptr SS:[0xd820],0xa     ; Advance directory position by 10 bytes (entry size)
                  20 d8 0a
                              LAB_1000_e702                                   XREF[1]:     1000:e6d4(j)  
-       1000:e702 83 c6 19        ADD        SI,0x19
-       1000:e705 80 3c 00        CMP        byte ptr [SI],0x0
-       1000:e708 75 c5           JNZ        LAB_1000_e6cf
+       1000:e702 83 c6 19        ADD        SI,0x19                      ; Advance to next entry (25 bytes per entry)
+       1000:e705 80 3c 00        CMP        byte ptr [SI],0x0            ; Check if we reached end marker (0 byte)
+       1000:e708 75 c5           JNZ        LAB_1000_e6cf                ; Continue loop if not at end
        1000:e70a 1f              POP        DS
        1000:e70b be 45 01        MOV        SI,0x145
        1000:e70e a1 20 d8        MOV        AX,[0xd820]
@@ -4875,41 +4878,55 @@
                              *                          FUNCTION                          *
                              **************************************************************
                              undefined __cdecl16near FUN_1000_e741()
+                             ; Archive header reader
+                             ; Seeks to start of archive and reads directory/catalog into memory
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_e741                                   XREF[3]:     FUN_1000_e675:1000:e6a9(c), 
                                                                                           1000:e758(j), 
                                                                                           FUN_1000_e826:1000:e82d(c)  
-       1000:e741 33 c0           XOR        AX,AX
-       1000:e743 33 d2           XOR        DX,DX
-       1000:e745 e8 8e 0b        CALL       FUN_1000_f2d6                                    undefined FUN_1000_f2d6()
+       1000:e741 33 c0           XOR        AX,AX                        ; AX = 0 (low word of offset)
+       1000:e743 33 d2           XOR        DX,DX                        ; DX = 0 (high word of offset)
+       1000:e745 e8 8e 0b        CALL       FUN_1000_f2d6                ; Seek to offset 0 (start of archive file)
        1000:e748 a1 b9 39        MOV        AX,[0x39b9]
        1000:e74b 05 00 08        ADD        AX,0x800
-       1000:e74e 8e c0           MOV        ES,AX
-       1000:e750 33 ff           XOR        DI,DI
-       1000:e752 b9 ff ff        MOV        CX,0xffff
-       1000:e755 e8 92 0b        CALL       FUN_1000_f2ea                                    undefined FUN_1000_f2ea()
-       1000:e758 72 e7           JC         FUN_1000_e741
+       1000:e74e 8e c0           MOV        ES,AX                        ; Set ES to buffer segment
+       1000:e750 33 ff           XOR        DI,DI                        ; DI = 0 (buffer offset)
+       1000:e752 b9 ff ff        MOV        CX,0xffff                    ; Read 65535 bytes (entire archive directory)
+       1000:e755 e8 92 0b        CALL       FUN_1000_f2ea                ; Read archive directory from file
+       1000:e758 72 e7           JC         FUN_1000_e741                ; Retry if read failed
        1000:e75a c3              RET
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
                              undefined __cdecl16near FUN_1000_e75b()
+                             ; Archive entry directory storage function
+                             ; Stores a 10-byte processed entry into the game's directory structure
+                             ; Entry format in archive (25 bytes):
+                             ;   +0x00: 16 bytes - filename (may be encoded with \P prefix)
+                             ;   +0x10: 3 bytes - metadata (file ID/type)
+                             ;   +0x13: 1 byte - padding/skip
+                             ;   +0x14: 4 bytes - file offset (32-bit, 2 words)
+                             ; Stored format (10 bytes):
+                             ;   +0x0: 2 bytes - file ID (from AX)
+                             ;   +0x2: 1 byte - file type/flags (from DL)
+                             ;   +0x3: 3 bytes - metadata from archive entry +0x10
+                             ;   +0x6: 4 bytes - file offset from archive entry +0x14
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_e75b                                   XREF[2]:     FUN_1000_e675:1000:e6f9(c), 
                                                                                           FUN_1000_e826:1000:e846(c)  
-       1000:e75b 56              PUSH       SI
-       1000:e75c ab              STOSW      ES:DI
-       1000:e75d 8a c2           MOV        AL,DL
-       1000:e75f aa              STOSB      ES:DI
-       1000:e760 83 c6 10        ADD        SI,0x10
-       1000:e763 a5              MOVSW      ES:DI,SI
-       1000:e764 a4              MOVSB      ES:DI,SI
-       1000:e765 46              INC        SI
-       1000:e766 a5              MOVSW      ES:DI,SI
-       1000:e767 a5              MOVSW      ES:DI,SI
-       1000:e768 5e              POP        SI
+       1000:e75b 56              PUSH       SI                           ; Save SI (points to archive entry)
+       1000:e75c ab              STOSW      ES:DI                        ; Store word at offset +0x0 (file ID from AX)
+       1000:e75d 8a c2           MOV        AL,DL                        ; Get file type/flags from DL
+       1000:e75f aa              STOSB      ES:DI                        ; Store byte at offset +0x2 (file type)
+       1000:e760 83 c6 10        ADD        SI,0x10                      ; Skip 16-byte filename in archive entry
+       1000:e763 a5              MOVSW      ES:DI,SI                     ; Copy word from archive +0x10 to directory +0x3
+       1000:e764 a4              MOVSB      ES:DI,SI                     ; Copy byte from archive +0x12 to directory +0x5
+       1000:e765 46              INC        SI                           ; Skip 1 byte padding at archive +0x13
+       1000:e766 a5              MOVSW      ES:DI,SI                     ; Copy offset low word from archive +0x14 to directory +0x6
+       1000:e767 a5              MOVSW      ES:DI,SI                     ; Copy offset high word from archive +0x16 to directory +0x8
+       1000:e768 5e              POP        SI                           ; Restore SI
        1000:e769 c3              RET
                              **************************************************************
                              *                          FUNCTION                          *
@@ -6303,26 +6320,31 @@
                              *                          FUNCTION                          *
                              **************************************************************
                              undefined __cdecl16near FUN_1000_f2a7()
+                             ; Archive entry file seek function
+                             ; Seeks to the position in the archive file where the actual file data is stored
+                             ; Uses the stored directory entry to find the file offset within dune.dat
+                             ; Input: DX = filename string pointer (for lookup)
+                             ; Output: Positions file pointer to start of file data in archive
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_f2a7                                   XREF[1]:     FUN_1000_f1fb:1000:f1fc(c)  
        1000:f2a7 57              PUSH       DI
        1000:f2a8 06              PUSH       ES
-       1000:f2a9 83 3e ba        CMP        word ptr [0xdbba],0x1
+       1000:f2a9 83 3e ba        CMP        word ptr [0xdbba],0x1        ; Check if archive file is open
                  db 01
-       1000:f2ae 72 23           JC         LAB_1000_f2d3
-       1000:f2b0 8b f2           MOV        SI,DX
-       1000:f2b2 e8 5f 00        CALL       FUN_1000_f314                                    undefined FUN_1000_f314()
-       1000:f2b5 72 1c           JC         LAB_1000_f2d3
-       1000:f2b7 e8 ed 00        CALL       FUN_1000_f3a7                                    undefined FUN_1000_f3a7()
-       1000:f2ba 72 17           JC         LAB_1000_f2d3
-       1000:f2bc 33 c9           XOR        CX,CX
-       1000:f2be 26 8a 4d 05     MOV        CL,byte ptr ES:[DI + 0x5]
-       1000:f2c2 8b e9           MOV        BP,CX
-       1000:f2c4 26 8b 4d 03     MOV        CX,word ptr ES:[DI + 0x3]
-       1000:f2c8 26 8b 45 06     MOV        AX,word ptr ES:[DI + 0x6]
-       1000:f2cc 26 8b 55 08     MOV        DX,word ptr ES:[DI + 0x8]
-       1000:f2d0 e8 03 00        CALL       FUN_1000_f2d6                                    undefined FUN_1000_f2d6()
+       1000:f2ae 72 23           JC         LAB_1000_f2d3                ; Exit if not open
+       1000:f2b0 8b f2           MOV        SI,DX                        ; Load filename pointer
+       1000:f2b2 e8 5f 00        CALL       FUN_1000_f314                ; Parse filename to get file ID
+       1000:f2b5 72 1c           JC         LAB_1000_f2d3                ; Exit if parsing failed
+       1000:f2b7 e8 ed 00        CALL       FUN_1000_f3a7                ; Search for entry in directory
+       1000:f2ba 72 17           JC         LAB_1000_f2d3                ; Exit if not found
+       1000:f2bc 33 c9           XOR        CX,CX                        ; Clear CX
+       1000:f2be 26 8a 4d 05     MOV        CL,byte ptr ES:[DI + 0x5]    ; Load byte from directory entry +5
+       1000:f2c2 8b e9           MOV        BP,CX                        ; Save to BP
+       1000:f2c4 26 8b 4d 03     MOV        CX,word ptr ES:[DI + 0x3]    ; Load word from directory entry +3
+       1000:f2c8 26 8b 45 06     MOV        AX,word ptr ES:[DI + 0x6]    ; Load file offset low word from entry +6
+       1000:f2cc 26 8b 55 08     MOV        DX,word ptr ES:[DI + 0x8]    ; Load file offset high word from entry +8
+       1000:f2d0 e8 03 00        CALL       FUN_1000_f2d6                ; Seek to file offset in archive (DX:AX = 32-bit offset)
                              LAB_1000_f2d3                                   XREF[3]:     1000:f2ae(j), 1000:f2b5(j), 
                                                                                           1000:f2ba(j)  
        1000:f2d3 07              POP        ES
@@ -6391,6 +6413,13 @@
                              *                          FUNCTION                          *
                              **************************************************************
                              undefined __cdecl16near FUN_1000_f314()
+                             ; Filename parser and decoder
+                             ; Parses archive entry filename and converts it to a numeric ID
+                             ; Handles two formats:
+                             ; 1. Normal null-terminated filenames (compared against directory)
+                             ; 2. Encoded filenames starting with "\P" (special compressed format)
+                             ; Encoded format: \P + 2 bytes + 1 type byte + 3 hex digits + flag + optional upper nibble
+                             ; Returns: AX = file ID, DL = file type, Carry flag = error
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_f314                                   XREF[3]:     FUN_1000_e675:1000:e6d0(c), 
@@ -6398,9 +6427,9 @@
                                                                                           FUN_1000_f2a7:1000:f2b2(c)  
        1000:f314 16              PUSH       SS
        1000:f315 07              POP        ES
-       1000:f316 81 7c 02        CMP        word ptr [SI + 0x2],0x505c
+       1000:f316 81 7c 02        CMP        word ptr [SI + 0x2],0x505c   ; Check if filename starts with "\P" (0x505c = "P\" little-endian)
                  5c 50
-       1000:f31b 74 4f           JZ         LAB_1000_f36c
+       1000:f31b 74 4f           JZ         LAB_1000_f36c                ; Jump to encoded filename handler
        1000:f31d 56              PUSH       SI
        1000:f31e b9 10 00        MOV        CX,0x10
        1000:f321 8b d1           MOV        DX,CX
@@ -6446,71 +6475,79 @@
        1000:f36a f9              STC
        1000:f36b c3              RET
                              LAB_1000_f36c                                   XREF[1]:     1000:f31b(j)  
-       1000:f36c 83 c6 04        ADD        SI,0x4
-       1000:f36f ac              LODSB      SI
-       1000:f370 2c 40           SUB        AL,0x40
-       1000:f372 8a d0           MOV        DL,AL
-       1000:f374 33 db           XOR        BX,BX
-       1000:f376 b9 03 00        MOV        CX,0x3
+                             ; Encoded filename parser for "\P" format
+                             ; Format: \P + XX + T + HHH + F + N
+                             ; Where: T = type byte, HHH = 3 hex digits, F = 'O' flag, N = optional A-Z for upper nibble
+       1000:f36c 83 c6 04        ADD        SI,0x4                       ; Skip "\P" prefix (2 bytes) + 2 unknown bytes
+       1000:f36f ac              LODSB      SI                           ; Read type byte
+       1000:f370 2c 40           SUB        AL,0x40                      ; Convert type byte (subtract 0x40 = '@')
+       1000:f372 8a d0           MOV        DL,AL                        ; Store type in DL
+       1000:f374 33 db           XOR        BX,BX                        ; Clear BX for building file ID
+       1000:f376 b9 03 00        MOV        CX,0x3                       ; Process 3 hex digits
                              LAB_1000_f379                                   XREF[1]:     1000:f38c(j)  
-       1000:f379 ac              LODSB      SI
-       1000:f37a 3c 41           CMP        AL,0x41
-       1000:f37c 72 02           JC         LAB_1000_f380
-       1000:f37e 2c 07           SUB        AL,0x7
+       1000:f379 ac              LODSB      SI                           ; Read hex digit
+       1000:f37a 3c 41           CMP        AL,0x41                      ; Check if >= 'A' (letter)
+       1000:f37c 72 02           JC         LAB_1000_f380                ; Jump if numeric (0-9)
+       1000:f37e 2c 07           SUB        AL,0x7                       ; Convert A-F: subtract 7 more to get 10-15
                              LAB_1000_f380                                   XREF[1]:     1000:f37c(j)  
-       1000:f380 24 0f           AND        AL,0xf
-       1000:f382 d1 e3           SHL        BX,0x1
-       1000:f384 d1 e3           SHL        BX,0x1
+       1000:f380 24 0f           AND        AL,0xf                       ; Mask to get 4-bit value
+       1000:f382 d1 e3           SHL        BX,0x1                       ; Shift BX left 4 bits
+       1000:f384 d1 e3           SHL        BX,0x1                       ; (4 shifts = multiply by 16)
        1000:f386 d1 e3           SHL        BX,0x1
        1000:f388 d1 e3           SHL        BX,0x1
-       1000:f38a 0a d8           OR         BL,AL
-       1000:f38c e2 eb           LOOP       LAB_1000_f379
-       1000:f38e ac              LODSB      SI
-       1000:f38f 3c 4f           CMP        AL,0x4f
-       1000:f391 f5              CMC
-       1000:f392 d0 d2           RCL        DL,0x1
-       1000:f394 ac              LODSB      SI
-       1000:f395 2c 41           SUB        AL,0x41
-       1000:f397 72 0a           JC         LAB_1000_f3a3
-       1000:f399 d0 e0           SHL        AL,0x1
-       1000:f39b d0 e0           SHL        AL,0x1
+       1000:f38a 0a d8           OR         BL,AL                        ; Add digit to lower nibble
+       1000:f38c e2 eb           LOOP       LAB_1000_f379                ; Process next digit
+       1000:f38e ac              LODSB      SI                           ; Read flag byte
+       1000:f38f 3c 4f           CMP        AL,0x4f                      ; Check if 'O'
+       1000:f391 f5              CMC                                     ; Complement carry (set if not 'O')
+       1000:f392 d0 d2           RCL        DL,0x1                       ; Rotate flag bit into DL type
+       1000:f394 ac              LODSB      SI                           ; Read optional upper nibble byte
+       1000:f395 2c 41           SUB        AL,0x41                      ; Convert from 'A' base
+       1000:f397 72 0a           JC         LAB_1000_f3a3                ; Skip if not a letter
+       1000:f399 d0 e0           SHL        AL,0x1                       ; Shift to upper nibble position
+       1000:f39b d0 e0           SHL        AL,0x1                       ; (4 shifts = multiply by 16)
        1000:f39d d0 e0           SHL        AL,0x1
        1000:f39f d0 e0           SHL        AL,0x1
-       1000:f3a1 0a f8           OR         BH,AL
+       1000:f3a1 0a f8           OR         BH,AL                        ; Set upper nibble of BH
                              LAB_1000_f3a3                                   XREF[1]:     1000:f397(j)  
-       1000:f3a3 8b c3           MOV        AX,BX
+       1000:f3a3 8b c3           MOV        AX,BX                        ; Return file ID in AX
                              LAB_1000_f3a5                                   XREF[2]:     1000:f347(j), 1000:f365(j)  
-       1000:f3a5 f8              CLC
+       1000:f3a5 f8              CLC                                     ; Clear carry (success)
        1000:f3a6 c3              RET
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
                              undefined __cdecl16near FUN_1000_f3a7()
+                             ; Archive directory entry search
+                             ; Searches for a file entry in the processed directory structure
+                             ; Input: AX = file ID, DL = file type
+                             ; Output: ES:DI = pointer to found entry (or insertion point)
+                             ; Returns: Zero flag set if not found (new entry)
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_f3a7                                   XREF[3]:     FUN_1000_e675:1000:e6d6(c), 
                                                                                           FUN_1000_e826:1000:e841(c), 
                                                                                           FUN_1000_f2a7:1000:f2b7(c)  
-       1000:f3a7 36 c4 3e        LES        DI,SS:[0xdbbc]
+       1000:f3a7 36 c4 3e        LES        DI,SS:[0xdbbc]               ; Load directory base pointer
                  bc db
-       1000:f3ac 83 ef 05        SUB        DI,0x5
+       1000:f3ac 83 ef 05        SUB        DI,0x5                       ; Back up before start
                              LAB_1000_f3af                                   XREF[1]:     1000:f3bc(j)  
-       1000:f3af 83 c7 05        ADD        DI,0x5
-       1000:f3b2 26 3a 55 04     CMP        DL,byte ptr ES:[DI + 0x4]
-       1000:f3b6 75 04           JNZ        LAB_1000_f3bc
-       1000:f3b8 26 3b 45 02     CMP        AX,word ptr ES:[DI + 0x2]
+       1000:f3af 83 c7 05        ADD        DI,0x5                       ; Move to next 5-byte group
+       1000:f3b2 26 3a 55 04     CMP        DL,byte ptr ES:[DI + 0x4]    ; Compare file type at offset +4
+       1000:f3b6 75 04           JNZ        LAB_1000_f3bc                ; Continue if not matching
+       1000:f3b8 26 3b 45 02     CMP        AX,word ptr ES:[DI + 0x2]    ; Compare file ID at offset +2
                              LAB_1000_f3bc                                   XREF[1]:     1000:f3b6(j)  
-       1000:f3bc 77 f1           JA         LAB_1000_f3af
-       1000:f3be 26 8b 3d        MOV        DI,word ptr ES:[DI]
-       1000:f3c1 83 ef 0a        SUB        DI,0xa
+       1000:f3bc 77 f1           JA         LAB_1000_f3af                ; Continue if our ID is greater
+       1000:f3be 26 8b 3d        MOV        DI,word ptr ES:[DI]          ; Load pointer to next level
+       1000:f3c1 83 ef 0a        SUB        DI,0xa                       ; Back up before start
                              LAB_1000_f3c4                                   XREF[1]:     1000:f3d0(j)  
-       1000:f3c4 83 c7 0a        ADD        DI,0xa
-       1000:f3c7 26 3a 55 02     CMP        DL,byte ptr ES:[DI + 0x2]
-       1000:f3cb 75 03           JNZ        LAB_1000_f3d0
-       1000:f3cd 26 3b 05        CMP        AX,word ptr ES:[DI]
+       1000:f3c4 83 c7 0a        ADD        DI,0xa                       ; Move to next 10-byte entry
+       1000:f3c7 26 3a 55 02     CMP        DL,byte ptr ES:[DI + 0x2]    ; Compare file type at offset +2
+       1000:f3cb 75 03           JNZ        LAB_1000_f3d0                ; Continue if not matching
+       1000:f3cd 26 3b 05        CMP        AX,word ptr ES:[DI]          ; Compare file ID at offset +0
                              LAB_1000_f3d0                                   XREF[1]:     1000:f3cb(j)  
-       1000:f3d0 77 f2           JA         LAB_1000_f3c4
-       1000:f3d2 c3              RET
+       1000:f3d0 77 f2           JA         LAB_1000_f3c4                ; Continue if our ID is greater
+       1000:f3d2 c3              RET                                     ; Return with DI pointing to entry
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
