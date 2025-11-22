@@ -4783,7 +4783,7 @@
        1000:e678 e8 80 0b        CALL       FUN_1000_f1fb                                    undefined FUN_1000_f1fb()
        1000:e67b 72 15           JC         LAB_1000_e692
        1000:e67d c4 3e b7 39     LES        DI,[0x39b7]
-       1000:e681 e8 dc 0b        CALL       FUN_1000_f260                                    undefined FUN_1000_f260()
+       1000:e681 e8 dc 0b        CALL       dos_read_file_and_close                                    undefined dos_read_file_and_close()
        1000:e684 26 81 3d        CMP        word ptr ES:[DI],0xc089
                  89 c0
        1000:e689 75 07           JNZ        LAB_1000_e692
@@ -4887,13 +4887,13 @@
                                                                                           FUN_1000_e826:1000:e82d(c)  
        1000:e741 33 c0           XOR        AX,AX                        ; AX = 0 (low word of offset)
        1000:e743 33 d2           XOR        DX,DX                        ; DX = 0 (high word of offset)
-       1000:e745 e8 8e 0b        CALL       FUN_1000_f2d6                ; Seek to offset 0 (start of archive file)
+       1000:e745 e8 8e 0b        CALL       dos_seek_from_start                ; Seek to offset 0 (start of archive file)
        1000:e748 a1 b9 39        MOV        AX,[0x39b9]
        1000:e74b 05 00 08        ADD        AX,0x800
        1000:e74e 8e c0           MOV        ES,AX                        ; Set ES to buffer segment
        1000:e750 33 ff           XOR        DI,DI                        ; DI = 0 (buffer offset)
        1000:e752 b9 ff ff        MOV        CX,0xffff                    ; Read 65535 bytes (entire archive directory)
-       1000:e755 e8 92 0b        CALL       FUN_1000_f2ea                ; Read archive directory from file
+       1000:e755 e8 92 0b        CALL       dos_read_from_file                ; Read archive directory from file
        1000:e758 72 e7           JC         FUN_1000_e741                ; Retry if read failed
        1000:e75a c3              RET
                              **************************************************************
@@ -6256,17 +6256,17 @@
        1000:f245 e8 e1 ff        CALL       FUN_1000_f229                                    undefined FUN_1000_f229()
        1000:f248 5a              POP        DX
        1000:f249 3b 1e ba db     CMP        BX,word ptr [0xdbba]
-       1000:f24d 75 11           JNZ        FUN_1000_f260
-       1000:f24f e8 98 00        CALL       FUN_1000_f2ea                                    undefined FUN_1000_f2ea()
+       1000:f24d 75 11           JNZ        dos_read_file_and_close
+       1000:f24f e8 98 00        CALL       dos_read_from_file                                    undefined dos_read_from_file()
        1000:f252 72 f0           JC         FUN_1000_f244
        1000:f254 c3              RET
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
-                             undefined __cdecl16near FUN_1000_f260()
+                             undefined __cdecl16near dos_read_file_and_close()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
-                             FUN_1000_f260                                   XREF[2]:     FUN_1000_e675:1000:e681(c), 
+                             dos_read_file_and_close                                   XREF[2]:     FUN_1000_e675:1000:e681(c), 
                                                                                           FUN_1000_f244:1000:f24d(j)  
        1000:f260 52              PUSH       DX                           ; Save DX register (file handle)
        1000:f261 57              PUSH       DI                           ; Save DI register (buffer offset)
@@ -6344,7 +6344,7 @@
        1000:f2c4 26 8b 4d 03     MOV        CX,word ptr ES:[DI + 0x3]    ; Load word from directory entry +3
        1000:f2c8 26 8b 45 06     MOV        AX,word ptr ES:[DI + 0x6]    ; Load file offset low word from entry +6
        1000:f2cc 26 8b 55 08     MOV        DX,word ptr ES:[DI + 0x8]    ; Load file offset high word from entry +8
-       1000:f2d0 e8 03 00        CALL       FUN_1000_f2d6                ; Seek to file offset in archive (DX:AX = 32-bit offset)
+       1000:f2d0 e8 03 00        CALL       dos_seek_from_start                ; Seek to file offset in archive (DX:AX = 32-bit offset)
                              LAB_1000_f2d3                                   XREF[3]:     1000:f2ae(j), 1000:f2b5(j), 
                                                                                           1000:f2ba(j)  
        1000:f2d3 07              POP        ES
@@ -6353,10 +6353,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
-                             undefined __cdecl16near FUN_1000_f2d6()
+                             undefined __cdecl16near dos_seek_from_start()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
-                             FUN_1000_f2d6                                   XREF[2]:     FUN_1000_e741:1000:e745(c), 
+                             dos_seek_from_start                                   XREF[2]:     FUN_1000_e741:1000:e745(c), 
                                                                                           FUN_1000_f2a7:1000:f2d0(c)  
        1000:f2d6 51              PUSH       CX                           ; Save CX register (will be used for high word of offset)
        1000:f2d7 36 8b 1e        MOV        BX,word ptr SS:[0xdbba]      ; Load file handle from SS:[0xdbba] into BX
@@ -6370,10 +6370,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
-                             undefined __cdecl16near FUN_1000_f2ea()
+                             undefined __cdecl16near dos_read_from_file()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
-                             FUN_1000_f2ea                                   XREF[2]:     FUN_1000_e741:1000:e755(c), 
+                             dos_read_from_file                                   XREF[2]:     FUN_1000_e741:1000:e755(c), 
                                                                                           FUN_1000_f244:1000:f24f(c)  
        1000:f2ea 1e              PUSH       DS
        1000:f2eb 06              PUSH       ES
@@ -6893,3 +6893,4 @@
        1f4b:3cbc                 undefined1 ??
                              DAT_1f4b_3cbd                                   XREF[1]:     FUN_1000_e594:1000:e5a4(W)  
        1f4b:3cbd                 undefined1 ??
+

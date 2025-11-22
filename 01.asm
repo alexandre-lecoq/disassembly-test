@@ -1375,10 +1375,10 @@
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
-                             undefined __cdecl16near FUN_1000_1ac5()
+                             undefined __cdecl16near divide_by_16()
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
-                             FUN_1000_1ac5                                   XREF[5]:     FUN_1000_1e43:1000:1e43(c), 
+                             divide_by_16                                   XREF[5]:     FUN_1000_1e43:1000:1e43(c), 
                                                                                           FUN_1000_2090:1000:2090(c), 
                                                                                           FUN_1000_2566:1000:25cd(c), 
                                                                                           FUN_1000_31f6:1000:328d(c), 
@@ -1819,7 +1819,7 @@
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_1e43                                   XREF[1]:     FUN_1000_1c46:1000:1c5f(c)  
-       1000:1e43 e8 7f fc        CALL       FUN_1000_1ac5                                    undefined FUN_1000_1ac5()
+       1000:1e43 e8 7f fc        CALL       divide_by_16                                    undefined divide_by_16()
        1000:1e46 3b 06 56 11     CMP        AX,word ptr [0x1156]
        1000:1e4a 72 5c           JC         LAB_1000_1ea8
        1000:1e4c 80 3e 2a        CMP        byte ptr [0x2a],0x5c
@@ -1923,7 +1923,7 @@
                                assume CS = 0x1000
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_2090                                   XREF[1]:     FUN_1000_1071:1000:1096(c)  
-       1000:2090 e8 32 fa        CALL       FUN_1000_1ac5                                    undefined FUN_1000_1ac5()
+       1000:2090 e8 32 fa        CALL       divide_by_16                                    undefined divide_by_16()
        1000:2093 a3 8d 11        MOV        [0x118d],AX
        1000:2096 eb 3a           JMP        LAB_1000_20d2
                              LAB_1000_20d2                                   XREF[1]:     1000:2096(j)  
@@ -2154,7 +2154,7 @@
        1000:25c5 83 e3 03        AND        BX,0x3
        1000:25c8 e8 ec bd        CALL       FUN_1000_e3b7                                    undefined FUN_1000_e3b7()
        1000:25cb 01 04           ADD        word ptr [SI],AX
-       1000:25cd e8 f5 f4        CALL       FUN_1000_1ac5                                    undefined FUN_1000_1ac5()
+       1000:25cd e8 f5 f4        CALL       divide_by_16                                    undefined divide_by_16()
        1000:25d0 2b 04           SUB        AX,word ptr [SI]
        1000:25d2 f7 d8           NEG        AX
        1000:25d4 a2 cf 00        MOV        [0xcf],AL
@@ -3303,7 +3303,7 @@
        1000:3284 a2 3b 00        MOV        [0x3b],AL
        1000:3287 8a 44 1a        MOV        AL,byte ptr [SI + 0x1a]
        1000:328a a2 3c 00        MOV        [0x3c],AL
-       1000:328d e8 35 e8        CALL       FUN_1000_1ac5                                    undefined FUN_1000_1ac5()
+       1000:328d e8 35 e8        CALL       divide_by_16                                    undefined divide_by_16()
        1000:3290 2a 44 14        SUB        AL,byte ptr [SI + 0x14]
        1000:3293 a2 40 00        MOV        [0x40],AL
        1000:3296 e8 85 00        CALL       FUN_1000_331e                                    undefined FUN_1000_331e()

@@ -3200,7 +3200,7 @@
        1000:7449 e8 02 f0        CALL       FUN_1000_644e                                    undefined FUN_1000_644e()
        1000:744c 5f              POP        DI
        1000:744d 5e              POP        SI
-       1000:744e e8 74 a6        CALL       FUN_1000_1ac5                                    undefined FUN_1000_1ac5()
+       1000:744e e8 74 a6        CALL       divide_by_16                                    undefined divide_by_16()
        1000:7451 04 02           ADD        AL,0x2
        1000:7453 88 45 0b        MOV        byte ptr [DI + 0xb],AL
        1000:7456 b0 04           MOV        AL,0x4
