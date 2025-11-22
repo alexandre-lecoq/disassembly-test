@@ -53,7 +53,6 @@ Offset  Size  Description
 0x13     1    Padding/Reserved byte
 0x14     2    File offset in archive (low word)
 0x16     2    File offset in archive (high word)
-0x18     1    (Implied end of 25-byte structure)
 ```
 
 **Total entry size: 25 bytes (0x19)**
@@ -77,7 +76,7 @@ Where:
 - `\P` (2 bytes): Magic prefix identifying encoded filename
 - `XX` (2 bytes): Two bytes skipped by the decoder (at offset +2 and +3 of filename field)
   - Purpose undetermined from assembly analysis - may be file attributes, extended flags, or reserved space
-  - The decoder simply skips them with `ADD SI,0x4` (skipping `\P` + these 2 bytes)
+  - The decoder skips all 4 bytes total (`\P` + XX) with `ADD SI,0x4`
 - `T` (1 byte): Type identifier (subtract 0x40 to get actual type)
 - `HHH` (3 bytes): Three hexadecimal digits (0-9, A-F) forming a 12-bit file ID
   - Each character is converted: '0'-'9' → 0-9, 'A'-'F' → 10-15
@@ -204,8 +203,8 @@ File offsets are stored as 32-bit little-endian values split into two 16-bit wor
 
 ### Directory Size Limit
 The directory is read with a maximum size of 65535 bytes (0xFFFF), which limits the total number of files that can be stored:
-- Maximum theoretical entries: 65535 / 25 = 2621 files
-- Practical limit is likely much lower due to the directory structure
+- Maximum theoretical entries: 65535 / 25 = 2621 complete entries (with 10 bytes remaining)
+- Practical limit is likely much lower due to the directory structure overhead
 
 ### Filename Encoding Purpose
 The `\P` encoded format appears designed to:

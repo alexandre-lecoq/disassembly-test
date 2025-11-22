@@ -4813,7 +4813,7 @@
        1000:e6c7 89 3e 20 d8     MOV        word ptr [0xd820],DI         ; Store current directory position
        1000:e6cb 1e              PUSH       DS
        1000:e6cc 8e dd           MOV        DS,BP                        ; Set DS to archive directory segment
-       1000:e6ce ad              LODSW      SI                           ; Read first word from archive directory (entry count or offset)
+       1000:e6ce ad              LODSW      SI                           ; Read first word from archive directory (purpose unclear - see dune-dat-format.md)
                              LAB_1000_e6cf                                   XREF[1]:     1000:e708(j)  
                              ; Archive entry processing loop - processes each 25-byte entry
        1000:e6cf 56              PUSH       SI                           ; Save SI (points to current entry)
