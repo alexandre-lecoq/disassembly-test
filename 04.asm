@@ -6336,15 +6336,15 @@
              undefined         <UNASSIGNED>   <RETURN>
                              FUN_1000_f2d6                                   XREF[2]:     FUN_1000_e741:1000:e745(c), 
                                                                                           FUN_1000_f2a7:1000:f2d0(c)  
-       1000:f2d6 51              PUSH       CX
-       1000:f2d7 36 8b 1e        MOV        BX,word ptr SS:[0xdbba]
+       1000:f2d6 51              PUSH       CX                           ; Save CX register (will be used for high word of offset)
+       1000:f2d7 36 8b 1e        MOV        BX,word ptr SS:[0xdbba]      ; Load file handle from SS:[0xdbba] into BX
                  ba db
-       1000:f2dc 8b ca           MOV        CX,DX
-       1000:f2de 8b d0           MOV        DX,AX
-       1000:f2e0 b8 00 42        MOV        AX,0x4200
-       1000:f2e3 cd 21           INT        0x21
-       1000:f2e5 59              POP        CX
-       1000:f2e6 c3              RET
+       1000:f2dc 8b ca           MOV        CX,DX                        ; Move DX (high word of offset) to CX
+       1000:f2de 8b d0           MOV        DX,AX                        ; Move AX (low word of offset) to DX (now CX:DX = 32-bit offset)
+       1000:f2e0 b8 00 42        MOV        AX,0x4200                    ; DOS function 42h: LSEEK (Move File Pointer), AL=00h (seek from beginning of file)
+       1000:f2e3 cd 21           INT        0x21                         ; Call DOS interrupt (seek file pointer to offset CX:DX from start, file handle in BX)
+       1000:f2e5 59              POP        CX                           ; Restore CX register
+       1000:f2e6 c3              RET                                     ; Return (DX:AX contains new file position)
                              **************************************************************
                              *                          FUNCTION                          *
                              **************************************************************
