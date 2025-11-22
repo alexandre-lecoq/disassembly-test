@@ -125,16 +125,18 @@ The structure being accessed appears to contain:
 
 ### Data Structure Analysis
 
-Based on the second call site, the data structure pointed to by ES:DI appears to be:
+Based on the second call site, the data structure pointed to by ES:DI appears to be (at least 10 bytes):
 
 ```
-Offset +0: Unknown (2 bytes)
-Offset +2: Unknown (1 byte)
-Offset +3: Word value (2 bytes) - possibly size or count
-Offset +5: Byte value (1 byte) - possibly flags or type
-Offset +6: Low word of file offset (2 bytes) - passed as AX
-Offset +8: High word of file offset (2 bytes) - passed as DX
+Offset +0: Unknown (2 bytes, not accessed in this code path)
+Offset +2: Unknown (1 byte, not accessed in this code path)
+Offset +3: Word value (2 bytes) - possibly size or count (loaded into CX)
+Offset +5: Byte value (1 byte) - possibly flags or type (loaded into BP via CL)
+Offset +6: Word value (2 bytes) - low word of file offset (passed in AX)
+Offset +8: Word value (2 bytes) - high word of file offset (passed in DX)
 ```
+
+Note: The structure is at least 10 bytes long. Offsets +0 through +2 are not accessed in this particular code path but may be used elsewhere.
 
 This structure is likely a file entry descriptor or resource catalog entry used by the game to locate data within resource files.
 
@@ -150,11 +152,11 @@ This structure is likely a file entry descriptor or resource catalog entry used 
 
 ### Low-Level Summary
 `FUN_1000_f2d6` is a thin wrapper around DOS interrupt 21h, function 42h (LSEEK). It:
-1. Takes a 32-bit offset in AX:DX (low:high)
+1. Takes a 32-bit offset as input parameters in AX:DX (AX = low word bits 0-15, DX = high word bits 16-31)
 2. Retrieves the file handle from SS:[0xdbba]
 3. Reorganizes registers to match DOS calling convention (CX:DX for offset, BX for handle)
 4. Calls INT 21h with AX=0x4200 (seek from beginning)
-5. Returns new file position in DX:AX
+5. Returns new file position in DX:AX (DX = high word, AX = low word)
 
 ### High-Level Summary
 From a high-level perspective, `FUN_1000_f2d6` serves as the game's file positioning mechanism:
