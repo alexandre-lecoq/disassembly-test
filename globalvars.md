@@ -2,6 +2,8 @@
 
 This document contains a table of global variables found in the disassembled code, along with their data types and likely meanings based on usage patterns.
 
+For the assembly language declarations with named variables, see **[globalvars.asm](globalvars.asm)**.
+
 ## Global Variable Table
 
 | Memory Address | Data Type | Access Count | Likely Meaning/Purpose |
